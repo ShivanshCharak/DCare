@@ -33,7 +33,7 @@ from .pipeline.structured_extract import extract_facts
 from .pipeline.explain import explain_facts
 from .pipeline.verify import verify_claims
 from .pipeline.route import build_doctor_questions, combine_states
-from .pipeline.translate import translate_claims
+from .pipeline.translate import LANGUAGES, translate_claims
 
 app = FastAPI(title="Discharge Explainer API", version="0.1.0")
 logger = logging.getLogger(__name__)
@@ -253,7 +253,7 @@ async def create_document(
 @app.post("/documents/{doc_id}/explain", response_model=ExplainResponse)
 def explain_document(
     doc_id: str,
-    lang: str = Query(default="en", pattern="^(en|hi)$"),
+    lang: str = Query(default="en", pattern="^(" + "|".join(LANGUAGES) + ")$"),
 ):
     record = store.documents.get(doc_id)
 

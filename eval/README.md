@@ -77,3 +77,13 @@ The report summarizes means, detail-preservation rate, omissions, additions, rev
 These source cases are authored separately from the templated document corpus, but they are synthetic and have not been clinically authored or independently translated. The script does not invent reference translations or assess semantic quality automatically. Token preservation is reported separately and is not a translation score. Ratings are descriptive and do not establish clinical performance or safety.
 
 The current corpus is English text, not scanned-page images. OCR is enabled for scanned PDFs when local Tesseract is installed, but OCR accuracy has not been benchmarked. Review the recognized source page manually; a page that cannot be read causes the upload to fail rather than accepting partial text.
+
+## Sarvam multilingual translation benchmark
+
+The older `translation_adjudication.csv` is a Hindi-only worksheet tied to the Qwen audit flow; it is not a gold set and has no reference Hindi translations. For the app's Sarvam-1 translator, run:
+
+```bash
+backend/.venv/bin/python eval/benchmark_sarvam_translation.py
+```
+
+This translates eight fixed project-authored instructions into Hindi, Bengali, Gujarati, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, and Telugu. It writes the exact outputs to `eval/results/sarvam_multilingual_benchmark.json` and a bilingual-review worksheet to `eval/results/sarvam_multilingual_review.csv`. The automated checks only record translation completion, expected script, and preservation of selected names and numeric details; they do not score meaning or readability. Review columns remain blank until qualified bilingual reviewers complete them. The examples contain no patient records and have not been independently translated or clinically reviewed. Use `--limit 1` for a short smoke run.

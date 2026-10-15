@@ -143,7 +143,7 @@ def extract_facts_structured(sentences: list[Sentence]) -> list[Fact]:
         sentence_id for sentence_id in kind_by_id
     }
     facts: list[Fact] = []
-    seen: set[tuple[str, str, str]] = set()
+    facts_by_content: dict[tuple[str, str], Fact] = {}
 
     for row in selections:
         sentence = sentences_by_id.get(row.source_id)
@@ -159,25 +159,30 @@ def extract_facts_structured(sentences: list[Sentence]) -> list[Fact]:
             raise ValueError(
                 "Structured extraction kind conflicts with its source section"
             )
-        key = (sentence.id, row.kind, sentence.text.casefold())
-        if key in seen:
+        # Identical instructions can appear multiple times in the same section.
+        # Keep one fact (and therefore one translation) while linking it to every
+        # matching source sentence.
+        key = (row.kind, sentence.text.strip().casefold())
+        existing_fact = facts_by_content.get(key)
+        if existing_fact is not None:
+            if sentence.id not in existing_fact.source_ids:
+                existing_fact.source_ids.append(sentence.id)
             continue
-        seen.add(key)
         attrs = (
             _extract_medication_attributes(sentence.text)
             if row.kind == "medication"
             else {}
         )
         attrs["extraction_mode"] = "structured_llm"
-        facts.append(
-            Fact(
-                id=f"F{len(facts) + 1}",
-                kind=row.kind,
-                text_en=sentence.text.strip(),
-                attrs=attrs,
-                source_ids=[sentence.id],
-            )
+        fact = Fact(
+            id=f"F{len(facts) + 1}",
+            kind=row.kind,
+            text_en=sentence.text.strip(),
+            attrs=attrs,
+            source_ids=[sentence.id],
         )
+        facts.append(fact)
+        facts_by_content[key] = fact
 
     selected_ids = {source_id for fact in facts for source_id in fact.source_ids}
     omitted_ids = sorted(eligible_ids - selected_ids)

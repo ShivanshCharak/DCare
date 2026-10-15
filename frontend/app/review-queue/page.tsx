@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import type { ReviewQueueItem, ReviewAction } from "../types";
+import { LANGUAGE_NAMES } from "../languages";
 import { API, apiFetch, checkClasses, checkLabel, checkPurpose, reasonDescription, statusClasses, STATUS_LABELS, verificationRows, meaningfulReasons, verificationDetailMessage } from "../utils";
 
 export default function ReviewQueuePage() {
@@ -144,6 +145,8 @@ export default function ReviewQueuePage() {
             <span className={`rounded-full border px-3 py-1 text-xs font-semibold ${statusClasses(claim.state)}`}>{STATUS_LABELS[claim.state]}</span>
           </div>
           <p className="source-name"><span aria-hidden="true">↳</span> {source_name}</p>
+          <p className="mt-1 text-xs text-slate-500">Language: {claim.language === "en" ? "English" : `${LANGUAGE_NAMES[claim.language] ?? claim.language} · machine translation, not validated`}</p>
+          {claim.language !== "en" && <p role="note" className="mt-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950">Have a qualified bilingual reviewer compare this translation with the English source before use.</p>}
           {typeof claim.review_priority_score === "number" && <p className="mt-2 text-xs text-slate-500">Review priority score: {claim.review_priority_score.toFixed(2)} / 1.00 · higher scores appear first; not a probability.</p>}
           {editingClaim === claim.id ? (
             <div className="edit-panel">

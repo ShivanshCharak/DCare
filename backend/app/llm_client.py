@@ -12,15 +12,7 @@ import httpx
 from .config import settings
 
 
-def chat_completion(
-    *,
-    model: str,
-    messages: list[dict[str, str]],
-    temperature: float = 0,
-    response_format: dict[str, Any] | None = None,
-    timeout: float = 60.0,
-) -> SimpleNamespace:
-    """Call Ollama's native API so thinking models can use ``think: false``."""
+def _validated_ollama_base_url() -> str:
     base_url = settings.llm_base_url.rstrip("/")
     hostname = urlparse(base_url).hostname
     local_aliases = {"localhost", "host.docker.internal", "host.containers.internal"}
@@ -36,6 +28,19 @@ def chat_completion(
         raise ValueError("Model endpoint must resolve to a local or private-network host; external endpoints are blocked to protect source text.")
     if base_url.endswith("/v1"):
         base_url = base_url[:-3]
+    return base_url
+
+
+def chat_completion(
+    *,
+    model: str,
+    messages: list[dict[str, str]],
+    temperature: float = 0,
+    response_format: dict[str, Any] | None = None,
+    timeout: float = 60.0,
+) -> SimpleNamespace:
+    """Call Ollama's native API so thinking models can use ``think: false``."""
+    base_url = _validated_ollama_base_url()
 
     payload: dict[str, Any] = {
         "model": model,
@@ -60,3 +65,30 @@ def chat_completion(
     return SimpleNamespace(
         choices=[SimpleNamespace(message=SimpleNamespace(content=content))]
     )
+
+
+def text_completion(
+    *,
+    model: str,
+    prompt: str,
+    temperature: float = 0,
+    timeout: float = 60.0,
+) -> str | None:
+    """Call Ollama's raw completion endpoint for base text-completion models."""
+    response = httpx.post(
+        f"{_validated_ollama_base_url()}/api/generate",
+        json={
+            "model": model,
+            "prompt": prompt,
+            "raw": True,
+            "stream": False,
+            "options": {
+                "temperature": temperature,
+                "num_predict": 512,
+            "stop": ["\nEnglish:", "\n English:", "\n\n English:"],
+            },
+        },
+        timeout=timeout,
+    )
+    response.raise_for_status()
+    return response.json().get("response")

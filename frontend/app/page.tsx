@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ClaimCard } from "./components/ClaimCard";
 import { SourceSentences } from "./components/SourceSentences";
 import { SYNTHETIC_SAMPLES } from "./samples";
+import { LANGUAGE_NAMES, OUTPUT_LANGUAGES } from "./languages";
 import type {
   ClaimReview,
   Claim,
@@ -383,13 +384,14 @@ const [reviewError, setReviewError] = useState("");
             onChange={(event) => setLanguage(event.target.value)}
             className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm"
           >
-            <option value="en">English</option>
-            <option value="hi">Hindi</option>
+            {OUTPUT_LANGUAGES.map(({ code, name }) => (
+              <option key={code} value={code}>{name}</option>
+            ))}
           </select>
 
-          {language === "hi" && (
+          {language !== "en" && (
             <p role="note" className="basis-full rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950">
-              Hindi is machine translation, not validated. No qualified bilingual reviewer has assessed this output; check it against the English source before use.
+              {LANGUAGE_NAMES[language] ?? language} output is machine-translated and not validated. A qualified bilingual reviewer must compare it with the English source before use.
             </p>
           )}
 
@@ -400,6 +402,11 @@ const [reviewError, setReviewError] = useState("");
           >
             {busy ? <><span className="button-spinner" aria-hidden="true" /> Preparing explanation…</> : selectedFile ? "Explain this file" : "Explain this summary"}
           </button>
+          {busy && language !== "en" && (
+            <p role="status" aria-live="polite" className="basis-full text-sm text-slate-600">
+              Translation runs claim by claim. For live progress and per-claim timing, check the backend terminal.
+            </p>
+          )}
         </div>
 
         {error && (

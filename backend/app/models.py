@@ -70,7 +70,7 @@ class ClaimReviewAuditEntry(ClaimReviewRequest):
 class Claim(BaseModel):
     id: str
     text: str
-    language: Literal["en", "hi"] = "en"
+    language: Literal["en", "hi", "bn", "gu", "kn", "ml", "mr", "or", "pa", "ta", "te"] = "en"
     review_priority_score: float | None = None
     source_language_text: str | None = None
     fact_ids: list[str]

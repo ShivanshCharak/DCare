@@ -6,6 +6,7 @@ import type {
   DocumentRecord,
   ReviewAction,
 } from "../types";
+import { LANGUAGE_NAMES } from "../languages";
 
 import {
   checkClasses,
@@ -66,7 +67,7 @@ export function ClaimCard({
           </p>
 
           <p className="mt-1 text-xs text-slate-500">
-            Language: {claim.language === "hi" ? "Hindi (machine translation, not validated)" : "English"}
+            Language: {claim.language === "en" ? "English" : `${LANGUAGE_NAMES[claim.language] ?? claim.language} (machine translation, not validated)`}
           </p>
           {typeof claim.review_priority_score === "number" && <p className="mt-1 text-xs text-slate-500">Review priority score: {claim.review_priority_score.toFixed(2)} / 1.00 · higher scores appear first; not a probability.</p>}
         </div>
@@ -92,9 +93,9 @@ export function ClaimCard({
         </div>
       )}
 
-      {claim.language === "hi" && (
+      {claim.language !== "en" && (
         <div role="note" className="mt-4 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm leading-6 text-amber-950">
-          Hindi is machine translation, not validated. No qualified bilingual reviewer has assessed this output; check it against the English source before use.
+          {LANGUAGE_NAMES[claim.language] ?? claim.language} output is machine-translated and not validated. A qualified bilingual reviewer must compare it with the English source before use.
         </div>
       )}
 

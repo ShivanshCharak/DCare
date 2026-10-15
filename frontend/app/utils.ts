@@ -20,7 +20,7 @@ const CHECK_PURPOSES: Record<string, string> = {
   back_translation: "Checks a translated claim by translating it back and comparing its meaning with the original.",
   warning_sign_urgency: "Checks that an urgent warning-sign instruction keeps its response level in the explanation.",
   translation: "Checks preservation of medication names and numeric details. This does not verify the full meaning of the translation.",
-  translation_judge: "A second model pass checks the Hindi against the English for omissions, additions, meaning changes, and clarity. It may suggest a correction, but does not replace qualified human review.",
+  translation_judge: "A second model pass checks the selected translation against the English for omissions, additions, meaning changes, and clarity. It may suggest a correction, but does not replace qualified human review.",
 };
 export function checkPurpose(name: string): string {
   return CHECK_PURPOSES[name as keyof typeof CHECK_PURPOSES] ?? "Describes the verification performed for this category.";
@@ -137,7 +137,7 @@ const CHECK_LABELS: Record<string, string> = {
   appointment_timeframes: "Appointment timeframe",
   entailment: "Clinical entailment",
   back_translation: "Back-translation",
-  translation_judge: "Hindi translation review",
+  translation_judge: "Translation review",
   warning_sign_urgency: "Warning-sign urgency",
   as_needed_duration_added: "As-needed wording changed",
   warning_sign_escalation_softened: "Urgent response level softened",
