@@ -1,0 +1,503 @@
+{
+  "scope": "held-out synthetic discharge-summary claim audit",
+  "model_id": "qwen3:1.7b",
+  "case_count": 40,
+  "cases": [
+    {
+      "case_id": "HO-001",
+      "deterministic_flags": [
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "unsupported_claim_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-002",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "unsupported_claim_detail",
+        "instruction_polarity_mismatch"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-003",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "unsupported_claim_detail",
+        "instruction_polarity_mismatch"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-004",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "unsupported_claim_detail",
+        "instruction_polarity_mismatch"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-005",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "unsupported_claim_detail",
+        "instruction_polarity_mismatch"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-006",
+      "deterministic_flags": [],
+      "deterministic_reasons": [
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "supported"
+    },
+    {
+      "case_id": "HO-007",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "unsupported_claim_detail",
+        "instruction_polarity_mismatch"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-008",
+      "deterministic_flags": [],
+      "deterministic_reasons": [
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "supported"
+    },
+    {
+      "case_id": "HO-009",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "medication_dose_mismatch",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-010",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "medication_frequency_mismatch",
+        "unsupported_claim_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-011",
+      "deterministic_flags": [
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "ambiguous_medication_details",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-012",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "medication_duration_mismatch",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-013",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "medication_dose_mismatch",
+        "ambiguous_medication_details",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-014",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "ambiguous_medication_details",
+        "unsupported_claim_detail",
+        "instruction_polarity_mismatch"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-015",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "medication_duration_mismatch",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-016",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "ambiguous_medication_details",
+        "unsupported_claim_detail",
+        "instruction_polarity_mismatch"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-017",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "medication_dose_mismatch",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-018",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "medication_frequency_mismatch",
+        "unsupported_claim_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-019",
+      "deterministic_flags": [
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "ambiguous_medication_details",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-020",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "medication_duration_mismatch",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-021",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "medication_dose_mismatch",
+        "ambiguous_medication_details",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-022",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "ambiguous_medication_details",
+        "unsupported_claim_detail",
+        "instruction_polarity_mismatch"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-023",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "medication_duration_mismatch",
+        "unsupported_claim_detail",
+        "unsupported_numeric_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-024",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail",
+        "unsupported_addition"
+      ],
+      "deterministic_reasons": [
+        "ambiguous_medication_details",
+        "unsupported_claim_detail",
+        "instruction_polarity_mismatch"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-025",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "medication_frequency_mismatch"
+      ],
+      "entailment_judge": "supported"
+    },
+    {
+      "case_id": "HO-026",
+      "deterministic_flags": [
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "medication_timing_mismatch",
+        "unsupported_claim_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-027",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "medication_frequency_mismatch",
+        "ambiguous_medication_details"
+      ],
+      "entailment_judge": "supported"
+    },
+    {
+      "case_id": "HO-028",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "medication_duration_mismatch"
+      ],
+      "entailment_judge": "supported"
+    },
+    {
+      "case_id": "HO-029",
+      "deterministic_flags": [
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "medication_timing_mismatch",
+        "ambiguous_medication_details",
+        "unsupported_claim_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-030",
+      "deterministic_flags": [
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "ambiguous_medication_details",
+        "unsupported_claim_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-031",
+      "deterministic_flags": [
+        "medication_change",
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "medication_duration_mismatch",
+        "unsupported_claim_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-032",
+      "deterministic_flags": [
+        "missing_detail"
+      ],
+      "deterministic_reasons": [
+        "ambiguous_medication_details",
+        "unsupported_claim_detail"
+      ],
+      "entailment_judge": "unsupported"
+    },
+    {
+      "case_id": "HO-033",
+      "deterministic_flags": [
+        "wrong_source_link"
+      ],
+      "deterministic_reasons": [
+        "invalid_or_missing_source",
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "not_run"
+    },
+    {
+      "case_id": "HO-034",
+      "deterministic_flags": [
+        "wrong_source_link"
+      ],
+      "deterministic_reasons": [
+        "invalid_or_missing_source",
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "not_run"
+    },
+    {
+      "case_id": "HO-035",
+      "deterministic_flags": [
+        "wrong_source_link"
+      ],
+      "deterministic_reasons": [
+        "invalid_or_missing_source",
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "not_run"
+    },
+    {
+      "case_id": "HO-036",
+      "deterministic_flags": [
+        "wrong_source_link"
+      ],
+      "deterministic_reasons": [
+        "invalid_or_missing_source",
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "not_run"
+    },
+    {
+      "case_id": "HO-037",
+      "deterministic_flags": [
+        "wrong_source_link"
+      ],
+      "deterministic_reasons": [
+        "invalid_or_missing_source",
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "not_run"
+    },
+    {
+      "case_id": "HO-038",
+      "deterministic_flags": [
+        "wrong_source_link"
+      ],
+      "deterministic_reasons": [
+        "invalid_or_missing_source",
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "not_run"
+    },
+    {
+      "case_id": "HO-039",
+      "deterministic_flags": [
+        "wrong_source_link"
+      ],
+      "deterministic_reasons": [
+        "invalid_or_missing_source",
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "not_run"
+    },
+    {
+      "case_id": "HO-040",
+      "deterministic_flags": [
+        "wrong_source_link"
+      ],
+      "deterministic_reasons": [
+        "invalid_or_missing_source",
+        "verification_layers_not_fully_configured"
+      ],
+      "entailment_judge": "not_run"
+    }
+  ],
+  "human_adjudication": "pending; see reviewer_labels.csv",
+  "limitations": [
+    "System flags are preliminary outputs, not human labels.",
+    "Do not report misses, false alarms, or judge agreement as human-validated until the worksheet is completed by a qualified reviewer."
+  ],
+  "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7"
+}

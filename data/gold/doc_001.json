@@ -1,0 +1,10 @@
+{
+  "document_id": "doc_001",
+  "synthetic": true,
+  "facts": [
+    {"id": "F1", "kind": "diagnosis", "text_en": "Pneumonia was diagnosed during this hospital stay.", "source_ids": ["S1"]},
+    {"id": "F2", "kind": "medication", "text_en": "Take the medicines as listed in the clinician-provided medication list.", "source_ids": ["S2"]},
+    {"id": "F3", "kind": "appointment", "text_en": "Attend the follow-up appointment in 7 days.", "source_ids": ["S3"]},
+    {"id": "F4", "kind": "warning_sign", "text_en": "Contact your care team if the warning signs described in your discharge paperwork occur.", "source_ids": ["S4"]}
+  ]
+}

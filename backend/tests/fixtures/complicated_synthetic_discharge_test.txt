@@ -1,0 +1,79 @@
+DISCHARGE SUMMARY — SYNTHETIC TEST DOCUMENT
+Document ID: SYNTH-DX-042
+Patient: Test Patient Alpha
+Date of admission: 12 October 2026
+Date of discharge: 16 October 2026
+IMPORTANT: This is entirely fictional test data created to evaluate a software prototype. It is not a real patient's record and must not be used for clinical decisions.
+
+SECTION 1 — REASON FOR ADMISSION
+The patient was admitted on 12 October 2026 after developing fever, cough, fatigue, and shortness of breath over three days. The admitting note states that the patient reported a temperature at home of 38.4 °C. On examination, the documented respiratory rate was 24 breaths per minute and oxygen saturation was 92% on room air. The initial assessment listed a suspected lower respiratory tract infection. These findings are included as source facts only; the summary does not establish that every symptom was caused by the final diagnosis.
+
+SECTION 2 — DIAGNOSIS AND HOSPITAL COURSE
+The discharge diagnosis is community-acquired pneumonia. A chest X-ray report described an opacity in the right lower lung zone, interpreted by the reporting clinician as consistent with pneumonia. The summary says the patient received treatment in hospital and that the fever improved before discharge. It does not state that the opacity completely resolved. A separate note says that blood culture results were still pending when the discharge summary was drafted. Do not rewrite “pending” as “negative” or “no infection was found.”
+
+The patient was discharged home on 16 October 2026 in stable condition, according to the discharge note. The note does not provide a numerical oxygen saturation at discharge. Do not infer one from the admission measurement.
+
+SECTION 3 — MEDICATIONS
+The following medication instructions are fictional and provided to test extraction and verification behavior. They are not treatment recommendations.
+
+A. Take amlodipine 5 mg by mouth once daily.
+B. Take acetaminophen 500 mg by mouth every 6 hours as needed for fever. Do not exceed the maximum daily amount specified by the prescribing clinician or product instructions; that maximum is not numerically stated in this summary.
+C. Stop taking the fictional medication “Cardioval-X” until the prescribing clinician reviews it. The reason for this instruction is not documented in the supplied text.
+D. The medication reconciliation section lists “metformin 500 mg twice daily,” while a later discharge instruction says “metformin 500 mg once daily.” The source does not resolve this discrepancy. Do not choose one instruction or silently harmonize them.
+E. A copied fragment in the medication section reads: “Take the medicines as listed in the 10 times a week.” This sentence is malformed and its intended meaning is unknown. Do not infer a medication identity or intended frequency.
+F. A separate imported line reads: “Take fictional medicine Zorvex 2 tablets 10 times a day.” This is deliberately unusual synthetic wording intended to test whether a configured safety rule flags the instruction for human review. Do not replace it with a more typical schedule.
+G. An old medication list contains “ibuprofen 200 mg as needed.” The discharge instructions do not say whether this old entry should be continued or stopped. The summary therefore does not establish a current instruction for this entry.
+
+SECTION 4 — FOLLOW-UP
+Attend the outpatient follow-up appointment in 7 days. The summary does not identify the clinic, clinician, appointment time, or booking status. Do not invent these details. The patient should bring the updated medication list to the appointment, according to the discharge instructions. A second sentence says: “If the appointment cannot be attended, contact the clinic to rearrange it.” The clinic's telephone number is not included.
+
+SECTION 5 — HOME CARE
+Rest as needed while recovering. Drink fluids as tolerated, unless a clinician has given different instructions. The summary does not specify a target volume of fluid per day. Do not invent one.
+The patient may resume usual activities gradually as symptoms improve, according to the discharge note. The note does not specify a date when full activity is expected to resume.
+The summary mentions that the patient received an information leaflet about pneumonia. The leaflet itself is not included in this test document, so its contents must not be summarized or invented.
+
+SECTION 6 — WARNING SIGNS AND CONTACT
+The discharge instructions say: “Seek urgent medical assessment if breathing becomes significantly worse.” They also say: “Contact the care team if fever persists or symptoms worsen.” The summary does not define a precise temperature threshold or number of hours for “persists.”
+For administrative questions, contact the fictional discharge desk during the hours stated in the separate patient information sheet. That separate sheet was not provided, and no hours or telephone number are present in this document. Do not fabricate contact details.
+A note says: “Do not stop any prescribed medicine without checking with the prescribing clinician, except where a specific stop instruction is explicitly documented in this discharge summary.” This sentence must not be simplified in a way that removes its exception.
+
+SECTION 7 — ALLERGIES AND UNCERTAINTIES
+The allergy section says “allergy status not confirmed.” It does not say “no known allergies.” Preserve this distinction.
+The discharge summary mentions that one laboratory result was pending at the time of writing. The result and the later outcome are not supplied.
+A draft note contains the phrase “possible sensitivity to an antibiotic,” but does not identify the antibiotic, reaction, date, or whether the sensitivity was confirmed. Treat this as uncertain wording rather than a confirmed allergy.
+One sentence states that the patient “denies chest pain.” Do not reverse the negation or turn it into a positive symptom.
+
+SECTION 8 — DATES, NUMBERS, AND SOURCE FIDELITY CHECKS
+Admission date: 12 October 2026.
+Discharge date: 16 October 2026.
+Follow-up interval: 7 days.
+Recorded admission temperature: 38.4 °C.
+Recorded admission respiratory rate: 24 breaths per minute.
+Recorded admission oxygen saturation: 92% on room air.
+The source does not state a discharge oxygen saturation, a fluid target, a fever threshold for follow-up, or an appointment time.
+
+SECTION 9 — DUPLICATE AND CONFLICTING WORDING
+The summary repeats the follow-up instruction in two places, once as “Attend the outpatient follow-up appointment in 7 days” and once as “Follow-up is recommended in one week.” These expressions may be equivalent, but preserve their source references so that the reviewer can inspect both.
+The phrase “blood cultures pending” appears in the hospital course and again in the investigations section. Both instances mean the result was not available in the supplied summary; neither means that the culture was negative.
+A copied draft sentence says “The pneumonia has completely cleared.” This conflicts with the more limited documented statement that fever improved and the chest X-ray showed an opacity consistent with pneumonia. The supplied summary does not provide evidence that the pneumonia completely cleared. Flag the unsupported assertion rather than treating it as established fact.
+
+SECTION 10 — TESTING INSTRUCTIONS FOR THE SOFTWARE
+This section is part of the synthetic test fixture, not a clinical instruction.
+
+Evaluate whether the application:
+1. Splits the document into source sentences and keeps stable source identifiers.
+2. Links each generated claim to relevant source sentences.
+3. Preserves medication doses, frequencies, durations, timing, stop instructions, and as-needed wording.
+4. Flags the conflicting metformin directions for human review without selecting one.
+5. Flags the malformed “10 times a week” instruction as ambiguous.
+6. Routes the deliberately unusual “10 times a day” medication instruction according to the configured safety policy, without silently correcting it.
+7. Preserves “allergy status not confirmed” and does not convert it to “no known allergies.”
+8. Preserves negation in “denies chest pain.”
+9. Does not turn pending test results into negative results.
+10. Does not invent discharge oxygen saturation, fluid targets, appointment times, clinic names, phone numbers, or leaflet contents.
+11. Does not claim the pneumonia completely cleared without supporting evidence.
+12. Shows actual verification statuses and meaningful review reasons, with missing checks clearly identified.
+13. Keeps all claims unverified if required verification layers have not run.
+14. Preserves the original generated claim and source text when a reviewer edits or rejects a claim.
+
+END OF SYNTHETIC TEST DOCUMENT

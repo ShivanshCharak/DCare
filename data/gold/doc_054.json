@@ -1,0 +1,57 @@
+{
+  "document_id": "doc_054",
+  "synthetic": true,
+  "set": "clean",
+  "narrative_style": true,
+  "authoring": "curated synthetic facts",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "The discharge summary records a synthetic condition for scenario 54.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "The fictional medication list names amlodipine and directs the reader to its printed instructions.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "The follow-up appointment is due 7 days after leaving the hospital.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "Keep lifting below 5 kg through the follow-up visit.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "Difficulty breathing is a reason to seek urgent help.",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "The final laboratory report is not yet available.",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Diagnosis:
+Scenario 18 includes a documented synthetic diagnosis.
+Medications:
+Use the discharge paperwork for the instructions on albuterol.
+Follow-up:
+Please attend a follow-up visit in 10 days.
+Restrictions:
+Keep the support wrap in place until the scheduled review.
+Warning signs:
+Use the contact instructions in the discharge paperwork if symptoms worsen.
+Pending tests:
+A culture result is pending review.

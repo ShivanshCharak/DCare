@@ -1,0 +1,12 @@
+Diagnosis:
+The discharge team recorded a synthetic condition for scenario 37.
+Medications:
+See the written medication list for instructions about levothyroxine.
+Follow-up:
+A follow-up appointment is scheduled for 5 days from discharge.
+Restrictions:
+Use the mobility aid as described in the discharge paperwork.
+Warning signs:
+Contact the care team if the warning signs listed in the discharge paperwork occur.
+Pending tests:
+The final laboratory report is pending.

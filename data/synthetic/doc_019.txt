@@ -1,0 +1,12 @@
+Diagnosis:
+A diagnosis was entered for synthetic scenario 19 before discharge.
+Medications:
+The medication plan for losartan is listed in the discharge paperwork.
+Follow-up:
+Your follow-up appointment should take place in 12 days.
+Restrictions:
+Avoid the activity listed in the discharge instructions until review.
+Warning signs:
+Contact the care team if a new concern described in the paperwork occurs.
+Pending tests:
+The final imaging report is pending.

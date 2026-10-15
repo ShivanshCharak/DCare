@@ -1,0 +1,64 @@
+{
+  "document_id": "doc_047",
+  "synthetic": true,
+  "set": "trap",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "The discharge team recorded a synthetic condition for scenario 47.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Continue taking heparin as written in the discharge medication instructions.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "medication",
+      "text_en": "Stop taking heparin as written in the discharge medication instructions.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "appointment",
+      "text_en": "A follow-up appointment is scheduled for 12 days from discharge.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "restriction",
+      "text_en": "Use the mobility aid as described in the discharge paperwork.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "warning_sign",
+      "text_en": "Contact the care team if a new concern described in the paperwork occurs.",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "id": "F7",
+      "kind": "pending_test",
+      "text_en": "The final imaging report is pending.",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "trap_type": "stop_continue_conflict"
+}

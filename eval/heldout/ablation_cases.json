@@ -1,0 +1,2979 @@
+{
+  "title": "Held-out synthetic verification set with 40 challenge cases and 40 clean controls",
+  "version": "0.1",
+  "case_count": 80,
+  "synthetic_only": true,
+  "label_status": "author_expected_labels_are_not_clinician_adjudication",
+  "challenge_case_count": 40,
+  "clean_control_count": 40,
+  "cases": [
+    {
+      "case_id": "HO-001",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U see your primary care clinic in 1 week\nReturn for new chest pain or difficulty breathing",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "The infection has completely cleared.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "challenge_family": "paraphrased_claim_change",
+      "author_expected_labels": [
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-002",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: call cardiology in 3 days | Seek urgent care for worsening pain or drainage from the wound.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "The patient no longer needs fluid medicine.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "challenge_family": "paraphrased_claim_change",
+      "author_expected_labels": [
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-003",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: see the clinic in 10 days\nCall/return if shortness of breath or blue lips",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "The flare will not recur after discharge.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "challenge_family": "paraphrased_claim_change",
+      "author_expected_labels": [
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-004",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 follow up with your surgeon in 2 weeks\nPrecautions: fever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "There is no remaining infection.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "challenge_family": "paraphrased_claim_change",
+      "author_expected_labels": [
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-005",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: call your care team tomorrow.\nED if: new weakness or trouble speaking.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Blood pressure is now normal without medication.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "challenge_family": "paraphrased_claim_change",
+      "author_expected_labels": [
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-006",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\nreturn for review in 5 days\nRED FLAGS\nincreasing swelling or severe pain",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "There was no stomach irritation during admission.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "challenge_family": "paraphrased_claim_change",
+      "author_expected_labels": [
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-007",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to see primary care in 2 weeks. They should seek care for fainting, severe dizziness, or confusion.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Oxygen is no longer needed at any time.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "challenge_family": "paraphrased_claim_change",
+      "author_expected_labels": [
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-008",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: contact the clinic in 4 days\n- precautions: repeated vomiting or inability to drink",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "The incision is fully healed.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "challenge_family": "paraphrased_claim_change",
+      "author_expected_labels": [
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-009",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U call cardiology in 3 days\nReturn for fever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take amlodipine 10 mg once daily.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "subtle_dose_or_schedule_change",
+      "author_expected_labels": [
+        "medication_change"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-010",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: see the clinic in 10 days | Seek urgent care for new weakness or trouble speaking.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue metformin 500 mg once daily with meals.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "subtle_dose_or_schedule_change",
+      "author_expected_labels": [
+        "medication_change"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-011",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: follow up with your surgeon in 2 weeks\nCall/return if increasing swelling or severe pain",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Use albuterol 4 puffs every 6 hours as needed for wheezing.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "subtle_dose_or_schedule_change",
+      "author_expected_labels": [
+        "medication_change"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-012",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 call your care team tomorrow\nPrecautions: fainting, severe dizziness, or confusion",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take cephalexin 500 mg three times daily for 7 days.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "subtle_dose_or_schedule_change",
+      "author_expected_labels": [
+        "medication_change"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-013",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: return for review in 5 days.\nED if: repeated vomiting or inability to drink.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take lisinopril 20 mg each morning.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "subtle_dose_or_schedule_change",
+      "author_expected_labels": [
+        "medication_change"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-014",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\nsee primary care in 2 weeks\nRED FLAGS\nnew chest pain or difficulty breathing",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take ibuprofen until the clinic reviews it.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "subtle_dose_or_schedule_change",
+      "author_expected_labels": [
+        "medication_change"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-015",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to contact the clinic in 4 days. They should seek care for worsening pain or drainage from the wound.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take prednisone 20 mg daily for 5 days, then stop.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "subtle_dose_or_schedule_change",
+      "author_expected_labels": [
+        "medication_change"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-016",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: see your primary care clinic in 1 week\n- precautions: shortness of breath or blue lips",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Stop atorvastatin 20 mg nightly.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "subtle_dose_or_schedule_change",
+      "author_expected_labels": [
+        "medication_change"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-017",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U see the clinic in 10 days\nReturn for fainting, severe dizziness, or confusion",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take amlodipine 10 mg once daily.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "negation_or_polarity_change",
+      "author_expected_labels": [
+        "medication_change",
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-018",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: follow up with your surgeon in 2 weeks | Seek urgent care for repeated vomiting or inability to drink.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue metformin 500 mg once daily with meals.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "negation_or_polarity_change",
+      "author_expected_labels": [
+        "medication_change",
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-019",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: call your care team tomorrow\nCall/return if new chest pain or difficulty breathing",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Use albuterol 4 puffs every 6 hours as needed for wheezing.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "negation_or_polarity_change",
+      "author_expected_labels": [
+        "medication_change",
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-020",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 return for review in 5 days\nPrecautions: worsening pain or drainage from the wound",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take cephalexin 500 mg three times daily for 7 days.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "negation_or_polarity_change",
+      "author_expected_labels": [
+        "medication_change",
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-021",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: see primary care in 2 weeks.\nED if: shortness of breath or blue lips.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take lisinopril 20 mg each morning.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "negation_or_polarity_change",
+      "author_expected_labels": [
+        "medication_change",
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-022",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\ncontact the clinic in 4 days\nRED FLAGS\nfever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take ibuprofen until the clinic reviews it.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "negation_or_polarity_change",
+      "author_expected_labels": [
+        "medication_change",
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-023",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to see your primary care clinic in 1 week. They should seek care for new weakness or trouble speaking.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take prednisone 20 mg daily for 5 days, then stop.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "negation_or_polarity_change",
+      "author_expected_labels": [
+        "medication_change",
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-024",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: call cardiology in 3 days\n- precautions: increasing swelling or severe pain",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Stop atorvastatin 20 mg nightly.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "negation_or_polarity_change",
+      "author_expected_labels": [
+        "medication_change",
+        "unsupported_addition"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-025",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U follow up with your surgeon in 2 weeks\nReturn for worsening pain or drainage from the wound",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take amlodipine 5 mg.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "omission",
+      "author_expected_labels": [
+        "missing_detail"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-026",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: call your care team tomorrow | Seek urgent care for shortness of breath or blue lips.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue metformin 500 mg twice daily.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "omission",
+      "author_expected_labels": [
+        "missing_detail"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-027",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: return for review in 5 days\nCall/return if fever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Use albuterol 2 puffs every 6 hours.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "omission",
+      "author_expected_labels": [
+        "missing_detail"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-028",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 see primary care in 2 weeks\nPrecautions: new weakness or trouble speaking",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take cephalexin 500 mg three times daily.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "omission",
+      "author_expected_labels": [
+        "missing_detail"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-029",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: contact the clinic in 4 days.\nED if: increasing swelling or severe pain.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take lisinopril 10 mg.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "omission",
+      "author_expected_labels": [
+        "missing_detail"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-030",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\nsee your primary care clinic in 1 week\nRED FLAGS\nfainting, severe dizziness, or confusion",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Do not take ibuprofen.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "omission",
+      "author_expected_labels": [
+        "missing_detail"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-031",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to call cardiology in 3 days. They should seek care for repeated vomiting or inability to drink.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take prednisone 20 mg daily.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "omission",
+      "author_expected_labels": [
+        "missing_detail"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-032",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: see the clinic in 10 days\n- precautions: new chest pain or difficulty breathing",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue atorvastatin 20 mg.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "challenge_family": "omission",
+      "author_expected_labels": [
+        "missing_detail"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-033",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U call your care team tomorrow\nReturn for new weakness or trouble speaking",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take amlodipine 5 mg once daily.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "challenge_family": "wrong_source_link",
+      "author_expected_labels": [
+        "wrong_source_link"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-034",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: return for review in 5 days | Seek urgent care for increasing swelling or severe pain.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue metformin 500 mg twice daily with meals.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "challenge_family": "wrong_source_link",
+      "author_expected_labels": [
+        "wrong_source_link"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-035",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: see primary care in 2 weeks\nCall/return if fainting, severe dizziness, or confusion",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "challenge_family": "wrong_source_link",
+      "author_expected_labels": [
+        "wrong_source_link"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-036",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 contact the clinic in 4 days\nPrecautions: repeated vomiting or inability to drink",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take cephalexin 500 mg three times daily for 5 days.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "challenge_family": "wrong_source_link",
+      "author_expected_labels": [
+        "wrong_source_link"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-037",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: see your primary care clinic in 1 week.\nED if: new chest pain or difficulty breathing.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take lisinopril 10 mg each morning.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "challenge_family": "wrong_source_link",
+      "author_expected_labels": [
+        "wrong_source_link"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-038",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\ncall cardiology in 3 days\nRED FLAGS\nworsening pain or drainage from the wound",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Do not take ibuprofen until the clinic reviews it.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "challenge_family": "wrong_source_link",
+      "author_expected_labels": [
+        "wrong_source_link"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-039",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to see the clinic in 10 days. They should seek care for shortness of breath or blue lips.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Take prednisone 20 mg daily for 3 days, then stop.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "challenge_family": "wrong_source_link",
+      "author_expected_labels": [
+        "wrong_source_link"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "HO-040",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: follow up with your surgeon in 2 weeks\n- precautions: fever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue atorvastatin 20 mg nightly.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "challenge_family": "wrong_source_link",
+      "author_expected_labels": [
+        "wrong_source_link"
+      ],
+      "author_expected_error": true,
+      "expected_result": "failed"
+    },
+    {
+      "case_id": "CTRL-001",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U see your primary care clinic in 1 week\nReturn for new chest pain or difficulty breathing",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Community-acquired pneumonia, improving.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-002",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: call cardiology in 3 days | Seek urgent care for worsening pain or drainage from the wound.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue metformin 500 mg twice daily with meals.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-003",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: see the clinic in 10 days\nCall/return if shortness of breath or blue lips",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: see the clinic in 10 days.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-004",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 follow up with your surgeon in 2 weeks\nPrecautions: fever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for fever above 38 C or worsening redness.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-005",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: call your care team tomorrow.\nED if: new weakness or trouble speaking.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Blood pressure was elevated during admission.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-006",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\nreturn for review in 5 days\nRED FLAGS\nincreasing swelling or severe pain",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Do not take ibuprofen until the clinic reviews it.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-007",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to see primary care in 2 weeks. They should seek care for fainting, severe dizziness, or confusion.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: see primary care in 2 weeks.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-008",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: contact the clinic in 4 days\n- precautions: repeated vomiting or inability to drink",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for repeated vomiting or inability to drink.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-009",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U call cardiology in 3 days\nReturn for fever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Community-acquired pneumonia, improving.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-010",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: see the clinic in 10 days | Seek urgent care for new weakness or trouble speaking.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue metformin 500 mg twice daily with meals.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-011",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: follow up with your surgeon in 2 weeks\nCall/return if increasing swelling or severe pain",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: follow up with your surgeon in 2 weeks.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-012",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 call your care team tomorrow\nPrecautions: fainting, severe dizziness, or confusion",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for fainting, severe dizziness, or confusion.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-013",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: return for review in 5 days.\nED if: repeated vomiting or inability to drink.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Blood pressure was elevated during admission.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-014",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\nsee primary care in 2 weeks\nRED FLAGS\nnew chest pain or difficulty breathing",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Do not take ibuprofen until the clinic reviews it.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-015",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to contact the clinic in 4 days. They should seek care for worsening pain or drainage from the wound.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: contact the clinic in 4 days.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-016",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: see your primary care clinic in 1 week\n- precautions: shortness of breath or blue lips",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for shortness of breath or blue lips.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-017",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U see the clinic in 10 days\nReturn for fainting, severe dizziness, or confusion",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Community-acquired pneumonia, improving.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-018",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: follow up with your surgeon in 2 weeks | Seek urgent care for repeated vomiting or inability to drink.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue metformin 500 mg twice daily with meals.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-019",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: call your care team tomorrow\nCall/return if new chest pain or difficulty breathing",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: call your care team tomorrow.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-020",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 return for review in 5 days\nPrecautions: worsening pain or drainage from the wound",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for worsening pain or drainage from the wound.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-021",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: see primary care in 2 weeks.\nED if: shortness of breath or blue lips.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Blood pressure was elevated during admission.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-022",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\ncontact the clinic in 4 days\nRED FLAGS\nfever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Do not take ibuprofen until the clinic reviews it.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-023",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to see your primary care clinic in 1 week. They should seek care for new weakness or trouble speaking.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: see your primary care clinic in 1 week.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-024",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: call cardiology in 3 days\n- precautions: increasing swelling or severe pain",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for increasing swelling or severe pain.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-025",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U follow up with your surgeon in 2 weeks\nReturn for worsening pain or drainage from the wound",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Community-acquired pneumonia, improving.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-026",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: call your care team tomorrow | Seek urgent care for shortness of breath or blue lips.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue metformin 500 mg twice daily with meals.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-027",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: return for review in 5 days\nCall/return if fever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: return for review in 5 days.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-028",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 see primary care in 2 weeks\nPrecautions: new weakness or trouble speaking",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for new weakness or trouble speaking.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-029",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: contact the clinic in 4 days.\nED if: increasing swelling or severe pain.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Blood pressure was elevated during admission.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-030",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\nsee your primary care clinic in 1 week\nRED FLAGS\nfainting, severe dizziness, or confusion",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Do not take ibuprofen until the clinic reviews it.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-031",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to call cardiology in 3 days. They should seek care for repeated vomiting or inability to drink.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: call cardiology in 3 days.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-032",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: see the clinic in 10 days\n- precautions: new chest pain or difficulty breathing",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for new chest pain or difficulty breathing.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-033",
+      "synthetic": true,
+      "document_text": "DISCHARGE NOTE\nCommunity-acquired pneumonia, improving.\nRx: Take amlodipine 5 mg once daily.\nF/U call your care team tomorrow\nReturn for new weakness or trouble speaking",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Community-acquired pneumonia, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take amlodipine 5 mg once daily.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call your care team tomorrow.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new weakness or trouble speaking.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Community-acquired pneumonia, improving.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-034",
+      "synthetic": true,
+      "document_text": "At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: return for review in 5 days | Seek urgent care for increasing swelling or severe pain.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Fluid overload improved after treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue metformin 500 mg twice daily with meals.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: return for review in 5 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for increasing swelling or severe pain.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Continue metformin 500 mg twice daily with meals.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-035",
+      "synthetic": true,
+      "document_text": "Hospital course / instructions\nAsthma flare settled; breathing comfortable at rest.\nMedication reconciliation \u2014 Use albuterol 2 puffs every 6 hours as needed for wheezing.\nClinic plan: see primary care in 2 weeks\nCall/return if fainting, severe dizziness, or confusion",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Asthma flare settled; breathing comfortable at rest.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Use albuterol 2 puffs every 6 hours as needed for wheezing.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see primary care in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fainting, severe dizziness, or confusion.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: see primary care in 2 weeks.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-036",
+      "synthetic": true,
+      "document_text": "Problem: Cellulitis of the left leg, improving.\nPlan:\n\u2022 Take cephalexin 500 mg three times daily for 5 days.\n\u2022 contact the clinic in 4 days\nPrecautions: repeated vomiting or inability to drink",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Cellulitis of the left leg, improving.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take cephalexin 500 mg three times daily for 5 days.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: contact the clinic in 4 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for repeated vomiting or inability to drink.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for repeated vomiting or inability to drink.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-037",
+      "synthetic": true,
+      "document_text": "Disch summary (pt): Blood pressure was elevated during admission..\nNew/changed: Take lisinopril 10 mg each morning..\nFU: see your primary care clinic in 1 week.\nED if: new chest pain or difficulty breathing.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Blood pressure was elevated during admission.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take lisinopril 10 mg each morning.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see your primary care clinic in 1 week.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for new chest pain or difficulty breathing.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Blood pressure was elevated during admission.",
+      "claim_source_ids": [
+        "S1"
+      ],
+      "linked_source_id": "S1",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-038",
+      "synthetic": true,
+      "document_text": "ASSESSMENT\nGastritis symptoms improved; no bleeding reported.\nTAKE HOME\nDo not take ibuprofen until the clinic reviews it.\nNEXT VISIT\ncall cardiology in 3 days\nRED FLAGS\nworsening pain or drainage from the wound",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Gastritis symptoms improved; no bleeding reported.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Do not take ibuprofen until the clinic reviews it.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: call cardiology in 3 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for worsening pain or drainage from the wound.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Do not take ibuprofen until the clinic reviews it.",
+      "claim_source_ids": [
+        "S2"
+      ],
+      "linked_source_id": "S2",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-039",
+      "synthetic": true,
+      "document_text": "COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to see the clinic in 10 days. They should seek care for shortness of breath or blue lips.",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "COPD exacerbation improved with treatment.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Take prednisone 20 mg daily for 3 days, then stop.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: see the clinic in 10 days.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for shortness of breath or blue lips.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Follow-up: see the clinic in 10 days.",
+      "claim_source_ids": [
+        "S3"
+      ],
+      "linked_source_id": "S3",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    },
+    {
+      "case_id": "CTRL-040",
+      "synthetic": true,
+      "document_text": "Typed after visit:\n- Postoperative wound check was reassuring.\n- Med rec: Continue atorvastatin 20 mg nightly.\n- f/u: follow up with your surgeon in 2 weeks\n- precautions: fever above 38 C or worsening redness",
+      "sentences": [
+        {
+          "id": "S1",
+          "text": "Postoperative wound check was reassuring.",
+          "section": "diagnosis"
+        },
+        {
+          "id": "S2",
+          "text": "Continue atorvastatin 20 mg nightly.",
+          "section": "medications"
+        },
+        {
+          "id": "S3",
+          "text": "Follow-up: follow up with your surgeon in 2 weeks.",
+          "section": "follow_up"
+        },
+        {
+          "id": "S4",
+          "text": "Seek care for fever above 38 C or worsening redness.",
+          "section": "warning_sign"
+        }
+      ],
+      "claim": "Seek care for fever above 38 C or worsening redness.",
+      "claim_source_ids": [
+        "S4"
+      ],
+      "linked_source_id": "S4",
+      "challenge_family": "clean_control",
+      "author_expected_labels": [],
+      "author_expected_error": false,
+      "control_type": "exact source-supported claim",
+      "expected_result": "passed"
+    }
+  ]
+}

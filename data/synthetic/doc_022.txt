@@ -1,0 +1,12 @@
+Diagnosis:
+The discharge team recorded a synthetic condition for scenario 22.
+Medications:
+See the written medication list for instructions about ondansetron.
+Follow-up:
+A follow-up appointment is scheduled for 3 days from discharge.
+Restrictions:
+Use the mobility aid as described in the discharge paperwork.
+Warning signs:
+Use the contact instructions in the discharge paperwork if symptoms worsen.
+Pending tests:
+A culture result is pending review.

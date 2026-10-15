@@ -1,0 +1,55 @@
+# Supplemental name-matching subset for the lexical unsupported-name check.
+# This is not a drug directory, clinical reference, or dosing source.
+source: "Manually maintained common generic-name subset; see high_alert.yaml for the separate high-alert subset"
+scope: "Limited English generic names and common ingredient aliases; brands, salts, combination products, and misspellings are incomplete"
+medications:
+  - generic: acetaminophen
+    aliases: [acetaminophen, paracetamol]
+  - generic: amoxicillin
+    aliases: [amoxicillin]
+  - generic: azithromycin
+    aliases: [azithromycin]
+  - generic: ibuprofen
+    aliases: [ibuprofen]
+  - generic: aspirin
+    aliases: [aspirin, acetylsalicylic acid]
+  - generic: atorvastatin
+    aliases: [atorvastatin]
+  - generic: lisinopril
+    aliases: [lisinopril]
+  - generic: amlodipine
+    aliases: [amlodipine]
+  - generic: metformin
+    aliases: [metformin]
+  - generic: omeprazole
+    aliases: [omeprazole]
+  - generic: pantoprazole
+    aliases: [pantoprazole]
+  - generic: levothyroxine
+    aliases: [levothyroxine]
+  - generic: albuterol
+    aliases: [albuterol, salbutamol]
+  - generic: losartan
+    aliases: [losartan]
+  - generic: furosemide
+    aliases: [furosemide, frusemide]
+  - generic: prednisone
+    aliases: [prednisone, prednisolone]
+  - generic: ondansetron
+    aliases: [ondansetron]
+  - generic: cephalexin
+    aliases: [cephalexin]
+  - generic: doxycycline
+    aliases: [doxycycline]
+  - generic: sertraline
+    aliases: [sertraline]
+  - generic: naproxen
+    aliases: [naproxen]
+  - generic: clopidogrel
+    aliases: [clopidogrel]
+  - generic: hydrochlorothiazide
+    aliases: [hydrochlorothiazide]
+  - generic: fluoxetine
+    aliases: [fluoxetine]
+  - generic: gabapentin
+    aliases: [gabapentin]

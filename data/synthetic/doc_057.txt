@@ -1,0 +1,4 @@
+Fictional software trap scenario 57 contains inconsistent schedule wording.
+Medication instructions:
+The fictional medication instructions say to take insulin once daily.
+Another line in the fictional instructions says to take insulin twice daily.

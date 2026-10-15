@@ -1,0 +1,55 @@
+{
+  "document_id": "doc_034",
+  "synthetic": true,
+  "set": "clean",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "A diagnosis was entered for synthetic scenario 34 before discharge.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "The medication plan for metformin is listed in the discharge paperwork.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "Your follow-up appointment should take place in 14 days.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "Avoid the activity listed in the discharge instructions until review.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "Use the contact instructions in the discharge paperwork if symptoms worsen.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "A culture result is pending review.",
+      "source_ids": [
+        "S6"
+      ]
+    }
+  ]
+}

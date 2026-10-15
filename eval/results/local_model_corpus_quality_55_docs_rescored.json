@@ -1,0 +1,2593 @@
+{
+  "run_at_utc": "2026-10-13T14:31:40.485135+00:00",
+  "synthetic_only": true,
+  "model_id": "qwen3:1.7b",
+  "includes_distinct_corpus_facts": true,
+  "distinct_corpus_fact_count": 183,
+  "case_count": 195,
+  "cases_with_deterministic_flags": 8,
+  "cases_with_expected_human_review": 18,
+  "scope_note": "Small synthetic generation audit; deterministic checks can miss semantic errors. This is not a clinical accuracy or safety evaluation.",
+  "cases": [
+    {
+      "id": "synthetic_01",
+      "kind": "diagnosis",
+      "source": "A synthetic diagnosis of seasonal influenza was recorded at discharge.",
+      "generated_claim": "A diagnosis of seasonal influenza was recorded at discharge.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_02",
+      "kind": "medication",
+      "source": "Take metformin 500 mg twice daily for 5 days.",
+      "generated_claim": "Take metformin 500 mg twice a day for 5 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_03",
+      "kind": "medication",
+      "source": "Do not take aspirin until your clinician reviews your medication list.",
+      "generated_claim": "Do not take aspirin until your doctor reviews your medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_04",
+      "kind": "appointment",
+      "source": "Attend the follow-up appointment in 7 days.",
+      "generated_claim": "Attend the follow-up appointment in 7 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_05",
+      "kind": "appointment",
+      "source": "Your appointment is scheduled for 10/20/2026.",
+      "generated_claim": "Your appointment is scheduled for October 20, 2026.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_06",
+      "kind": "restriction",
+      "source": "Do not lift objects heavier than 5 kg until your follow-up appointment.",
+      "generated_claim": "Do not lift objects heavier than 5 kilograms until your follow-up appointment.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_07",
+      "kind": "warning_sign",
+      "source": "Seek urgent help if you have difficulty breathing.",
+      "generated_claim": "Seek urgent help if you have difficulty breathing.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_08",
+      "kind": "pending_test",
+      "source": "The final laboratory report is pending.",
+      "generated_claim": "The final laboratory report is not yet available.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_09",
+      "kind": "medication",
+      "source": "Take acetaminophen 500 mg every 8 hours as needed.",
+      "generated_claim": "Take acetaminophen 500 mg every 8 hours as needed.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_10",
+      "kind": "medication",
+      "source": "Continue taking lisinopril 10 mg once daily until your next review.",
+      "generated_claim": "Take lisinopril 10 mg once a day as directed until your next review.",
+      "state": "needs_clinician",
+      "reason_codes": [
+        "instruction_polarity_mismatch"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {
+        "instruction_polarity": "failed"
+      },
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_11",
+      "kind": "appointment",
+      "source": "Call the clinic if you cannot attend your appointment in 3 days.",
+      "generated_claim": "Call the clinic if you cannot attend your appointment in 3 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_12",
+      "kind": "diagnosis",
+      "source": "Your clinician documented a synthetic diagnosis of dehydration.",
+      "generated_claim": "Your clinician wrote that you have dehydration.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_13",
+      "kind": "appointment",
+      "source": "A follow-up appointment is scheduled for 10 days from discharge.",
+      "generated_claim": "A follow-up appointment is scheduled for 10 days after you leave the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_14",
+      "kind": "appointment",
+      "source": "A follow-up appointment is scheduled for 12 days from discharge.",
+      "generated_claim": "A follow-up appointment is scheduled for 12 days after you leave the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_15",
+      "kind": "appointment",
+      "source": "A follow-up appointment is scheduled for 14 days from discharge.",
+      "generated_claim": "A follow-up appointment is scheduled for 14 days after you leave the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_16",
+      "kind": "appointment",
+      "source": "A follow-up appointment is scheduled for 21 days from discharge.",
+      "generated_claim": "A follow-up appointment is scheduled for 21 days after you leave the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_17",
+      "kind": "appointment",
+      "source": "A follow-up appointment is scheduled for 3 days from discharge.",
+      "generated_claim": "A follow-up appointment is scheduled for 3 days after you leave the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_18",
+      "kind": "appointment",
+      "source": "A follow-up appointment is scheduled for 5 days from discharge.",
+      "generated_claim": "A follow-up appointment is scheduled for 5 days after you leave the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_19",
+      "kind": "appointment",
+      "source": "A follow-up appointment is scheduled for 7 days from discharge.",
+      "generated_claim": "A follow-up appointment is scheduled for 7 days after you leave the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_20",
+      "kind": "appointment",
+      "source": "A follow-up appointment is scheduled in 7 days.",
+      "generated_claim": "A follow-up appointment is scheduled in 7 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_21",
+      "kind": "appointment",
+      "source": "A follow-up appointment is set for 7 days after discharge.",
+      "generated_claim": "A follow-up appointment is scheduled for 7 days after you leave the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_22",
+      "kind": "appointment",
+      "source": "Arrange the listed follow-up visit within 10 days.",
+      "generated_claim": "Arrange the listed follow-up visit within 10 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_23",
+      "kind": "appointment",
+      "source": "Arrange the listed follow-up visit within 12 days.",
+      "generated_claim": "Arrange the listed follow-up visit within 12 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_24",
+      "kind": "appointment",
+      "source": "Arrange the listed follow-up visit within 14 days.",
+      "generated_claim": "Arrange the listed follow-up visit within 14 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_25",
+      "kind": "appointment",
+      "source": "Arrange the listed follow-up visit within 21 days.",
+      "generated_claim": "Arrange the listed follow-up visit within 21 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_26",
+      "kind": "appointment",
+      "source": "Arrange the listed follow-up visit within 3 days.",
+      "generated_claim": "Arrange the listed follow-up visit within 3 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_27",
+      "kind": "appointment",
+      "source": "Arrange the listed follow-up visit within 5 days.",
+      "generated_claim": "Arrange the listed follow-up visit within 5 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_28",
+      "kind": "appointment",
+      "source": "Arrange the listed follow-up visit within 7 days.",
+      "generated_claim": "Arrange the listed follow-up visit within 7 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_29",
+      "kind": "appointment",
+      "source": "Attend the clinic appointment in 5 days.",
+      "generated_claim": "Attend the clinic appointment in 5 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_30",
+      "kind": "appointment",
+      "source": "Attend the follow-up appointment in 10 days.",
+      "generated_claim": "Attend the follow-up appointment in 10 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_31",
+      "kind": "appointment",
+      "source": "Attend the follow-up appointment in 12 days.",
+      "generated_claim": "Attend the follow-up appointment in 12 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_32",
+      "kind": "appointment",
+      "source": "Attend the follow-up appointment in 14 days.",
+      "generated_claim": "Attend the follow-up appointment in 14 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_33",
+      "kind": "appointment",
+      "source": "Attend the follow-up appointment in 21 days.",
+      "generated_claim": "Attend the follow-up appointment in 21 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_34",
+      "kind": "appointment",
+      "source": "Attend the follow-up appointment in 3 days.",
+      "generated_claim": "Attend the follow-up appointment in 3 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_35",
+      "kind": "appointment",
+      "source": "Attend the follow-up appointment in 5 days.",
+      "generated_claim": "Attend the follow-up appointment in 5 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_36",
+      "kind": "appointment",
+      "source": "Attend the follow-up appointment in 7 days.",
+      "generated_claim": "Attend the follow-up appointment in 7 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_37",
+      "kind": "appointment",
+      "source": "Attend the fracture clinic appointment in 10 days.",
+      "generated_claim": "Attend the fracture clinic appointment in 10 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_38",
+      "kind": "appointment",
+      "source": "Attend your follow-up appointment in 14 days.",
+      "generated_claim": "Attend your follow-up appointment in 14 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_39",
+      "kind": "appointment",
+      "source": "Attend your follow-up appointment in 3 days.",
+      "generated_claim": "Attend your follow-up appointment in 3 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_40",
+      "kind": "appointment",
+      "source": "Please attend a follow-up visit in 10 days.",
+      "generated_claim": "Please attend a follow-up visit in 10 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_41",
+      "kind": "appointment",
+      "source": "Please attend a follow-up visit in 12 days.",
+      "generated_claim": "Please return for a follow-up visit in 12 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_42",
+      "kind": "appointment",
+      "source": "Please attend a follow-up visit in 14 days.",
+      "generated_claim": "Please return for a follow-up visit in 14 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_43",
+      "kind": "appointment",
+      "source": "Please attend a follow-up visit in 21 days.",
+      "generated_claim": "Please attend a follow-up visit in 21 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_44",
+      "kind": "appointment",
+      "source": "Please attend a follow-up visit in 3 days.",
+      "generated_claim": "Please attend a follow-up visit in 3 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_45",
+      "kind": "appointment",
+      "source": "Please attend a follow-up visit in 5 days.",
+      "generated_claim": "Please attend a follow-up visit in 5 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_46",
+      "kind": "appointment",
+      "source": "Please attend a follow-up visit in 7 days.",
+      "generated_claim": "Please attend a follow-up visit in 7 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_47",
+      "kind": "appointment",
+      "source": "Please attend the follow-up visit scheduled for 7 days after discharge.",
+      "generated_claim": "Please attend the follow-up visit 7 days after you are discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_48",
+      "kind": "appointment",
+      "source": "The follow-up appointment is due 7 days after leaving the hospital.",
+      "generated_claim": "The follow-up appointment is scheduled 7 days after you leave the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_49",
+      "kind": "appointment",
+      "source": "The next appointment is arranged for 7 days from discharge.",
+      "generated_claim": "The next appointment is scheduled for 7 days after you are released from the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_50",
+      "kind": "appointment",
+      "source": "Your follow-up appointment should take place in 10 days.",
+      "generated_claim": "Your follow-up appointment should take place in 10 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_51",
+      "kind": "appointment",
+      "source": "Your follow-up appointment should take place in 12 days.",
+      "generated_claim": "Your follow-up appointment should take place in 12 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_52",
+      "kind": "appointment",
+      "source": "Your follow-up appointment should take place in 14 days.",
+      "generated_claim": "Your follow-up appointment should take place in 14 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_53",
+      "kind": "appointment",
+      "source": "Your follow-up appointment should take place in 21 days.",
+      "generated_claim": "Your follow-up appointment should take place in 21 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_54",
+      "kind": "appointment",
+      "source": "Your follow-up appointment should take place in 3 days.",
+      "generated_claim": "Your follow-up appointment should take place in 3 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_55",
+      "kind": "appointment",
+      "source": "Your follow-up appointment should take place in 5 days.",
+      "generated_claim": "Your follow-up appointment should take place in 5 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_56",
+      "kind": "appointment",
+      "source": "Your follow-up appointment should take place in 7 days.",
+      "generated_claim": "Your follow-up appointment should take place in 7 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_57",
+      "kind": "diagnosis",
+      "source": "A diagnosis was entered for synthetic scenario 09 before discharge.",
+      "generated_claim": "A diagnosis was recorded for the synthetic scenario 09 before the patient was discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_58",
+      "kind": "diagnosis",
+      "source": "A diagnosis was entered for synthetic scenario 14 before discharge.",
+      "generated_claim": "A diagnosis was recorded for synthetic scenario 14 before the patient was discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_59",
+      "kind": "diagnosis",
+      "source": "A diagnosis was entered for synthetic scenario 19 before discharge.",
+      "generated_claim": "A diagnosis was recorded for synthetic scenario 19 before the patient was discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_60",
+      "kind": "diagnosis",
+      "source": "A diagnosis was entered for synthetic scenario 24 before discharge.",
+      "generated_claim": "A diagnosis was recorded for synthetic scenario 24 before the patient was discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_61",
+      "kind": "diagnosis",
+      "source": "A diagnosis was entered for synthetic scenario 29 before discharge.",
+      "generated_claim": "A diagnosis was recorded for synthetic scenario 29 before the patient was discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_62",
+      "kind": "diagnosis",
+      "source": "A diagnosis was entered for synthetic scenario 34 before discharge.",
+      "generated_claim": "A diagnosis was recorded for synthetic scenario 34 before the patient was discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_63",
+      "kind": "diagnosis",
+      "source": "A diagnosis was entered for synthetic scenario 39 before discharge.",
+      "generated_claim": "A diagnosis was recorded for synthetic scenario 39 before the patient was discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_64",
+      "kind": "diagnosis",
+      "source": "A diagnosis was entered for synthetic scenario 44 before discharge.",
+      "generated_claim": "A diagnosis was recorded for synthetic scenario 44 before the patient was discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_65",
+      "kind": "diagnosis",
+      "source": "A diagnosis was entered for synthetic scenario 49 before discharge.",
+      "generated_claim": "A diagnosis was recorded for synthetic scenario 49 before the patient was discharged.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_66",
+      "kind": "diagnosis",
+      "source": "A synthetic condition from scenario 06 was documented during this hospital stay.",
+      "generated_claim": "A condition that is not naturally occurring was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_67",
+      "kind": "diagnosis",
+      "source": "A synthetic condition from scenario 11 was documented during this hospital stay.",
+      "generated_claim": "A condition that is not naturally occurring was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_68",
+      "kind": "diagnosis",
+      "source": "A synthetic condition from scenario 16 was documented during this hospital stay.",
+      "generated_claim": "A condition that is not naturally occurring was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_69",
+      "kind": "diagnosis",
+      "source": "A synthetic condition from scenario 21 was documented during this hospital stay.",
+      "generated_claim": "A condition that is not naturally occurring was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_70",
+      "kind": "diagnosis",
+      "source": "A synthetic condition from scenario 26 was documented during this hospital stay.",
+      "generated_claim": "A condition that is not naturally occurring was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_71",
+      "kind": "diagnosis",
+      "source": "A synthetic condition from scenario 31 was documented during this hospital stay.",
+      "generated_claim": "A condition that is not naturally occurring was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_72",
+      "kind": "diagnosis",
+      "source": "A synthetic condition from scenario 36 was documented during this hospital stay.",
+      "generated_claim": "A condition that is not naturally occurring was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_73",
+      "kind": "diagnosis",
+      "source": "A synthetic condition from scenario 41 was documented during this hospital stay.",
+      "generated_claim": "A condition that is not naturally occurring was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_74",
+      "kind": "diagnosis",
+      "source": "A synthetic condition from scenario 46 was documented during this hospital stay.",
+      "generated_claim": "A condition that is not naturally occurring was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_75",
+      "kind": "diagnosis",
+      "source": "A synthetic condition is listed in the discharge record for scenario 52.",
+      "generated_claim": "A synthetic condition has been recorded in the discharge notes for scenario 52.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_76",
+      "kind": "diagnosis",
+      "source": "A synthetic condition was documented for fictional scenario 55.",
+      "generated_claim": "A synthetic condition was documented for fictional scenario 55.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_77",
+      "kind": "diagnosis",
+      "source": "A synthetic skin infection was treated during this hospital stay.",
+      "generated_claim": "A skin infection was treated during the hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_78",
+      "kind": "diagnosis",
+      "source": "A synthetic wrist fracture was treated during this hospital stay.",
+      "generated_claim": "A broken wrist was treated in this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_79",
+      "kind": "diagnosis",
+      "source": "A urinary tract infection was recorded in this synthetic summary.",
+      "generated_claim": "A urinary tract infection was recorded in this synthetic summary.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_80",
+      "kind": "diagnosis",
+      "source": "An asthma exacerbation was recorded during this synthetic hospital stay.",
+      "generated_claim": "An asthma attack was recorded during this hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_81",
+      "kind": "diagnosis",
+      "source": "Discharge documentation notes a synthetic condition for scenario 53.",
+      "generated_claim": "Discharge documentation mentions that scenario 53 is classified as a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_82",
+      "kind": "diagnosis",
+      "source": "Pneumonia was diagnosed during this hospital stay.",
+      "generated_claim": "Pneumonia was diagnosed during the patient's hospital stay.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_83",
+      "kind": "diagnosis",
+      "source": "Scenario 08 includes a documented synthetic diagnosis.",
+      "generated_claim": "Scenario 08 includes a documented synthetic diagnosis.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_84",
+      "kind": "diagnosis",
+      "source": "Scenario 13 includes a documented synthetic diagnosis.",
+      "generated_claim": "Scenario 13 includes a documented synthetic diagnosis.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_85",
+      "kind": "diagnosis",
+      "source": "Scenario 18 includes a documented synthetic diagnosis.",
+      "generated_claim": "The fact indicates that Scenario 18 contains a documented synthetic diagnosis.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_86",
+      "kind": "diagnosis",
+      "source": "Scenario 23 includes a documented synthetic diagnosis.",
+      "generated_claim": "Scenario 23 includes a documented synthetic diagnosis.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_87",
+      "kind": "diagnosis",
+      "source": "Scenario 28 includes a documented synthetic diagnosis.",
+      "generated_claim": "Scenario 28 includes a documented synthetic diagnosis.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_88",
+      "kind": "diagnosis",
+      "source": "Scenario 33 includes a documented synthetic diagnosis.",
+      "generated_claim": "Scenario 33 includes a documented synthetic diagnosis.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_89",
+      "kind": "diagnosis",
+      "source": "Scenario 38 includes a documented synthetic diagnosis.",
+      "generated_claim": "Scenario 38 includes a documented synthetic diagnosis.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_90",
+      "kind": "diagnosis",
+      "source": "Scenario 43 includes a documented synthetic diagnosis.",
+      "generated_claim": "Scenario 43 includes a documented synthetic diagnosis.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_91",
+      "kind": "diagnosis",
+      "source": "Scenario 48 includes a documented synthetic diagnosis.",
+      "generated_claim": "Scenario 48 includes a documented synthetic diagnosis.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_92",
+      "kind": "diagnosis",
+      "source": "The discharge record notes a synthetic condition for scenario 51.",
+      "generated_claim": "The discharge record mentions that scenario 51 is classified as a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_93",
+      "kind": "diagnosis",
+      "source": "The discharge summary records a synthetic condition for scenario 54.",
+      "generated_claim": "The discharge summary notes that a synthetic condition is recorded for scenario 54.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_94",
+      "kind": "diagnosis",
+      "source": "The discharge team recorded a synthetic condition for scenario 07.",
+      "generated_claim": "The discharge team noted that a synthetic condition exists for scenario 07.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_95",
+      "kind": "diagnosis",
+      "source": "The discharge team recorded a synthetic condition for scenario 12.",
+      "generated_claim": "The discharge team noted that scenario 12 is considered a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_96",
+      "kind": "diagnosis",
+      "source": "The discharge team recorded a synthetic condition for scenario 17.",
+      "generated_claim": "The discharge team noted that scenario 17 is considered a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_97",
+      "kind": "diagnosis",
+      "source": "The discharge team recorded a synthetic condition for scenario 22.",
+      "generated_claim": "The discharge team noted that scenario 22 is considered a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_98",
+      "kind": "diagnosis",
+      "source": "The discharge team recorded a synthetic condition for scenario 27.",
+      "generated_claim": "The discharge team noted that scenario 27 is considered a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_99",
+      "kind": "diagnosis",
+      "source": "The discharge team recorded a synthetic condition for scenario 32.",
+      "generated_claim": "The discharge team noted that scenario 32 is considered a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_100",
+      "kind": "diagnosis",
+      "source": "The discharge team recorded a synthetic condition for scenario 37.",
+      "generated_claim": "The discharge team noted that scenario 37 is considered a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_101",
+      "kind": "diagnosis",
+      "source": "The discharge team recorded a synthetic condition for scenario 42.",
+      "generated_claim": "The discharge team noted that scenario 42 is considered a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_102",
+      "kind": "diagnosis",
+      "source": "The discharge team recorded a synthetic condition for scenario 47.",
+      "generated_claim": "The discharge team noted that scenario 47 is classified as a synthetic condition.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_103",
+      "kind": "diagnosis",
+      "source": "The synthetic discharge record lists a condition for scenario 10.",
+      "generated_claim": "The synthetic discharge record shows a condition that applies to scenario 10.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_104",
+      "kind": "diagnosis",
+      "source": "The synthetic discharge record lists a condition for scenario 15.",
+      "generated_claim": "The synthetic discharge record shows a condition that applies to scenario 15.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_105",
+      "kind": "diagnosis",
+      "source": "The synthetic discharge record lists a condition for scenario 20.",
+      "generated_claim": "The synthetic discharge record shows a condition that applies to scenario 20.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_106",
+      "kind": "diagnosis",
+      "source": "The synthetic discharge record lists a condition for scenario 25.",
+      "generated_claim": "The synthetic discharge record shows a condition that applies to scenario 25.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_107",
+      "kind": "diagnosis",
+      "source": "The synthetic discharge record lists a condition for scenario 30.",
+      "generated_claim": "The synthetic discharge record shows a condition that applies to scenario 30.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_108",
+      "kind": "diagnosis",
+      "source": "The synthetic discharge record lists a condition for scenario 35.",
+      "generated_claim": "The synthetic discharge record shows a condition that applies to scenario 35.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_109",
+      "kind": "diagnosis",
+      "source": "The synthetic discharge record lists a condition for scenario 40.",
+      "generated_claim": "The synthetic discharge record shows a condition that applies to scenario 40.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_110",
+      "kind": "diagnosis",
+      "source": "The synthetic discharge record lists a condition for scenario 45.",
+      "generated_claim": "The synthetic discharge record shows a condition that applies to scenario 45.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_111",
+      "kind": "diagnosis",
+      "source": "The synthetic discharge record lists a condition for scenario 50.",
+      "generated_claim": "The synthetic discharge record shows a condition that applies to scenario 50.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_112",
+      "kind": "medication",
+      "source": "Amlodipine appears on the fictional medication list with its instructions.",
+      "generated_claim": "Amlodipine is a fictional medication that appears on the medication list with its instructions.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_113",
+      "kind": "medication",
+      "source": "Amlodipine is named in the fictional medication record; use the instructions printed with that list.",
+      "generated_claim": "Amlodipine is a fictional medication name listed in the record; follow the instructions provided with that list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_114",
+      "kind": "medication",
+      "source": "Continue apixaban according to the written medication list.",
+      "generated_claim": "Continue taking apixaban as directed by the written medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_115",
+      "kind": "medication",
+      "source": "Continue glimepiride according to the written medication list.",
+      "generated_claim": "Continue glimepiride as directed by your medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_116",
+      "kind": "medication",
+      "source": "Continue potassium chloride according to the written medication list.",
+      "generated_claim": "Continue taking potassium chloride as directed by your medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_117",
+      "kind": "medication",
+      "source": "Continue taking amlodipine as written in the discharge medication instructions.",
+      "generated_claim": "Continue taking amlodipine as written in the discharge medication instructions.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_118",
+      "kind": "medication",
+      "source": "Continue taking heparin as written in the discharge medication instructions.",
+      "generated_claim": "Take the heparin as directed by your healthcare provider.",
+      "state": "needs_clinician",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "unsupported_attribution",
+        "instruction_polarity_mismatch"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {
+        "unsupported_details": "failed",
+        "instruction_polarity": "failed"
+      },
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_119",
+      "kind": "medication",
+      "source": "Continue taking methotrexate as written in the discharge medication instructions.",
+      "generated_claim": "Take methotrexate as directed in the discharge instructions.",
+      "state": "needs_clinician",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "instruction_polarity_mismatch"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {
+        "instruction_polarity": "failed"
+      },
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_120",
+      "kind": "medication",
+      "source": "Continue taking warfarin as written in the discharge medication instructions.",
+      "generated_claim": "Take warfarin as directed by your healthcare provider.",
+      "state": "needs_clinician",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "unsupported_attribution",
+        "instruction_polarity_mismatch"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {
+        "unsupported_details": "failed",
+        "instruction_polarity": "failed"
+      },
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_121",
+      "kind": "medication",
+      "source": "Discontinue fentanyl as directed in the discharge paperwork.",
+      "generated_claim": "Stop taking fentanyl as instructed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_122",
+      "kind": "medication",
+      "source": "Discontinue insulin as directed in the discharge paperwork.",
+      "generated_claim": "Stop taking insulin as instructed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_123",
+      "kind": "medication",
+      "source": "Discontinue morphine as directed in the discharge paperwork.",
+      "generated_claim": "Stop taking morphine as instructed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_124",
+      "kind": "medication",
+      "source": "Finish the prescribed antibiotic course as stated on the medication label.",
+      "generated_claim": "Finish the prescribed antibiotic course as stated on the medication label.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_125",
+      "kind": "medication",
+      "source": "Follow the discharge medication instructions for amlodipine.",
+      "generated_claim": "Follow the discharge medication instructions for amlodipine.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_126",
+      "kind": "medication",
+      "source": "Follow the discharge medication instructions for aspirin.",
+      "generated_claim": "Follow the discharge medication instructions for aspirin.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_127",
+      "kind": "medication",
+      "source": "Follow the discharge medication instructions for pantoprazole.",
+      "generated_claim": "Follow the discharge medication instructions for pantoprazole.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_128",
+      "kind": "medication",
+      "source": "Follow the discharge medication instructions for prednisone.",
+      "generated_claim": "Follow the discharge medication instructions for prednisone.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_129",
+      "kind": "medication",
+      "source": "Keep taking fentanyl as directed in the discharge paperwork.",
+      "generated_claim": "Take fentanyl as directed in the discharge paperwork.",
+      "state": "needs_clinician",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "instruction_polarity_mismatch"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {
+        "instruction_polarity": "failed"
+      },
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_130",
+      "kind": "medication",
+      "source": "Keep taking insulin as directed in the discharge paperwork.",
+      "generated_claim": "Take insulin as directed by your healthcare provider.",
+      "state": "needs_clinician",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "unsupported_attribution",
+        "instruction_polarity_mismatch"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {
+        "unsupported_details": "failed",
+        "instruction_polarity": "failed"
+      },
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_131",
+      "kind": "medication",
+      "source": "Keep taking morphine as directed in the discharge paperwork.",
+      "generated_claim": "Take morphine as directed by your healthcare provider whenever you need it.",
+      "state": "needs_clinician",
+      "reason_codes": [
+        "medication_frequency_mismatch",
+        "high_alert_medication_review",
+        "unsupported_attribution",
+        "instruction_polarity_mismatch"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {
+        "unsupported_details": "failed",
+        "instruction_polarity": "failed",
+        "risk_rules": "failed"
+      },
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_132",
+      "kind": "medication",
+      "source": "Refer to the discharge medication list for how to take furosemide.",
+      "generated_claim": "Refer to the discharge medication list for instructions on how to take furosemide.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_133",
+      "kind": "medication",
+      "source": "Refer to the discharge medication list for how to take ibuprofen.",
+      "generated_claim": "Follow the instructions on the discharge medication list to take ibuprofen.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_134",
+      "kind": "medication",
+      "source": "Refer to the discharge medication list for how to take omeprazole.",
+      "generated_claim": "Follow the instructions on the discharge medication list for taking omeprazole.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_135",
+      "kind": "medication",
+      "source": "Refer to the discharge medication list for how to take sertraline.",
+      "generated_claim": "Follow the instructions on the discharge medication list for taking sertraline.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_136",
+      "kind": "medication",
+      "source": "Refer to the medication list in your discharge paperwork.",
+      "generated_claim": "Refer to the medication list in your discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_137",
+      "kind": "medication",
+      "source": "See the written medication list for instructions about acetaminophen.",
+      "generated_claim": "See the written medication list for instructions about acetaminophen.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_138",
+      "kind": "medication",
+      "source": "See the written medication list for instructions about atorvastatin.",
+      "generated_claim": "See the written medication list for instructions about atorvastatin.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_139",
+      "kind": "medication",
+      "source": "See the written medication list for instructions about levothyroxine.",
+      "generated_claim": "See the written medication list for instructions about levothyroxine.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_140",
+      "kind": "medication",
+      "source": "See the written medication list for instructions about ondansetron.",
+      "generated_claim": "See the written medication list for instructions about ondansetron.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_141",
+      "kind": "medication",
+      "source": "Stop apixaban according to the written medication list.",
+      "generated_claim": "Stop taking apixaban according to the written medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_142",
+      "kind": "medication",
+      "source": "Stop glimepiride according to the written medication list.",
+      "generated_claim": "Stop taking glimepiride as directed by your medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_143",
+      "kind": "medication",
+      "source": "Stop potassium chloride according to the written medication list.",
+      "generated_claim": "Stop taking potassium chloride as directed by your medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_144",
+      "kind": "medication",
+      "source": "Stop taking amlodipine as written in the discharge medication instructions.",
+      "generated_claim": "Stop taking amlodipine as directed in the discharge medication instructions.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_145",
+      "kind": "medication",
+      "source": "Stop taking heparin as written in the discharge medication instructions.",
+      "generated_claim": "Stop taking heparin as prescribed in your discharge medication instructions.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_146",
+      "kind": "medication",
+      "source": "Stop taking methotrexate as written in the discharge medication instructions.",
+      "generated_claim": "Stop taking methotrexate as directed in your discharge medication instructions.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_147",
+      "kind": "medication",
+      "source": "Stop taking warfarin as written in the discharge medication instructions.",
+      "generated_claim": "Stop taking warfarin as prescribed in your discharge medication instructions.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "high_alert_medication_review",
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": true,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_148",
+      "kind": "medication",
+      "source": "Take the medicines as listed in the clinician-provided medication list.",
+      "generated_claim": "Take the medicines as listed in the clinician-provided medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_149",
+      "kind": "medication",
+      "source": "Take the prescribed pain medicine only as listed in the discharge medication list.",
+      "generated_claim": "Take the prescribed pain medicine only as listed in the discharge medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_150",
+      "kind": "medication",
+      "source": "The fictional medication list includes amlodipine and says to follow the instructions printed there.",
+      "generated_claim": "The medication list includes amlodipine, and you should follow the instructions that are printed on the list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_151",
+      "kind": "medication",
+      "source": "The fictional medication list names amlodipine and directs the reader to its printed instructions.",
+      "generated_claim": "The medication list includes amlodipine and tells the reader to follow the instructions that come with the medication.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_152",
+      "kind": "medication",
+      "source": "The medication plan for azithromycin is listed in the discharge paperwork.",
+      "generated_claim": "The medication plan for azithromycin is listed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_153",
+      "kind": "medication",
+      "source": "The medication plan for doxycycline is listed in the discharge paperwork.",
+      "generated_claim": "The medication plan for doxycycline is listed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_154",
+      "kind": "medication",
+      "source": "The medication plan for losartan is listed in the discharge paperwork.",
+      "generated_claim": "The medication plan for losartan is listed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_155",
+      "kind": "medication",
+      "source": "The medication plan for metformin is listed in the discharge paperwork.",
+      "generated_claim": "The medication plan for metformin is listed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_156",
+      "kind": "medication",
+      "source": "The printed fictional medication instructions include amlodipine.",
+      "generated_claim": "The printed fictional medication instructions include amlodipine.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_157",
+      "kind": "medication",
+      "source": "Use the discharge paperwork for the instructions on albuterol.",
+      "generated_claim": "Use the discharge paperwork for the instructions on albuterol.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_158",
+      "kind": "medication",
+      "source": "Use the discharge paperwork for the instructions on amoxicillin.",
+      "generated_claim": "Use the discharge paperwork for the instructions on amoxicillin.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_159",
+      "kind": "medication",
+      "source": "Use the discharge paperwork for the instructions on cephalexin.",
+      "generated_claim": "Use the discharge paperwork for the instructions on cephalexin.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_160",
+      "kind": "medication",
+      "source": "Use the discharge paperwork for the instructions on lisinopril.",
+      "generated_claim": "Use the discharge paperwork for the instructions on lisinopril.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_161",
+      "kind": "medication",
+      "source": "Use your inhaler according to the instructions in your discharge medication list.",
+      "generated_claim": "Use your inhaler as directed by the instructions on your discharge medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_162",
+      "kind": "pending_test",
+      "source": "A culture result is pending review.",
+      "generated_claim": "A culture result is being reviewed now.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_163",
+      "kind": "pending_test",
+      "source": "A culture result is pending; the care team will contact you if the plan needs to change.",
+      "generated_claim": "A culture result is waiting to be done; the care team will call you if something needs to change.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_164",
+      "kind": "pending_test",
+      "source": "A follow-up test result is pending.",
+      "generated_claim": "A follow-up test result is waiting to be received.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_165",
+      "kind": "pending_test",
+      "source": "Ask your care team whether the pending test listed in this synthetic summary has been completed.",
+      "generated_claim": "Ask your care team if the pending test listed in this synthetic summary has been completed.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_166",
+      "kind": "pending_test",
+      "source": "Final laboratory results remain pending.",
+      "generated_claim": "The lab results are still waiting to be finished.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_167",
+      "kind": "pending_test",
+      "source": "The final imaging report is pending.",
+      "generated_claim": "The final imaging report is not yet ready.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_168",
+      "kind": "pending_test",
+      "source": "The final imaging report is still pending.",
+      "generated_claim": "The final imaging report is still not yet finished.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_169",
+      "kind": "pending_test",
+      "source": "The final laboratory report has not yet been completed.",
+      "generated_claim": "The lab test results are still being processed and have not been finished yet.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_170",
+      "kind": "pending_test",
+      "source": "The final laboratory report is not yet available.",
+      "generated_claim": "The final lab test results are not yet available.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_171",
+      "kind": "pending_test",
+      "source": "The final laboratory report is pending.",
+      "generated_claim": "The final laboratory report is not yet available.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_172",
+      "kind": "pending_test",
+      "source": "The final laboratory result has not yet returned.",
+      "generated_claim": "The final laboratory result has not yet been received.",
+      "state": "needs_clinician",
+      "reason_codes": [
+        "instruction_polarity_mismatch"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {
+        "instruction_polarity": "failed"
+      },
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_173",
+      "kind": "restriction",
+      "source": "A 5 kg lifting limit applies until the follow-up visit.",
+      "generated_claim": "A 5 kg limit applies until the follow-up visit.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_174",
+      "kind": "restriction",
+      "source": "Avoid the activity listed in the discharge instructions until review.",
+      "generated_claim": "Avoid the activity mentioned in the discharge instructions until you review it.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_175",
+      "kind": "restriction",
+      "source": "Before the follow-up, do not lift anything heavier than 5 kg.",
+      "generated_claim": "Before the follow-up, do not lift anything heavier than 5 kilograms.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_176",
+      "kind": "restriction",
+      "source": "Do not lift any object heavier than 5 kg before the follow-up.",
+      "generated_claim": "Do not lift anything heavier than 5 kilograms until your follow-up appointment.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_177",
+      "kind": "restriction",
+      "source": "Do not lift objects heavier than 5 kg until the follow-up visit.",
+      "generated_claim": "Do not lift objects heavier than 5 kilograms until your follow-up visit.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_178",
+      "kind": "restriction",
+      "source": "Follow the written activity restrictions in the discharge paperwork.",
+      "generated_claim": "Follow the activity restrictions listed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_179",
+      "kind": "restriction",
+      "source": "Follow the written lifting restriction until the follow-up visit.",
+      "generated_claim": "Follow the written lifting restriction until the follow-up visit.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_180",
+      "kind": "restriction",
+      "source": "Keep lifting below 5 kg through the follow-up visit.",
+      "generated_claim": "Keep the weight you lift below 5 kilograms during the follow-up visit.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_181",
+      "kind": "restriction",
+      "source": "Keep the affected area clean and covered as instructed in the discharge paperwork.",
+      "generated_claim": "Keep the affected area clean and covered as instructed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_182",
+      "kind": "restriction",
+      "source": "Keep the support wrap in place until the scheduled review.",
+      "generated_claim": "Keep the support wrap on until the scheduled review.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_183",
+      "kind": "restriction",
+      "source": "Keep the wrist splint in place until the follow-up visit.",
+      "generated_claim": "Keep the wrist splint on until your follow-up visit.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_184",
+      "kind": "restriction",
+      "source": "Use the mobility aid as described in the discharge paperwork.",
+      "generated_claim": "Use the mobility aid as instructed in the discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_185",
+      "kind": "warning_sign",
+      "source": "Contact the care team if a new concern described in the paperwork occurs.",
+      "generated_claim": "If you have a new concern mentioned in your medical paperwork, talk to your healthcare team.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_186",
+      "kind": "warning_sign",
+      "source": "Contact the care team if the warning signs listed in the discharge paperwork occur.",
+      "generated_claim": "If any of the warning signs listed in your discharge paperwork happen, contact your care team.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_187",
+      "kind": "warning_sign",
+      "source": "Contact your care team if the warning signs described in your discharge paperwork occur.",
+      "generated_claim": "Contact your care team if the warning signs described in your discharge paperwork occur.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_188",
+      "kind": "warning_sign",
+      "source": "Contact your care team if the warning signs listed in your discharge paperwork occur.",
+      "generated_claim": "Contact your care team if the warning signs listed in your discharge paperwork occur.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_189",
+      "kind": "warning_sign",
+      "source": "Difficulty breathing is a reason to seek urgent help.",
+      "generated_claim": "Difficulty breathing is a reason to seek urgent help.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_190",
+      "kind": "warning_sign",
+      "source": "Follow the written urgent-contact instructions if the listed warning signs occur.",
+      "generated_claim": "Follow the urgent-contact instructions if the listed warning signs occur.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_191",
+      "kind": "warning_sign",
+      "source": "Get urgent help if breathing becomes difficult.",
+      "generated_claim": "Get urgent help if you have trouble breathing.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_192",
+      "kind": "warning_sign",
+      "source": "If breathing difficulty develops, seek urgent medical help.",
+      "generated_claim": "If you experience difficulty breathing, seek immediate medical help.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_193",
+      "kind": "warning_sign",
+      "source": "Seek urgent assistance for difficulty breathing.",
+      "generated_claim": "Seek urgent assistance if you have difficulty breathing.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_194",
+      "kind": "warning_sign",
+      "source": "Seek urgent help if difficulty breathing occurs.",
+      "generated_claim": "Seek urgent help if you have difficulty breathing.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_195",
+      "kind": "warning_sign",
+      "source": "Use the contact instructions in the discharge paperwork if symptoms worsen.",
+      "generated_claim": "If your symptoms get worse, follow the contact instructions listed in your discharge paperwork.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    }
+  ],
+  "rescore_at_utc": "2026-10-13T14:31:54.865657+00:00"
+}

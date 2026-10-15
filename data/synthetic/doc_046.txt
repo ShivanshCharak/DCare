@@ -1,0 +1,13 @@
+Diagnosis:
+A synthetic condition from scenario 46 was documented during this hospital stay.
+Medications:
+Continue glimepiride according to the written medication list.
+Stop glimepiride according to the written medication list.
+Follow-up:
+Attend the follow-up appointment in 10 days.
+Restrictions:
+Follow the written activity restrictions in the discharge paperwork.
+Warning signs:
+Use the contact instructions in the discharge paperwork if symptoms worsen.
+Pending tests:
+A culture result is pending review.

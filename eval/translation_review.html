@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hindi Translation Review</title>
+  <style>
+    :root { color-scheme: light; --ink:#17212b; --muted:#526272; --line:#d5dee6; --panel:#fff; --bg:#f3f6f8; --blue:#155eef; --red:#a12b23; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui,-apple-system,"Noto Sans Devanagari",sans-serif; }
+    main { max-width:1040px; margin:0 auto; padding:24px 18px 48px; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { font-size:1.7rem; margin-bottom:8px; }
+    h2 { font-size:1.2rem; margin-bottom:12px; }
+    .subtle { color:var(--muted); }
+    .warning { border-left:4px solid #c77700; background:#fff7e6; padding:12px 14px; margin:16px 0; }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; margin:16px 0; box-shadow:0 2px 8px #17212b0a; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    label { display:block; font-weight:600; }
+    input,select,textarea,button { font:inherit; }
+    input[type="text"],input[type="date"],input[type="file"],select,textarea { display:block; width:100%; margin-top:5px; border:1px solid #9aa9b7; border-radius:7px; padding:9px 10px; background:white; color:var(--ink); }
+    textarea { min-height:90px; resize:vertical; }
+    .case-text { border:1px solid var(--line); background:#f9fbfc; border-radius:8px; padding:14px; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .case-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin-bottom:5px; }
+    .rating-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .choices { display:flex; flex-wrap:wrap; gap:12px; padding-top:8px; }
+    .choices label { font-weight:400; }
+    .actions { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:16px; }
+    button { border:0; border-radius:8px; padding:10px 15px; font-weight:650; cursor:pointer; background:var(--blue); color:white; }
+    button.secondary { background:#e7edf3; color:var(--ink); }
+    button:disabled { opacity:.45; cursor:not-allowed; }
+    .status { min-height:24px; color:var(--muted); }
+    .status.error { color:var(--red); }
+    .progress { height:8px; border-radius:8px; overflow:hidden; background:#e3e9ee; margin:8px 0 15px; }
+    .progress > span { display:block; height:100%; background:#15803d; width:0; }
+    .small { font-size:.9rem; }
+    .hidden { display:none; }
+    @media (max-width:700px) { .grid,.rating-grid { grid-template-columns:1fr; } main { padding:18px 12px 36px; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Hindi translation review</h1>
+  <p class="subtle">Offline review form for the exact outputs in <code>translation_audit.json</code>. It sends no text anywhere; ratings remain in this browser until exported.</p>
+  <div class="warning"><strong>Reviewer guidance:</strong> Compare each Hindi output with its English source. Judge meaning and clinically important details, including dose, frequency, timing, negation, follow-up, and warning signs. Do not infer missing instructions. This synthetic audit is not a clinical-use approval.</div>
+
+  <section class="panel">
+    <h2>1. Load the audit and reviewer details</h2>
+    <label>Audit JSON file<input id="auditFile" type="file" accept="application/json,.json"></label>
+    <div class="grid" style="margin-top:14px">
+      <label>Reviewer name or ID<input id="reviewerId" type="text" autocomplete="name"></label>
+      <label>Qualification (for example, Hindi-English bilingual clinician)<input id="qualification" type="text"></label>
+      <label>Review date<input id="reviewDate" type="date"></label>
+      <label>Case<select id="caseSelect" disabled></select></label>
+    </div>
+    <p id="auditInfo" class="subtle small" style="margin:12px 0 0">Choose the audit JSON created by <code>eval/evaluate_translation.py</code>.</p>
+  </section>
+
+  <div id="reviewArea" class="hidden">
+    <div class="panel">
+      <div class="actions" style="justify-content:space-between;margin-top:0">
+        <div><strong id="caseHeading"></strong><div id="caseMeta" class="subtle small"></div></div>
+        <div id="progressText" class="subtle small"></div>
+      </div>
+      <div class="progress"><span id="progressBar"></span></div>
+      <div class="grid">
+        <div><div class="case-label">English source</div><div id="source" class="case-text"></div></div>
+        <div><div class="case-label">Machine-generated Hindi output</div><div id="output" class="case-text" lang="hi"></div></div>
+      </div>
+      <p id="tokenInfo" class="subtle small" style="margin:12px 0 0"></p>
+    </div>
+
+    <section class="panel">
+      <h2>2. Rate this translation</h2>
+      <div class="rating-grid">
+        <label>Semantic fidelity (1 = inaccurate, 5 = faithful)
+          <select data-field="semantic_fidelity_1_5"><option value="">Choose 1–5</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+        </label>
+        <label>Critical details preserved?
+          <select data-field="critical_details_preserved_yes_no"><option value="">Choose</option><option>yes</option><option>no</option></select>
+        </label>
+        <label>Important detail omitted?
+          <select data-field="omissions_yes_no"><option value="">Choose</option><option>no</option><option>yes</option></select>
+        </label>
+        <label>Unsupported detail added?
+          <select data-field="additions_yes_no"><option value="">Choose</option><option>no</option><option>yes</option></select>
+        </label>
+        <label>Readability (1 = hard to understand, 5 = clear)
+          <select data-field="readability_1_5"><option value="">Choose 1–5</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+        </label>
+        <label>Naturalness (1 = unnatural, 5 = natural)
+          <select data-field="naturalness_1_5"><option value="">Choose 1–5</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+        </label>
+      </div>
+      <div style="margin-top:14px">
+        <label>Reviewer decision
+          <select data-field="review_decision"><option value="">Choose</option><option value="acceptable">Acceptable translation for this case</option><option value="revise">Revise before use</option><option value="reject">Unacceptable translation</option></select>
+        </label>
+      </div>
+      <div style="margin-top:14px">
+        <label>Error categories, if any (for example: dose, negation, omission, added meaning, terminology)<input data-field="error_categories" type="text"></label>
+      </div>
+      <div style="margin-top:14px">
+        <label>Suggested corrected Hindi translation (optional)<textarea data-field="reviewer_corrected_translation" lang="hi"></textarea></label>
+      </div>
+      <div style="margin-top:14px">
+        <label>Reviewer notes<textarea data-field="review_notes"></textarea></label>
+      </div>
+      <div class="actions">
+        <button id="prev" class="secondary" type="button">Previous</button>
+        <button id="save" type="button">Save this rating</button>
+        <button id="next" class="secondary" type="button">Next</button>
+        <span id="caseStatus" class="status" role="status"></span>
+      </div>
+    </section>
+    <section class="panel">
+      <h2>3. Export ratings</h2>
+      <p class="subtle small">Complete all six cases and reviewer details to export. The CSV can be summarized with <code>eval/evaluate_translation.py --summarize-reviews</code>. An “acceptable” rating applies to this reviewed sample only; it does not certify the system for clinical use.</p>
+      <div class="actions"><button id="export" type="button">Download completed ratings CSV</button><span id="exportStatus" class="status" role="status"></span></div>
+    </section>
+  </div>
+</main>
+<script>
+(() => {
+  const fields = ["semantic_fidelity_1_5","critical_details_preserved_yes_no","omissions_yes_no","additions_yes_no","readability_1_5","naturalness_1_5","review_decision","error_categories","reviewer_corrected_translation","reviewer_id","reviewer_qualification","reviewed_at","review_notes"];
+  const required = ["semantic_fidelity_1_5","critical_details_preserved_yes_no","omissions_yes_no","additions_yes_no","readability_1_5","naturalness_1_5","review_decision","reviewer_id","reviewer_qualification","reviewed_at"];
+  const $ = id => document.getElementById(id);
+  const formFields = [...document.querySelectorAll("[data-field]")];
+  let audit = null, cases = [], index = 0, reviews = {}, storageKey = "";
+  const today = new Date();
+  $("reviewDate").value = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,"0")}-${String(today.getDate()).padStart(2,"0")}`;
+  const csvCell = value => `"${String(value ?? "").replaceAll('"','""')}"`;
+  const completed = row => required.every(key => String(row?.[key] ?? "").trim()) && ["acceptable","revise","reject"].includes(row.review_decision) && (row.review_decision === "acceptable" || String(row.reviewer_corrected_translation || row.review_notes || "").trim());
+  const saveDraft = () => { if (storageKey) localStorage.setItem(storageKey, JSON.stringify(reviews)); };
+  const current = () => cases[index];
+  function setForm(row) { for (const el of formFields) el.value = row?.[el.dataset.field] ?? ""; }
+  function refreshProgress() {
+    const count = cases.filter(c => completed(reviews[c.row_id])).length;
+    $("progressText").textContent = `${count} of ${cases.length} rated`;
+    $("progressBar").style.width = `${cases.length ? count / cases.length * 100 : 0}%`;
+    $("export").disabled = count !== cases.length || !$("reviewerId").value.trim() || !$("qualification").value.trim();
+    $("exportStatus").textContent = $("export").disabled ? "Complete every rating and reviewer detail before export." : "All cases are ready to export.";
+  }
+  function showCase() {
+    const row = current(); if (!row) return;
+    $("caseSelect").value = String(index);
+    $("caseHeading").textContent = `${row.case_id} · ${index+1} / ${cases.length}`;
+    $("caseMeta").textContent = `${row.language.toUpperCase()} · ${row.category} · model ${audit.model_id} · ${audit.model_digest || "digest not recorded"}`;
+    $("source").textContent = row.source;
+    $("output").textContent = row.output || "[No translated output; mark as unacceptable and note translation failure.]";
+    $("tokenInfo").textContent = row.token_preservation_passed ? "Protected names/details: all preserved verbatim." : `Protected names/details: check failed${row.missing_tokens?.length ? `; missing: ${row.missing_tokens.join(", ")}` : ""}.`;
+    setForm(reviews[row.row_id]);
+    $("prev").disabled = index === 0; $("next").disabled = index === cases.length - 1;
+    $("caseStatus").textContent = completed(reviews[row.row_id]) ? "Rating saved." : "Not yet rated.";
+    refreshProgress();
+  }
+  function saveCurrent() {
+    const data = Object.fromEntries(formFields.map(el => [el.dataset.field, el.value.trim()]));
+    data.reviewer_id = $("reviewerId").value.trim();
+    data.reviewer_qualification = $("qualification").value.trim();
+    data.reviewed_at = $("reviewDate").value;
+    reviews[current().row_id] = data; saveDraft(); $("caseStatus").classList.remove("error");
+    $("caseStatus").textContent = completed(data) ? "Completed rating saved in this browser." : "Draft saved in this browser; finish required ratings before export.";
+    refreshProgress(); return true;
+  }
+  $("auditFile").addEventListener("change", async event => {
+    const file = event.target.files[0]; if (!file) return;
+    try {
+      audit = JSON.parse(await file.text());
+      if (!Array.isArray(audit.cases) || !audit.cases.length) throw new Error("Audit JSON has no cases.");
+      cases = audit.cases;
+      storageKey = `translation-review:${audit.model_digest || audit.model_id}:${audit.case_set_sha256 || cases.length}`;
+      reviews = JSON.parse(localStorage.getItem(storageKey) || "{}");
+      for (const row of cases) if (row.human_review && Object.keys(row.human_review).length && !reviews[row.row_id]) reviews[row.row_id] = row.human_review;
+      const saved = cases.map(row => reviews[row.row_id]).find(Boolean);
+      if (saved) {
+        if (!$("reviewerId").value) $("reviewerId").value = saved.reviewer_id || "";
+        if (!$("qualification").value) $("qualification").value = saved.reviewer_qualification || "";
+        $("reviewDate").value = saved.reviewed_at || $("reviewDate").value;
+      }
+      const select = $("caseSelect"); select.innerHTML = "";
+      cases.forEach((row,i) => { const opt=document.createElement("option"); opt.value=String(i); opt.textContent=`${row.case_id} — ${row.category}`; select.append(opt); });
+      select.disabled = false; $("reviewArea").classList.remove("hidden");
+      $("auditInfo").textContent = `${cases.length} cases loaded · ${audit.model_id} · audit run ${audit.run_at_utc || "date unavailable"}. Draft ratings are saved only in this browser.`;
+      showCase();
+    } catch (error) { $("auditInfo").textContent = `Could not load audit: ${error.message}`; }
+  });
+  $("caseSelect").addEventListener("change", () => { saveCurrent(); index=Number($("caseSelect").value); showCase(); });
+  $("prev").addEventListener("click", () => { if (saveCurrent() && index>0) { index--; showCase(); } });
+  $("next").addEventListener("click", () => { if (saveCurrent() && index<cases.length-1) { index++; showCase(); } });
+  $("save").addEventListener("click", saveCurrent);
+  for (const id of ["reviewerId","qualification","reviewDate"]) $(id).addEventListener("input", refreshProgress);
+  $("export").addEventListener("click", () => {
+    if (!saveCurrent()) return;
+    const header = ["row_id","case_id","language","category","source","output",...fields];
+    const lines = [header.map(csvCell).join(",")];
+    for (const row of cases) {
+      const rating = reviews[row.row_id];
+      lines.push([row.row_id,row.case_id,row.language,row.category,row.source,row.output,...fields.map(field => rating[field] || "")].map(csvCell).join(","));
+    }
+    const blob = new Blob(["\ufeff",lines.join("\r\n")],{type:"text/csv;charset=utf-8"});
+    const link = document.createElement("a"); link.href=URL.createObjectURL(blob); link.download="translation_adjudication.csv"; link.click(); URL.revokeObjectURL(link.href);
+    $("exportStatus").textContent = "Downloaded. Save it to eval/results/translation_adjudication.csv, then run the report command in eval/README.md.";
+  });
+})();
+</script>
+</body>
+</html>

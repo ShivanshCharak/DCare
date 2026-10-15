@@ -1,0 +1,11 @@
+{
+  "document_id": "doc_004",
+  "synthetic": true,
+  "facts": [
+    {"id": "F1", "kind": "diagnosis", "text_en": "A synthetic wrist fracture was treated during this hospital stay.", "source_ids": ["S1"]},
+    {"id": "F2", "kind": "medication", "text_en": "Take the prescribed pain medicine only as listed in the discharge medication list.", "source_ids": ["S2"]},
+    {"id": "F3", "kind": "restriction", "text_en": "Keep the wrist splint in place until the follow-up visit.", "source_ids": ["S3"]},
+    {"id": "F4", "kind": "appointment", "text_en": "Attend the fracture clinic appointment in 10 days.", "source_ids": ["S4"]},
+    {"id": "F5", "kind": "pending_test", "text_en": "The final imaging report is still pending.", "source_ids": ["S5"]}
+  ]
+}

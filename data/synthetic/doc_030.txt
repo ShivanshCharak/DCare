@@ -1,0 +1,12 @@
+Diagnosis:
+The synthetic discharge record lists a condition for scenario 30.
+Medications:
+Refer to the discharge medication list for how to take ibuprofen.
+Follow-up:
+Arrange the listed follow-up visit within 5 days.
+Restrictions:
+Follow the written lifting restriction until the follow-up visit.
+Warning signs:
+Use the contact instructions in the discharge paperwork if symptoms worsen.
+Pending tests:
+A culture result is pending review.

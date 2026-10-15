@@ -1,0 +1,55 @@
+{
+  "document_id": "doc_015",
+  "synthetic": true,
+  "set": "clean",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "The synthetic discharge record lists a condition for scenario 15.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Refer to the discharge medication list for how to take omeprazole.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "Arrange the listed follow-up visit within 3 days.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "Follow the written lifting restriction until the follow-up visit.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "Contact the care team if a new concern described in the paperwork occurs.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "The final imaging report is pending.",
+      "source_ids": [
+        "S6"
+      ]
+    }
+  ]
+}

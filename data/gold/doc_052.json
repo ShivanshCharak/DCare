@@ -1,0 +1,57 @@
+{
+  "document_id": "doc_052",
+  "synthetic": true,
+  "set": "clean",
+  "narrative_style": true,
+  "authoring": "curated synthetic facts",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "A synthetic condition is listed in the discharge record for scenario 52.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Amlodipine appears on the fictional medication list with its instructions.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "Please attend the follow-up visit scheduled for 7 days after discharge.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "Before the follow-up, do not lift anything heavier than 5 kg.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "Get urgent help if breathing becomes difficult.",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "The final laboratory report has not yet been completed.",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ]
+}

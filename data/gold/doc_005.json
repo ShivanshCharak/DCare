@@ -1,0 +1,11 @@
+{
+  "document_id": "doc_005",
+  "synthetic": true,
+  "facts": [
+    {"id": "F1", "kind": "diagnosis", "text_en": "A synthetic skin infection was treated during this hospital stay.", "source_ids": ["S1"]},
+    {"id": "F2", "kind": "medication", "text_en": "Finish the prescribed antibiotic course as stated on the medication label.", "source_ids": ["S2"]},
+    {"id": "F3", "kind": "restriction", "text_en": "Keep the affected area clean and covered as instructed in the discharge paperwork.", "source_ids": ["S3"]},
+    {"id": "F4", "kind": "appointment", "text_en": "Attend the clinic appointment in 5 days.", "source_ids": ["S4"]},
+    {"id": "F5", "kind": "pending_test", "text_en": "A culture result is pending; the care team will contact you if the plan needs to change.", "source_ids": ["S5"]}
+  ]
+}

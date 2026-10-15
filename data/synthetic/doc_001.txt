@@ -1,0 +1,8 @@
+Diagnosis:
+Pneumonia was diagnosed during this hospital stay.
+Medications:
+Take the medicines as listed in the clinician-provided medication list.
+Follow-up:
+Attend the follow-up appointment in 7 days.
+Warning signs:
+Contact your care team if the warning signs described in your discharge paperwork occur.

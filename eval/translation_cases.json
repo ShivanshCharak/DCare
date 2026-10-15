@@ -1,0 +1,8 @@
+[
+  {"id":"hi-med-01","language":"hi","category":"medication","source":"Take metformin 500 mg twice daily with food for 7 days."},
+  {"id":"hi-med-02","language":"hi","category":"medication","source":"Stop taking ibuprofen today. Do not restart it unless your doctor tells you to."},
+  {"id":"hi-med-03","language":"hi","category":"medication","source":"Use the inhaler only when you feel short of breath; do not use more than 4 times in one day."},
+  {"id":"hi-follow-01","language":"hi","category":"follow_up","source":"Call the clinic tomorrow if the swelling is worse. Your appointment is on 11/18/2026 at 9:15 AM."},
+  {"id":"hi-warning-01","language":"hi","category":"warning_sign","source":"Go to the emergency department for chest pain, trouble breathing, or fainting."},
+  {"id":"hi-restriction-01","language":"hi","category":"restriction","source":"Do not lift anything heavier than 3 kg for 2 weeks, until your follow-up visit."}
+]

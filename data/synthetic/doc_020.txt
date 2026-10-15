@@ -1,0 +1,12 @@
+Diagnosis:
+The synthetic discharge record lists a condition for scenario 20.
+Medications:
+Refer to the discharge medication list for how to take furosemide.
+Follow-up:
+Arrange the listed follow-up visit within 14 days.
+Restrictions:
+Follow the written lifting restriction until the follow-up visit.
+Warning signs:
+Follow the written urgent-contact instructions if the listed warning signs occur.
+Pending tests:
+A follow-up test result is pending.

@@ -1,0 +1,8 @@
+Diagnosis:
+A urinary tract infection was recorded in this synthetic summary.
+Medications:
+Refer to the medication list in your discharge paperwork.
+Follow-up:
+Attend your follow-up appointment in 3 days.
+Pending tests:
+Ask your care team whether the pending test listed in this synthetic summary has been completed.

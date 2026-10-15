@@ -1,0 +1,55 @@
+{
+  "document_id": "doc_038",
+  "synthetic": true,
+  "set": "clean",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "Scenario 38 includes a documented synthetic diagnosis.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Use the discharge paperwork for the instructions on albuterol.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "Please attend a follow-up visit in 7 days.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "Keep the support wrap in place until the scheduled review.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "Use the contact instructions in the discharge paperwork if symptoms worsen.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "A culture result is pending review.",
+      "source_ids": [
+        "S6"
+      ]
+    }
+  ]
+}

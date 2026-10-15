@@ -1,0 +1,13 @@
+Diagnosis:
+A diagnosis was entered for synthetic scenario 44 before discharge.
+Medications:
+Continue taking methotrexate as written in the discharge medication instructions.
+Stop taking methotrexate as written in the discharge medication instructions.
+Follow-up:
+Your follow-up appointment should take place in 5 days.
+Restrictions:
+Avoid the activity listed in the discharge instructions until review.
+Warning signs:
+Follow the written urgent-contact instructions if the listed warning signs occur.
+Pending tests:
+A follow-up test result is pending.

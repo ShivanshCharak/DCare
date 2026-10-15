@@ -1,0 +1,12 @@
+Diagnosis:
+A synthetic condition from scenario 11 was documented during this hospital stay.
+Medications:
+Follow the discharge medication instructions for aspirin.
+Follow-up:
+Attend the follow-up appointment in 10 days.
+Restrictions:
+Follow the written activity restrictions in the discharge paperwork.
+Warning signs:
+Contact the care team if a new concern described in the paperwork occurs.
+Pending tests:
+The final imaging report is pending.

@@ -1,0 +1,13 @@
+Diagnosis:
+Scenario 48 includes a documented synthetic diagnosis.
+Medications:
+Keep taking fentanyl as directed in the discharge paperwork.
+Discontinue fentanyl as directed in the discharge paperwork.
+Follow-up:
+Please attend a follow-up visit in 14 days.
+Restrictions:
+Keep the support wrap in place until the scheduled review.
+Warning signs:
+Follow the written urgent-contact instructions if the listed warning signs occur.
+Pending tests:
+A follow-up test result is pending.

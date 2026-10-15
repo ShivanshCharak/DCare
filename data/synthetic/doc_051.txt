@@ -1,0 +1,13 @@
+This fictional discharge note is software test scenario 51 and does not describe a real person.
+Clinical diagnosis:
+The discharge record notes a synthetic condition for scenario 51.
+Medication list:
+The fictional medication list includes amlodipine and says to follow the instructions printed there.
+Follow-up plan:
+A follow-up appointment is set for 7 days after discharge.
+Activity limits:
+Do not lift objects heavier than 5 kg until the follow-up visit.
+When to get help:
+Seek urgent help if difficulty breathing occurs.
+Results pending:
+The final laboratory report is pending.

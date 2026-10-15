@@ -1,0 +1,64 @@
+{
+  "document_id": "doc_050",
+  "synthetic": true,
+  "set": "trap",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "The synthetic discharge record lists a condition for scenario 50.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Continue taking amlodipine as written in the discharge medication instructions.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "medication",
+      "text_en": "Stop taking amlodipine as written in the discharge medication instructions.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "appointment",
+      "text_en": "Arrange the listed follow-up visit within 3 days.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "restriction",
+      "text_en": "Follow the written lifting restriction until the follow-up visit.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "warning_sign",
+      "text_en": "Use the contact instructions in the discharge paperwork if symptoms worsen.",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "id": "F7",
+      "kind": "pending_test",
+      "text_en": "A culture result is pending review.",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "trap_type": "stop_continue_conflict"
+}

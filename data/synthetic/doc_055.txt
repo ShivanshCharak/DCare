@@ -1,0 +1,13 @@
+Fictional scenario 55 is included to test alternate headings and wording in this software.
+Discharge diagnosis:
+A synthetic condition was documented for fictional scenario 55.
+Discharge medicines:
+Amlodipine is named in the fictional medication record; use the instructions printed with that list.
+Next appointment:
+A follow-up appointment is scheduled in 7 days.
+Activity guidance:
+Do not lift any object heavier than 5 kg before the follow-up.
+When to seek urgent help:
+Seek urgent assistance for difficulty breathing.
+Pending test results:
+The final laboratory result has not yet returned.

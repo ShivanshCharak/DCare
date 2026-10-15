@@ -1,0 +1,64 @@
+{
+  "document_id": "doc_044",
+  "synthetic": true,
+  "set": "trap",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "A diagnosis was entered for synthetic scenario 44 before discharge.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Continue taking methotrexate as written in the discharge medication instructions.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "medication",
+      "text_en": "Stop taking methotrexate as written in the discharge medication instructions.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "appointment",
+      "text_en": "Your follow-up appointment should take place in 5 days.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "restriction",
+      "text_en": "Avoid the activity listed in the discharge instructions until review.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "warning_sign",
+      "text_en": "Follow the written urgent-contact instructions if the listed warning signs occur.",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "id": "F7",
+      "kind": "pending_test",
+      "text_en": "A follow-up test result is pending.",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "trap_type": "stop_continue_conflict"
+}

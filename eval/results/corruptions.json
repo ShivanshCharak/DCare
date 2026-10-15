@@ -1,0 +1,436 @@
+[
+  {
+    "id": "dose_changed",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Take amlodipine 5 mg once daily.",
+        "section": "medications"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "medication",
+        "text_en": "Take amlodipine 5 mg once daily.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Take amlodipine 5 mg once daily.",
+    "corrupted_text": "Take amlodipine 50 mg once daily.",
+    "expected_reason": "medication_dose_mismatch",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "frequency_changed",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Take amlodipine 5 mg once daily.",
+        "section": "medications"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "medication",
+        "text_en": "Take amlodipine 5 mg once daily.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Take amlodipine 5 mg once daily.",
+    "corrupted_text": "Take amlodipine 5 mg twice daily.",
+    "expected_reason": "medication_frequency_mismatch",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "unsupported_known_medication_name",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Take amlodipine 5 mg once daily.",
+        "section": "medications"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "medication",
+        "text_en": "Take amlodipine 5 mg once daily.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Take amlodipine 5 mg once daily.",
+    "corrupted_text": "Take amoxicillin and amlodipine 5 mg once daily.",
+    "expected_reason": "unsupported_medication_name",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "follow_up_timeframe_changed",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Attend your follow-up appointment in 7 days.",
+        "section": "follow_up"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "appointment",
+        "text_en": "Attend your follow-up appointment in 7 days.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Attend your follow-up appointment in 7 days.",
+    "corrupted_text": "Attend your follow-up appointment in 30 days.",
+    "expected_reason": "unsupported_numeric_detail",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "date_changed",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Your appointment is on 10/20/2026.",
+        "section": "follow_up"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "appointment",
+        "text_en": "Your appointment is on 10/20/2026.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Your appointment is on 10/20/2026.",
+    "corrupted_text": "Your appointment is on 10/21/2026.",
+    "expected_reason": "unsupported_numeric_detail",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "negation_dropped",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Do not take aspirin.",
+        "section": "medications"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "medication",
+        "text_en": "Do not take aspirin.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Do not take aspirin.",
+    "corrupted_text": "Take aspirin.",
+    "expected_reason": "instruction_polarity_mismatch",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "unsupported_clinician_attribution",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Pneumonia was diagnosed.",
+        "section": "diagnosis"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "diagnosis",
+        "text_en": "Pneumonia was diagnosed.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Pneumonia was diagnosed.",
+    "corrupted_text": "The doctor told the patient they have pneumonia.",
+    "expected_reason": "unsupported_attribution",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "high_alert_stop_continue_conflict",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Stop taking warfarin.",
+        "section": "medications"
+      },
+      {
+        "id": "S2",
+        "text": "Continue taking warfarin.",
+        "section": "medications"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "medication",
+        "text_en": "Stop taking warfarin.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "id": "F2",
+        "kind": "medication",
+        "text_en": "Continue taking warfarin.",
+        "attrs": {},
+        "source_ids": [
+          "S2"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Stop taking warfarin.",
+    "corrupted_text": "Stop taking warfarin.",
+    "expected_reason": "contradictory_medication_instructions",
+    "clean_has_conflict": true
+  },
+  {
+    "id": "medication_duration_changed",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Take amoxicillin 500 mg twice daily for 5 days.",
+        "section": "medications"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "medication",
+        "text_en": "Take amoxicillin 500 mg twice daily for 5 days.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Take amoxicillin 500 mg twice daily for 5 days.",
+    "corrupted_text": "Take amoxicillin 500 mg twice daily for 10 days.",
+    "expected_reason": "medication_duration_mismatch",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "as_needed_instruction_dropped",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Take morphine 2 mg every 6 hours as needed.",
+        "section": "medications"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "medication",
+        "text_en": "Take morphine 2 mg every 6 hours as needed.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Take morphine 2 mg every 6 hours as needed.",
+    "corrupted_text": "Take morphine 2 mg every 6 hours.",
+    "expected_reason": "medication_frequency_mismatch",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "continue_instruction_dropped",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Continue taking lisinopril 10 mg once daily.",
+        "section": "medications"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "medication",
+        "text_en": "Continue taking lisinopril 10 mg once daily.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Continue taking lisinopril 10 mg once daily.",
+    "corrupted_text": "Take lisinopril 10 mg once daily.",
+    "expected_reason": "instruction_polarity_mismatch",
+    "clean_has_conflict": false
+  },
+  {
+    "id": "restriction_threshold_changed",
+    "source_sentences": [
+      {
+        "id": "S1",
+        "text": "Do not lift objects heavier than 5 kg until review.",
+        "section": "restrictions"
+      }
+    ],
+    "facts": [
+      {
+        "id": "F1",
+        "kind": "restriction",
+        "text_en": "Do not lift objects heavier than 5 kg until review.",
+        "attrs": {},
+        "source_ids": [
+          "S1"
+        ]
+      }
+    ],
+    "claim": {
+      "id": "C1",
+      "language": "en",
+      "fact_ids": [
+        "F1"
+      ],
+      "source_ids": [
+        "S1"
+      ]
+    },
+    "clean_text": "Do not lift objects heavier than 5 kg until review.",
+    "corrupted_text": "Do not lift objects heavier than 10 kg until review.",
+    "expected_reason": "unsupported_numeric_detail",
+    "clean_has_conflict": false
+  }
+]

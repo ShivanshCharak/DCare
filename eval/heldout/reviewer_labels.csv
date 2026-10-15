@@ -1,0 +1,171 @@
+case_id,document_text,claim,claim_source_ids,unsupported_addition_yes_no,missing_detail_yes_no,medication_change_yes_no,wrong_source_link_yes_no,overall_supported_yes_no,reviewer_id,reviewer_qualification,reviewed_at,notes
+HO-001,"DISCHARGE NOTE
+Community-acquired pneumonia, improving.
+Rx: Take amlodipine 5 mg once daily.
+F/U see your primary care clinic in 1 week
+Return for new chest pain or difficulty breathing",The infection has completely cleared.,S1,,,,,,,,,
+HO-002,At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: call cardiology in 3 days | Seek urgent care for worsening pain or drainage from the wound.,The patient no longer needs fluid medicine.,S1,,,,,,,,,
+HO-003,"Hospital course / instructions
+Asthma flare settled; breathing comfortable at rest.
+Medication reconciliation — Use albuterol 2 puffs every 6 hours as needed for wheezing.
+Clinic plan: see the clinic in 10 days
+Call/return if shortness of breath or blue lips",The flare will not recur after discharge.,S1,,,,,,,,,
+HO-004,"Problem: Cellulitis of the left leg, improving.
+Plan:
+• Take cephalexin 500 mg three times daily for 5 days.
+• follow up with your surgeon in 2 weeks
+Precautions: fever above 38 C or worsening redness",There is no remaining infection.,S1,,,,,,,,,
+HO-005,"Disch summary (pt): Blood pressure was elevated during admission..
+New/changed: Take lisinopril 10 mg each morning..
+FU: call your care team tomorrow.
+ED if: new weakness or trouble speaking.",Blood pressure is now normal without medication.,S1,,,,,,,,,
+HO-006,"ASSESSMENT
+Gastritis symptoms improved; no bleeding reported.
+TAKE HOME
+Do not take ibuprofen until the clinic reviews it.
+NEXT VISIT
+return for review in 5 days
+RED FLAGS
+increasing swelling or severe pain",There was no stomach irritation during admission.,S1,,,,,,,,,
+HO-007,"COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to see primary care in 2 weeks. They should seek care for fainting, severe dizziness, or confusion.",Oxygen is no longer needed at any time.,S1,,,,,,,,,
+HO-008,"Typed after visit:
+- Postoperative wound check was reassuring.
+- Med rec: Continue atorvastatin 20 mg nightly.
+- f/u: contact the clinic in 4 days
+- precautions: repeated vomiting or inability to drink",The incision is fully healed.,S1,,,,,,,,,
+HO-009,"DISCHARGE NOTE
+Community-acquired pneumonia, improving.
+Rx: Take amlodipine 5 mg once daily.
+F/U call cardiology in 3 days
+Return for fever above 38 C or worsening redness",Take amlodipine 10 mg once daily.,S2,,,,,,,,,
+HO-010,At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: see the clinic in 10 days | Seek urgent care for new weakness or trouble speaking.,Continue metformin 500 mg once daily with meals.,S2,,,,,,,,,
+HO-011,"Hospital course / instructions
+Asthma flare settled; breathing comfortable at rest.
+Medication reconciliation — Use albuterol 2 puffs every 6 hours as needed for wheezing.
+Clinic plan: follow up with your surgeon in 2 weeks
+Call/return if increasing swelling or severe pain",Use albuterol 4 puffs every 6 hours as needed for wheezing.,S2,,,,,,,,,
+HO-012,"Problem: Cellulitis of the left leg, improving.
+Plan:
+• Take cephalexin 500 mg three times daily for 5 days.
+• call your care team tomorrow
+Precautions: fainting, severe dizziness, or confusion",Take cephalexin 500 mg three times daily for 7 days.,S2,,,,,,,,,
+HO-013,"Disch summary (pt): Blood pressure was elevated during admission..
+New/changed: Take lisinopril 10 mg each morning..
+FU: return for review in 5 days.
+ED if: repeated vomiting or inability to drink.",Take lisinopril 20 mg each morning.,S2,,,,,,,,,
+HO-014,"ASSESSMENT
+Gastritis symptoms improved; no bleeding reported.
+TAKE HOME
+Do not take ibuprofen until the clinic reviews it.
+NEXT VISIT
+see primary care in 2 weeks
+RED FLAGS
+new chest pain or difficulty breathing",Take ibuprofen until the clinic reviews it.,S2,,,,,,,,,
+HO-015,"COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to contact the clinic in 4 days. They should seek care for worsening pain or drainage from the wound.","Take prednisone 20 mg daily for 5 days, then stop.",S2,,,,,,,,,
+HO-016,"Typed after visit:
+- Postoperative wound check was reassuring.
+- Med rec: Continue atorvastatin 20 mg nightly.
+- f/u: see your primary care clinic in 1 week
+- precautions: shortness of breath or blue lips",Stop atorvastatin 20 mg nightly.,S2,,,,,,,,,
+HO-017,"DISCHARGE NOTE
+Community-acquired pneumonia, improving.
+Rx: Take amlodipine 5 mg once daily.
+F/U see the clinic in 10 days
+Return for fainting, severe dizziness, or confusion",Take amlodipine 10 mg once daily.,S2,,,,,,,,,
+HO-018,At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: follow up with your surgeon in 2 weeks | Seek urgent care for repeated vomiting or inability to drink.,Continue metformin 500 mg once daily with meals.,S2,,,,,,,,,
+HO-019,"Hospital course / instructions
+Asthma flare settled; breathing comfortable at rest.
+Medication reconciliation — Use albuterol 2 puffs every 6 hours as needed for wheezing.
+Clinic plan: call your care team tomorrow
+Call/return if new chest pain or difficulty breathing",Use albuterol 4 puffs every 6 hours as needed for wheezing.,S2,,,,,,,,,
+HO-020,"Problem: Cellulitis of the left leg, improving.
+Plan:
+• Take cephalexin 500 mg three times daily for 5 days.
+• return for review in 5 days
+Precautions: worsening pain or drainage from the wound",Take cephalexin 500 mg three times daily for 7 days.,S2,,,,,,,,,
+HO-021,"Disch summary (pt): Blood pressure was elevated during admission..
+New/changed: Take lisinopril 10 mg each morning..
+FU: see primary care in 2 weeks.
+ED if: shortness of breath or blue lips.",Take lisinopril 20 mg each morning.,S2,,,,,,,,,
+HO-022,"ASSESSMENT
+Gastritis symptoms improved; no bleeding reported.
+TAKE HOME
+Do not take ibuprofen until the clinic reviews it.
+NEXT VISIT
+contact the clinic in 4 days
+RED FLAGS
+fever above 38 C or worsening redness",Take ibuprofen until the clinic reviews it.,S2,,,,,,,,,
+HO-023,"COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to see your primary care clinic in 1 week. They should seek care for new weakness or trouble speaking.","Take prednisone 20 mg daily for 5 days, then stop.",S2,,,,,,,,,
+HO-024,"Typed after visit:
+- Postoperative wound check was reassuring.
+- Med rec: Continue atorvastatin 20 mg nightly.
+- f/u: call cardiology in 3 days
+- precautions: increasing swelling or severe pain",Stop atorvastatin 20 mg nightly.,S2,,,,,,,,,
+HO-025,"DISCHARGE NOTE
+Community-acquired pneumonia, improving.
+Rx: Take amlodipine 5 mg once daily.
+F/U follow up with your surgeon in 2 weeks
+Return for worsening pain or drainage from the wound",Take amlodipine 5 mg once daily.,S2,,,,,,,,,
+HO-026,At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: call your care team tomorrow | Seek urgent care for shortness of breath or blue lips.,Continue metformin 500 mg twice daily.,S2,,,,,,,,,
+HO-027,"Hospital course / instructions
+Asthma flare settled; breathing comfortable at rest.
+Medication reconciliation — Use albuterol 2 puffs every 6 hours as needed for wheezing.
+Clinic plan: return for review in 5 days
+Call/return if fever above 38 C or worsening redness",Use albuterol 2 puffs every 6 hours.,S2,,,,,,,,,
+HO-028,"Problem: Cellulitis of the left leg, improving.
+Plan:
+• Take cephalexin 500 mg three times daily for 5 days.
+• see primary care in 2 weeks
+Precautions: new weakness or trouble speaking",Take cephalexin 500 mg three times daily.,S2,,,,,,,,,
+HO-029,"Disch summary (pt): Blood pressure was elevated during admission..
+New/changed: Take lisinopril 10 mg each morning..
+FU: contact the clinic in 4 days.
+ED if: increasing swelling or severe pain.",Take lisinopril 10 mg.,S2,,,,,,,,,
+HO-030,"ASSESSMENT
+Gastritis symptoms improved; no bleeding reported.
+TAKE HOME
+Do not take ibuprofen until the clinic reviews it.
+NEXT VISIT
+see your primary care clinic in 1 week
+RED FLAGS
+fainting, severe dizziness, or confusion",Do not take ibuprofen.,S2,,,,,,,,,
+HO-031,"COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to call cardiology in 3 days. They should seek care for repeated vomiting or inability to drink.",Take prednisone 20 mg daily.,S2,,,,,,,,,
+HO-032,"Typed after visit:
+- Postoperative wound check was reassuring.
+- Med rec: Continue atorvastatin 20 mg nightly.
+- f/u: see the clinic in 10 days
+- precautions: new chest pain or difficulty breathing",Continue atorvastatin 20 mg.,S2,,,,,,,,,
+HO-033,"DISCHARGE NOTE
+Community-acquired pneumonia, improving.
+Rx: Take amlodipine 5 mg once daily.
+F/U call your care team tomorrow
+Return for new weakness or trouble speaking",Take amlodipine 5 mg once daily.,S3,,,,,,,,,
+HO-034,At discharge: Fluid overload improved after treatment.  | MEDS: Continue metformin 500 mg twice daily with meals. | Follow up: return for review in 5 days | Seek urgent care for increasing swelling or severe pain.,Continue metformin 500 mg twice daily with meals.,S3,,,,,,,,,
+HO-035,"Hospital course / instructions
+Asthma flare settled; breathing comfortable at rest.
+Medication reconciliation — Use albuterol 2 puffs every 6 hours as needed for wheezing.
+Clinic plan: see primary care in 2 weeks
+Call/return if fainting, severe dizziness, or confusion",Use albuterol 2 puffs every 6 hours as needed for wheezing.,S3,,,,,,,,,
+HO-036,"Problem: Cellulitis of the left leg, improving.
+Plan:
+• Take cephalexin 500 mg three times daily for 5 days.
+• contact the clinic in 4 days
+Precautions: repeated vomiting or inability to drink",Take cephalexin 500 mg three times daily for 5 days.,S3,,,,,,,,,
+HO-037,"Disch summary (pt): Blood pressure was elevated during admission..
+New/changed: Take lisinopril 10 mg each morning..
+FU: see your primary care clinic in 1 week.
+ED if: new chest pain or difficulty breathing.",Take lisinopril 10 mg each morning.,S3,,,,,,,,,
+HO-038,"ASSESSMENT
+Gastritis symptoms improved; no bleeding reported.
+TAKE HOME
+Do not take ibuprofen until the clinic reviews it.
+NEXT VISIT
+call cardiology in 3 days
+RED FLAGS
+worsening pain or drainage from the wound",Do not take ibuprofen until the clinic reviews it.,S3,,,,,,,,,
+HO-039,"COPD exacerbation improved with treatment.; Take prednisone 20 mg daily for 3 days, then stop.. The team asked the patient to see the clinic in 10 days. They should seek care for shortness of breath or blue lips.","Take prednisone 20 mg daily for 3 days, then stop.",S3,,,,,,,,,
+HO-040,"Typed after visit:
+- Postoperative wound check was reassuring.
+- Med rec: Continue atorvastatin 20 mg nightly.
+- f/u: follow up with your surgeon in 2 weeks
+- precautions: fever above 38 C or worsening redness",Continue atorvastatin 20 mg nightly.,S3,,,,,,,,,

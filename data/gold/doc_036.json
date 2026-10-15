@@ -1,0 +1,55 @@
+{
+  "document_id": "doc_036",
+  "synthetic": true,
+  "set": "clean",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "A synthetic condition from scenario 36 was documented during this hospital stay.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Follow the discharge medication instructions for pantoprazole.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "Attend the follow-up appointment in 3 days.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "Follow the written activity restrictions in the discharge paperwork.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "Follow the written urgent-contact instructions if the listed warning signs occur.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "A follow-up test result is pending.",
+      "source_ids": [
+        "S6"
+      ]
+    }
+  ]
+}

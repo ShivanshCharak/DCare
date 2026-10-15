@@ -1,0 +1,12 @@
+Diagnosis:
+The discharge team recorded a synthetic condition for scenario 32.
+Medications:
+See the written medication list for instructions about atorvastatin.
+Follow-up:
+A follow-up appointment is scheduled for 10 days from discharge.
+Restrictions:
+Use the mobility aid as described in the discharge paperwork.
+Warning signs:
+Follow the written urgent-contact instructions if the listed warning signs occur.
+Pending tests:
+A follow-up test result is pending.

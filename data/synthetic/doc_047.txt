@@ -1,0 +1,13 @@
+Diagnosis:
+The discharge team recorded a synthetic condition for scenario 47.
+Medications:
+Continue taking heparin as written in the discharge medication instructions.
+Stop taking heparin as written in the discharge medication instructions.
+Follow-up:
+A follow-up appointment is scheduled for 12 days from discharge.
+Restrictions:
+Use the mobility aid as described in the discharge paperwork.
+Warning signs:
+Contact the care team if a new concern described in the paperwork occurs.
+Pending tests:
+The final imaging report is pending.

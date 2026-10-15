@@ -1,0 +1,13 @@
+Diagnosis:
+A synthetic condition from scenario 41 was documented during this hospital stay.
+Medications:
+Continue taking warfarin as written in the discharge medication instructions.
+Stop taking warfarin as written in the discharge medication instructions.
+Follow-up:
+Attend the follow-up appointment in 14 days.
+Restrictions:
+Follow the written activity restrictions in the discharge paperwork.
+Warning signs:
+Contact the care team if the warning signs listed in the discharge paperwork occur.
+Pending tests:
+The final laboratory report is pending.

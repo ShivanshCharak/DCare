@@ -1,0 +1,57 @@
+{
+  "document_id": "doc_053",
+  "synthetic": true,
+  "set": "clean",
+  "narrative_style": true,
+  "authoring": "curated synthetic facts",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "Discharge documentation notes a synthetic condition for scenario 53.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "The printed fictional medication instructions include amlodipine.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "The next appointment is arranged for 7 days from discharge.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "A 5 kg lifting limit applies until the follow-up visit.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "If breathing difficulty develops, seek urgent medical help.",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "Final laboratory results remain pending.",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ]
+}

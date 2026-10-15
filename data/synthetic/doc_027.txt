@@ -1,0 +1,12 @@
+Diagnosis:
+The discharge team recorded a synthetic condition for scenario 27.
+Medications:
+See the written medication list for instructions about acetaminophen.
+Follow-up:
+A follow-up appointment is scheduled for 14 days from discharge.
+Restrictions:
+Use the mobility aid as described in the discharge paperwork.
+Warning signs:
+Contact the care team if a new concern described in the paperwork occurs.
+Pending tests:
+The final imaging report is pending.

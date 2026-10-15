@@ -1,0 +1,13 @@
+Diagnosis:
+The synthetic discharge record lists a condition for scenario 50.
+Medications:
+Continue taking amlodipine as written in the discharge medication instructions.
+Stop taking amlodipine as written in the discharge medication instructions.
+Follow-up:
+Arrange the listed follow-up visit within 3 days.
+Restrictions:
+Follow the written lifting restriction until the follow-up visit.
+Warning signs:
+Use the contact instructions in the discharge paperwork if symptoms worsen.
+Pending tests:
+A culture result is pending review.

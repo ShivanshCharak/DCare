@@ -1,0 +1,55 @@
+{
+  "document_id": "doc_012",
+  "synthetic": true,
+  "set": "clean",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "The discharge team recorded a synthetic condition for scenario 12.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "See the written medication list for instructions about atorvastatin.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "A follow-up appointment is scheduled for 12 days from discharge.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "Use the mobility aid as described in the discharge paperwork.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "Follow the written urgent-contact instructions if the listed warning signs occur.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "A follow-up test result is pending.",
+      "source_ids": [
+        "S6"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Diagnosis:
+A synthetic condition from scenario 36 was documented during this hospital stay.
+Medications:
+Follow the discharge medication instructions for pantoprazole.
+Follow-up:
+Attend the follow-up appointment in 3 days.
+Restrictions:
+Follow the written activity restrictions in the discharge paperwork.
+Warning signs:
+Follow the written urgent-contact instructions if the listed warning signs occur.
+Pending tests:
+A follow-up test result is pending.

@@ -1,0 +1,10 @@
+{
+  "document_id": "doc_002",
+  "synthetic": true,
+  "facts": [
+    {"id": "F1", "kind": "diagnosis", "text_en": "An asthma exacerbation was recorded during this synthetic hospital stay.", "source_ids": ["S1"]},
+    {"id": "F2", "kind": "medication", "text_en": "Use your inhaler according to the instructions in your discharge medication list.", "source_ids": ["S2"]},
+    {"id": "F3", "kind": "appointment", "text_en": "Attend your follow-up appointment in 14 days.", "source_ids": ["S3"]},
+    {"id": "F4", "kind": "warning_sign", "text_en": "Contact your care team if the warning signs listed in your discharge paperwork occur.", "source_ids": ["S4"]}
+  ]
+}

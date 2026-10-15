@@ -1,0 +1,40 @@
+{
+  "run_at_utc": "2026-10-13T14:16:33.351437+00:00",
+  "synthetic_only": true,
+  "model_id": "phi:latest",
+  "includes_distinct_corpus_facts": false,
+  "distinct_corpus_fact_count": 0,
+  "case_count": 2,
+  "cases_with_deterministic_flags": 0,
+  "cases_with_expected_human_review": 0,
+  "scope_note": "Small synthetic generation audit; deterministic checks can miss semantic errors. This is not a clinical accuracy or safety evaluation.",
+  "cases": [
+    {
+      "id": "synthetic_01",
+      "kind": "diagnosis",
+      "source": "A synthetic diagnosis of seasonal influenza was recorded at discharge.",
+      "generated_claim": "The patient had a diagnosis of seasonal flu when they left the hospital.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    },
+    {
+      "id": "synthetic_02",
+      "kind": "medication",
+      "source": "Take metformin 500 mg twice daily for 5 days.",
+      "generated_claim": "Fact type: medication\nSource fact: Take 500mg of metformin two times a day for five days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "expected_human_review": false,
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured"
+    }
+  ],
+  "rescore_at_utc": "2026-10-13T14:17:12.674935+00:00"
+}

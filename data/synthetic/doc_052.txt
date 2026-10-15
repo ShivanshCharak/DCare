@@ -1,0 +1,13 @@
+Scenario 52 is a fictional example prepared only to exercise the discharge-summary parser.
+Discharge diagnosis:
+A synthetic condition is listed in the discharge record for scenario 52.
+Discharge medicines:
+Amlodipine appears on the fictional medication list with its instructions.
+Next appointment:
+Please attend the follow-up visit scheduled for 7 days after discharge.
+Activity guidance:
+Before the follow-up, do not lift anything heavier than 5 kg.
+When to seek urgent help:
+Get urgent help if breathing becomes difficult.
+Pending test results:
+The final laboratory report has not yet been completed.

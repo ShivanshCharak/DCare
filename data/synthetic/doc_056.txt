@@ -1,0 +1,4 @@
+Fictional software trap scenario 56 contains two conflicting medication directions.
+Medication instructions:
+The fictional discharge medication list says to take warfarin 2 mg once daily.
+A separate line in that fictional list says to take warfarin 5 mg once daily.

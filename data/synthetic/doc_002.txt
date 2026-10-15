@@ -1,0 +1,8 @@
+Diagnosis:
+An asthma exacerbation was recorded during this synthetic hospital stay.
+Medications:
+Use your inhaler according to the instructions in your discharge medication list.
+Follow-up:
+Attend your follow-up appointment in 14 days.
+Warning signs:
+Contact your care team if the warning signs listed in your discharge paperwork occur.

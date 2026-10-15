@@ -1,0 +1,330 @@
+{
+  "scope": "independently authored synthetic translation cases; local-model output audit",
+  "run_at_utc": "2026-10-14T13:01:54.613312+00:00",
+  "synthetic_data_only": true,
+  "model_id": "qwen3:1.7b",
+  "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "case_set_sha256": "a85ff7704ab647c1e7ac965f88981e9e4e743a9ebb00c096083f5c2bfef145a5",
+  "case_count": 6,
+  "case_counts_by_language": {
+    "hi": 6
+  },
+  "translation_success_count": 6,
+  "translation_failure_count": 0,
+  "token_preservation_by_language": {
+    "hi": {
+      "translated_count": 6,
+      "passed": 2,
+      "pass_rate": 0.3333333333333333
+    }
+  },
+  "token_preservation_by_category": {
+    "follow_up": {
+      "translated_count": 1,
+      "passed": 1,
+      "pass_rate": 1.0
+    },
+    "medication": {
+      "translated_count": 3,
+      "passed": 0,
+      "pass_rate": 0.0
+    },
+    "restriction": {
+      "translated_count": 1,
+      "passed": 0,
+      "pass_rate": 0.0
+    },
+    "warning_sign": {
+      "translated_count": 1,
+      "passed": 1,
+      "pass_rate": 1.0
+    }
+  },
+  "semantic_quality_measured": false,
+  "human_review_complete_row_count": 0,
+  "token_preservation_pass_count": 2,
+  "token_preservation_pass_rate": 0.3333333333333333,
+  "human_quality_summary": null,
+  "cases": [
+    {
+      "row_id": "hi-med-01:qwen3:1.7b:457bc63f7d69",
+      "case_id": "hi-med-01",
+      "language": "hi",
+      "category": "medication",
+      "source": "Take metformin 500 mg twice daily with food for 7 days.",
+      "output": "मेटफॉमिन 500 मग्री दिन दो बार आम आंतरिक दूध बाहर ले लिया जायेगा 7 दिन तक।",
+      "required_verbatim_tokens": [
+        "500 mg",
+        "7",
+        "food",
+        "metformin",
+        "twice",
+        "with"
+      ],
+      "missing_tokens": [
+        "500 mg",
+        "food",
+        "metformin",
+        "twice",
+        "with"
+      ],
+      "translation_succeeded": true,
+      "token_preservation_passed": false,
+      "translation_check": "failed",
+      "routing_state": "needs_clinician",
+      "review_priority_score": 0.51,
+      "human_review": {
+        "semantic_fidelity_1_5": "",
+        "critical_details_preserved_yes_no": "",
+        "omissions_yes_no": "",
+        "additions_yes_no": "",
+        "readability_1_5": "",
+        "naturalness_1_5": "",
+        "review_decision": "",
+        "error_categories": "",
+        "reviewer_corrected_translation": "",
+        "reviewer_id": "",
+        "reviewer_qualification": "",
+        "reviewed_at": "",
+        "review_notes": ""
+      }
+    },
+    {
+      "row_id": "hi-med-02:qwen3:1.7b:3ac6233e3c4e",
+      "case_id": "hi-med-02",
+      "language": "hi",
+      "category": "medication",
+      "source": "Stop taking ibuprofen today. Do not restart it unless your doctor tells you to.",
+      "output": "आज इब्पोफेन रोक ले दीजिए। आप अपने डॉक्टर के निर्देश के बिना इसे फिर से ले नहीं दीजिए।",
+      "required_verbatim_tokens": [
+        "Do",
+        "doctor",
+        "ibuprofen",
+        "it",
+        "not",
+        "restart",
+        "Stop",
+        "taking",
+        "tells",
+        "to",
+        "today",
+        "unless",
+        "you",
+        "your"
+      ],
+      "missing_tokens": [
+        "Do",
+        "doctor",
+        "ibuprofen",
+        "it",
+        "not",
+        "restart",
+        "Stop",
+        "taking",
+        "tells",
+        "to",
+        "today",
+        "unless",
+        "you",
+        "your"
+      ],
+      "translation_succeeded": true,
+      "token_preservation_passed": false,
+      "translation_check": "failed",
+      "routing_state": "needs_clinician",
+      "review_priority_score": 0.51,
+      "human_review": {
+        "semantic_fidelity_1_5": "",
+        "critical_details_preserved_yes_no": "",
+        "omissions_yes_no": "",
+        "additions_yes_no": "",
+        "readability_1_5": "",
+        "naturalness_1_5": "",
+        "review_decision": "",
+        "error_categories": "",
+        "reviewer_corrected_translation": "",
+        "reviewer_id": "",
+        "reviewer_qualification": "",
+        "reviewed_at": "",
+        "review_notes": ""
+      }
+    },
+    {
+      "row_id": "hi-med-03:qwen3:1.7b:2385be4face7",
+      "case_id": "hi-med-03",
+      "language": "hi",
+      "category": "medication",
+      "source": "Use the inhaler only when you feel short of breath; do not use more than 4 times in one day.",
+      "output": "एक दिन में अधिक नहीं बार जल्दी बाहर आने के लिए इंहलर का उपयोग करें।",
+      "required_verbatim_tokens": [
+        "4",
+        "breath",
+        "day",
+        "do",
+        "feel",
+        "in",
+        "inhaler",
+        "more",
+        "not",
+        "of",
+        "one",
+        "only",
+        "short",
+        "than",
+        "the",
+        "times",
+        "use",
+        "Use",
+        "when",
+        "you"
+      ],
+      "missing_tokens": [
+        "4",
+        "breath",
+        "day",
+        "do",
+        "feel",
+        "in",
+        "inhaler",
+        "more",
+        "not",
+        "of",
+        "one",
+        "only",
+        "short",
+        "than",
+        "the",
+        "times",
+        "use",
+        "Use",
+        "when",
+        "you"
+      ],
+      "translation_succeeded": true,
+      "token_preservation_passed": false,
+      "translation_check": "failed",
+      "routing_state": "needs_clinician",
+      "review_priority_score": 0.51,
+      "human_review": {
+        "semantic_fidelity_1_5": "",
+        "critical_details_preserved_yes_no": "",
+        "omissions_yes_no": "",
+        "additions_yes_no": "",
+        "readability_1_5": "",
+        "naturalness_1_5": "",
+        "review_decision": "",
+        "error_categories": "",
+        "reviewer_corrected_translation": "",
+        "reviewer_id": "",
+        "reviewer_qualification": "",
+        "reviewed_at": "",
+        "review_notes": ""
+      }
+    },
+    {
+      "row_id": "hi-follow-01:qwen3:1.7b:3d1861990943",
+      "case_id": "hi-follow-01",
+      "language": "hi",
+      "category": "follow_up",
+      "source": "Call the clinic tomorrow if the swelling is worse. Your appointment is on 11/18/2026 at 9:15 AM.",
+      "output": "अगर ब्लेडिंग बेहतर हो जाए तो अगले दिन रिजर्वेशन करें। आपका अपील 11/18/2026 बर्बर बजट 9:15 बजे है।",
+      "required_verbatim_tokens": [
+        "11/18/2026",
+        "9:15"
+      ],
+      "missing_tokens": [],
+      "translation_succeeded": true,
+      "token_preservation_passed": true,
+      "translation_check": "review_suggested",
+      "routing_state": "needs_clinician",
+      "review_priority_score": 0.51,
+      "human_review": {
+        "semantic_fidelity_1_5": "",
+        "critical_details_preserved_yes_no": "",
+        "omissions_yes_no": "",
+        "additions_yes_no": "",
+        "readability_1_5": "",
+        "naturalness_1_5": "",
+        "review_decision": "",
+        "error_categories": "",
+        "reviewer_corrected_translation": "",
+        "reviewer_id": "",
+        "reviewer_qualification": "",
+        "reviewed_at": "",
+        "review_notes": ""
+      }
+    },
+    {
+      "row_id": "hi-warning-01:qwen3:1.7b:4ef2bd52653f",
+      "case_id": "hi-warning-01",
+      "language": "hi",
+      "category": "warning_sign",
+      "source": "Go to the emergency department for chest pain, trouble breathing, or fainting.",
+      "output": "चिड़चिड़ा दर्द, दृढ़ बाहरी दृष्टि या बाहरी दृष्टि में दिखाई देने वाला दर्द के लिए अतिरिक्त अस्पताल गए।",
+      "required_verbatim_tokens": [],
+      "missing_tokens": [],
+      "translation_succeeded": true,
+      "token_preservation_passed": true,
+      "translation_check": "review_suggested",
+      "routing_state": "needs_clinician",
+      "review_priority_score": 0.51,
+      "human_review": {
+        "semantic_fidelity_1_5": "",
+        "critical_details_preserved_yes_no": "",
+        "omissions_yes_no": "",
+        "additions_yes_no": "",
+        "readability_1_5": "",
+        "naturalness_1_5": "",
+        "review_decision": "",
+        "error_categories": "",
+        "reviewer_corrected_translation": "",
+        "reviewer_id": "",
+        "reviewer_qualification": "",
+        "reviewed_at": "",
+        "review_notes": ""
+      }
+    },
+    {
+      "row_id": "hi-restriction-01:qwen3:1.7b:f755e342df1a",
+      "case_id": "hi-restriction-01",
+      "language": "hi",
+      "category": "restriction",
+      "source": "Do not lift anything heavier than 3 kg for 2 weeks, until your follow-up visit.",
+      "output": "अपने फॉलोअप विजिट तक 3 किग्रा तक उठाना न दे दीजिए।",
+      "required_verbatim_tokens": [
+        "2",
+        "3 kg"
+      ],
+      "missing_tokens": [
+        "2",
+        "3 kg"
+      ],
+      "translation_succeeded": true,
+      "token_preservation_passed": false,
+      "translation_check": "failed",
+      "routing_state": "needs_clinician",
+      "review_priority_score": 0.51,
+      "human_review": {
+        "semantic_fidelity_1_5": "",
+        "critical_details_preserved_yes_no": "",
+        "omissions_yes_no": "",
+        "additions_yes_no": "",
+        "readability_1_5": "",
+        "naturalness_1_5": "",
+        "review_decision": "",
+        "error_categories": "",
+        "reviewer_corrected_translation": "",
+        "reviewer_id": "",
+        "reviewer_qualification": "",
+        "reviewed_at": "",
+        "review_notes": ""
+      }
+    }
+  ],
+  "limitations": [
+    "Cases are synthetic and authored separately from the templated document corpus.",
+    "Token preservation does not measure translation meaning or readability.",
+    "Human ratings require qualified Hindi reviewers; blank ratings are not evidence.",
+    "This audit does not establish clinical performance or safety."
+  ]
+}

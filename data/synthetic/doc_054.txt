@@ -1,0 +1,13 @@
+This is fictional software-test scenario 54, not a real discharge record.
+Clinical diagnosis:
+The discharge summary records a synthetic condition for scenario 54.
+Discharge medications:
+The fictional medication list names amlodipine and directs the reader to its printed instructions.
+Follow-up plan:
+The follow-up appointment is due 7 days after leaving the hospital.
+Activity limits:
+Keep lifting below 5 kg through the follow-up visit.
+When to get help:
+Difficulty breathing is a reason to seek urgent help.
+Results pending:
+The final laboratory report is not yet available.

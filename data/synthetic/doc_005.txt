@@ -1,0 +1,10 @@
+Diagnosis:
+A synthetic skin infection was treated during this hospital stay.
+Medications:
+Finish the prescribed antibiotic course as stated on the medication label.
+Restrictions:
+Keep the affected area clean and covered as instructed in the discharge paperwork.
+Follow-up:
+Attend the clinic appointment in 5 days.
+Pending tests:
+A culture result is pending; the care team will contact you if the plan needs to change.

@@ -1,0 +1,26 @@
+{
+  "document_id": "doc_056",
+  "synthetic": true,
+  "set": "trap",
+  "trap_type": "dose_conflict",
+  "narrative_style": true,
+  "authoring": "curated synthetic facts",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "medication",
+      "text_en": "The fictional discharge medication list says to take warfarin 2 mg once daily.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "A separate line in that fictional list says to take warfarin 5 mg once daily.",
+      "source_ids": [
+        "S3"
+      ]
+    }
+  ]
+}

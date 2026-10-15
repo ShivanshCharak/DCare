@@ -1,0 +1,13 @@
+Fictional evaluation record 53 contains invented facts and no real patient information.
+Diagnosis:
+Discharge documentation notes a synthetic condition for scenario 53.
+Medication list:
+The printed fictional medication instructions include amlodipine.
+Follow up:
+The next appointment is arranged for 7 days from discharge.
+Restrictions:
+A 5 kg lifting limit applies until the follow-up visit.
+Warning signs:
+If breathing difficulty develops, seek urgent medical help.
+Pending tests:
+Final laboratory results remain pending.

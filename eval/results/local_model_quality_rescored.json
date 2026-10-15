@@ -1,0 +1,170 @@
+{
+  "run_at_utc": "2026-10-13T13:53:31.434779+00:00",
+  "synthetic_only": true,
+  "model_id": "qwen3:1.7b",
+  "case_count": 12,
+  "cases_with_deterministic_flags": 1,
+  "scope_note": "Small synthetic generation audit; deterministic checks can miss semantic errors. This is not a clinical accuracy or safety evaluation.",
+  "cases": [
+    {
+      "id": "synthetic_01",
+      "kind": "diagnosis",
+      "source": "A synthetic diagnosis of seasonal influenza was recorded at discharge.",
+      "generated_claim": "A diagnosis of seasonal influenza was recorded at discharge.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_02",
+      "kind": "medication",
+      "source": "Take metformin 500 mg twice daily for 5 days.",
+      "generated_claim": "Take metformin 500 mg twice a day for 5 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_03",
+      "kind": "medication",
+      "source": "Do not take aspirin until your clinician reviews your medication list.",
+      "generated_claim": "Do not take aspirin until your doctor reviews your medication list.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_04",
+      "kind": "appointment",
+      "source": "Attend the follow-up appointment in 7 days.",
+      "generated_claim": "Attend the follow-up appointment in 7 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_05",
+      "kind": "appointment",
+      "source": "Your appointment is scheduled for 10/20/2026.",
+      "generated_claim": "Your appointment is scheduled for October 20, 2026.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_06",
+      "kind": "restriction",
+      "source": "Do not lift objects heavier than 5 kg until your follow-up appointment.",
+      "generated_claim": "Do not lift objects heavier than 5 kilograms until your follow-up appointment.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_07",
+      "kind": "warning_sign",
+      "source": "Seek urgent help if you have difficulty breathing.",
+      "generated_claim": "Seek urgent help if you have difficulty breathing.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_08",
+      "kind": "pending_test",
+      "source": "The final laboratory report is pending.",
+      "generated_claim": "The final laboratory report is not yet available.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_09",
+      "kind": "medication",
+      "source": "Take acetaminophen 500 mg every 8 hours as needed.",
+      "generated_claim": "Take acetaminophen 500 mg every 8 hours as needed.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_10",
+      "kind": "medication",
+      "source": "Continue taking lisinopril 10 mg once daily until your next review.",
+      "generated_claim": "Take lisinopril 10 mg once a day as directed until your next review.",
+      "state": "needs_clinician",
+      "reason_codes": [
+        "instruction_polarity_mismatch"
+      ],
+      "deterministic_failed_checks": {
+        "instruction_polarity": "failed"
+      },
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_11",
+      "kind": "appointment",
+      "source": "Call the clinic if you cannot attend your appointment in 3 days.",
+      "generated_claim": "Call the clinic if you cannot attend your appointment in 3 days.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    },
+    {
+      "id": "synthetic_12",
+      "kind": "diagnosis",
+      "source": "Your clinician documented a synthetic diagnosis of dehydration.",
+      "generated_claim": "Your clinician wrote that you have dehydration.",
+      "state": "review_suggested",
+      "reason_codes": [
+        "verification_layers_not_fully_configured"
+      ],
+      "deterministic_failed_checks": {},
+      "entailment_judge": "not_configured",
+      "expected_human_review": false
+    }
+  ],
+  "rescore_at_utc": "2026-10-13T14:04:42.187526+00:00",
+  "cases_with_expected_human_review": 0
+}

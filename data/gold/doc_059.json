@@ -1,0 +1,26 @@
+{
+  "document_id": "doc_059",
+  "synthetic": true,
+  "set": "trap",
+  "trap_type": "dose_conflict",
+  "narrative_style": true,
+  "authoring": "curated synthetic facts",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "medication",
+      "text_en": "One fictional instruction says to take methotrexate 2.5 mg once weekly.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "A second fictional instruction says to take methotrexate 5 mg once weekly.",
+      "source_ids": [
+        "S3"
+      ]
+    }
+  ]
+}

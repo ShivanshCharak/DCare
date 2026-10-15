@@ -1,0 +1,55 @@
+{
+  "document_id": "doc_009",
+  "synthetic": true,
+  "set": "clean",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "A diagnosis was entered for synthetic scenario 09 before discharge.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "The medication plan for azithromycin is listed in the discharge paperwork.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "Your follow-up appointment should take place in 5 days.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "Avoid the activity listed in the discharge instructions until review.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "Contact the care team if the warning signs listed in the discharge paperwork occur.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "The final laboratory report is pending.",
+      "source_ids": [
+        "S6"
+      ]
+    }
+  ]
+}

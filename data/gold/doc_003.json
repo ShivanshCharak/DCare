@@ -1,0 +1,10 @@
+{
+  "document_id": "doc_003",
+  "synthetic": true,
+  "facts": [
+    {"id": "F1", "kind": "diagnosis", "text_en": "A urinary tract infection was recorded in this synthetic summary.", "source_ids": ["S1"]},
+    {"id": "F2", "kind": "medication", "text_en": "Refer to the medication list in your discharge paperwork.", "source_ids": ["S2"]},
+    {"id": "F3", "kind": "appointment", "text_en": "Attend your follow-up appointment in 3 days.", "source_ids": ["S3"]},
+    {"id": "F4", "kind": "pending_test", "text_en": "Ask your care team whether the pending test listed in this synthetic summary has been completed.", "source_ids": ["S4"]}
+  ]
+}

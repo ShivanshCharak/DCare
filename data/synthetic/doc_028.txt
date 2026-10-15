@@ -1,0 +1,12 @@
+Diagnosis:
+Scenario 28 includes a documented synthetic diagnosis.
+Medications:
+Use the discharge paperwork for the instructions on amoxicillin.
+Follow-up:
+Please attend a follow-up visit in 21 days.
+Restrictions:
+Keep the support wrap in place until the scheduled review.
+Warning signs:
+Follow the written urgent-contact instructions if the listed warning signs occur.
+Pending tests:
+A follow-up test result is pending.

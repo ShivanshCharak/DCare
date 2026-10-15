@@ -1,0 +1,12 @@
+Diagnosis:
+Scenario 13 includes a documented synthetic diagnosis.
+Medications:
+Use the discharge paperwork for the instructions on lisinopril.
+Follow-up:
+Please attend a follow-up visit in 14 days.
+Restrictions:
+Keep the support wrap in place until the scheduled review.
+Warning signs:
+Contact the care team if the warning signs listed in the discharge paperwork occur.
+Pending tests:
+The final laboratory report is pending.

@@ -1,0 +1,13 @@
+Diagnosis:
+Scenario 43 includes a documented synthetic diagnosis.
+Medications:
+Continue apixaban according to the written medication list.
+Stop apixaban according to the written medication list.
+Follow-up:
+Please attend a follow-up visit in 3 days.
+Restrictions:
+Keep the support wrap in place until the scheduled review.
+Warning signs:
+Contact the care team if a new concern described in the paperwork occurs.
+Pending tests:
+The final imaging report is pending.

@@ -1,0 +1,221 @@
+{
+  "scope": "independently authored synthetic translation cases; local-model output audit",
+  "run_at_utc": "2026-10-14T12:04:01.277890+00:00",
+  "synthetic_data_only": true,
+  "model_id": "qwen3:1.7b",
+  "case_set_sha256": "a85ff7704ab647c1e7ac965f88981e9e4e743a9ebb00c096083f5c2bfef145a5",
+  "case_count": 6,
+  "case_counts_by_language": {
+    "hi": 6
+  },
+  "translation_success_count": 3,
+  "translation_failure_count": 3,
+  "token_preservation_by_language": {
+    "hi": {
+      "translated_count": 3,
+      "passed": 1,
+      "pass_rate": 0.3333333333333333
+    }
+  },
+  "token_preservation_by_category": {
+    "follow_up": {
+      "translated_count": 1,
+      "passed": 1,
+      "pass_rate": 1.0
+    },
+    "medication": {
+      "translated_count": 2,
+      "passed": 0,
+      "pass_rate": 0.0
+    },
+    "restriction": {
+      "translated_count": 0,
+      "passed": 0,
+      "pass_rate": null
+    },
+    "warning_sign": {
+      "translated_count": 0,
+      "passed": 0,
+      "pass_rate": null
+    }
+  },
+  "semantic_quality_measured": false,
+  "human_review_complete_row_count": 0,
+  "token_preservation_pass_count": 1,
+  "token_preservation_pass_rate": 0.3333333333333333,
+  "human_quality_summary": null,
+  "cases": [
+    {
+      "row_id": "hi-med-01:qwen3:1.7b",
+      "case_id": "hi-med-01",
+      "language": "hi",
+      "category": "medication",
+      "source": "Take metformin 500 mg twice daily with food for 7 days.",
+      "output": "मेट्फॉमिन 500 मग्री दिन दो बार आम आंतरिक दूध बाहर ले लिया जाए जिसके 7 दिन रहेंगे।",
+      "required_verbatim_tokens": [
+        "500 mg",
+        "7",
+        "food",
+        "metformin",
+        "twice",
+        "with"
+      ],
+      "missing_tokens": [
+        "500 mg",
+        "food",
+        "metformin",
+        "twice",
+        "with"
+      ],
+      "translation_succeeded": true,
+      "token_preservation_passed": false,
+      "translation_check": "failed",
+      "routing_state": "needs_clinician",
+      "routing_score_heuristic": 0.0,
+      "human_review": {}
+    },
+    {
+      "row_id": "hi-med-02:qwen3:1.7b",
+      "case_id": "hi-med-02",
+      "language": "hi",
+      "category": "medication",
+      "source": "Stop taking ibuprofen today. Do not restart it unless your doctor tells you to.",
+      "output": "आज इब्पोफेन रोक ले रहे। आपके डॉक्टर के निर्देश के अनुसार फिर से इसे ले लेने के लिए आपको आवश्यक होगा।",
+      "required_verbatim_tokens": [
+        "Do",
+        "doctor",
+        "ibuprofen",
+        "it",
+        "not",
+        "restart",
+        "Stop",
+        "taking",
+        "tells",
+        "to",
+        "today",
+        "unless",
+        "you",
+        "your"
+      ],
+      "missing_tokens": [
+        "Do",
+        "doctor",
+        "ibuprofen",
+        "it",
+        "not",
+        "restart",
+        "Stop",
+        "taking",
+        "tells",
+        "to",
+        "today",
+        "unless",
+        "you",
+        "your"
+      ],
+      "translation_succeeded": true,
+      "token_preservation_passed": false,
+      "translation_check": "failed",
+      "routing_state": "needs_clinician",
+      "routing_score_heuristic": 0.0,
+      "human_review": {}
+    },
+    {
+      "row_id": "hi-med-03:qwen3:1.7b",
+      "case_id": "hi-med-03",
+      "language": "hi",
+      "category": "medication",
+      "source": "Use the inhaler only when you feel short of breath; do not use more than 4 times in one day.",
+      "output": "Use the inhaler only when you feel short of breath; do not use more than 4 times in one day.",
+      "required_verbatim_tokens": [
+        "4",
+        "breath",
+        "day",
+        "do",
+        "feel",
+        "in",
+        "inhaler",
+        "more",
+        "not",
+        "of",
+        "one",
+        "only",
+        "short",
+        "than",
+        "the",
+        "times",
+        "use",
+        "Use",
+        "when",
+        "you"
+      ],
+      "missing_tokens": null,
+      "translation_succeeded": false,
+      "token_preservation_passed": false,
+      "translation_check": "not_run",
+      "routing_state": "needs_clinician",
+      "routing_score_heuristic": 0.0,
+      "human_review": {}
+    },
+    {
+      "row_id": "hi-follow-01:qwen3:1.7b",
+      "case_id": "hi-follow-01",
+      "language": "hi",
+      "category": "follow_up",
+      "source": "Call the clinic tomorrow if the swelling is worse. Your appointment is on 11/18/2026 at 9:15 AM.",
+      "output": "अगर ब्लेडिंग बेहतर हो जाए तो अगले दिन रिजर्वेशन करें। आपका अपील 11/18/2026 बर्बर बजट 9:15 बजे है।",
+      "required_verbatim_tokens": [
+        "11/18/2026",
+        "9:15"
+      ],
+      "missing_tokens": [],
+      "translation_succeeded": true,
+      "token_preservation_passed": true,
+      "translation_check": "review_suggested",
+      "routing_state": "needs_clinician",
+      "routing_score_heuristic": 0.0,
+      "human_review": {}
+    },
+    {
+      "row_id": "hi-warning-01:qwen3:1.7b",
+      "case_id": "hi-warning-01",
+      "language": "hi",
+      "category": "warning_sign",
+      "source": "Go to the emergency department for chest pain, trouble breathing, or fainting.",
+      "output": "Go to the emergency department for chest pain, trouble breathing, or fainting.",
+      "required_verbatim_tokens": [],
+      "missing_tokens": null,
+      "translation_succeeded": false,
+      "token_preservation_passed": false,
+      "translation_check": "not_run",
+      "routing_state": "needs_clinician",
+      "routing_score_heuristic": 0.0,
+      "human_review": {}
+    },
+    {
+      "row_id": "hi-restriction-01:qwen3:1.7b",
+      "case_id": "hi-restriction-01",
+      "language": "hi",
+      "category": "restriction",
+      "source": "Do not lift anything heavier than 3 kg for 2 weeks, until your follow-up visit.",
+      "output": "Do not lift anything heavier than 3 kg for 2 weeks, until your follow-up visit.",
+      "required_verbatim_tokens": [
+        "2",
+        "3 kg"
+      ],
+      "missing_tokens": null,
+      "translation_succeeded": false,
+      "token_preservation_passed": false,
+      "translation_check": "not_run",
+      "routing_state": "needs_clinician",
+      "routing_score_heuristic": 0.0,
+      "human_review": {}
+    }
+  ],
+  "limitations": [
+    "Cases are synthetic and authored separately from the templated document corpus.",
+    "Token preservation does not measure translation meaning or readability.",
+    "Human ratings require qualified Hindi reviewers; blank ratings are not evidence.",
+    "This audit does not establish clinical performance or safety."
+  ]
+}

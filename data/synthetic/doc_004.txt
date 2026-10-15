@@ -1,0 +1,10 @@
+Diagnosis:
+A synthetic wrist fracture was treated during this hospital stay.
+Medications:
+Take the prescribed pain medicine only as listed in the discharge medication list.
+Restrictions:
+Keep the wrist splint in place until the follow-up visit.
+Follow-up:
+Attend the fracture clinic appointment in 10 days.
+Pending tests:
+The final imaging report is still pending.

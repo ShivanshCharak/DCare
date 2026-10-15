@@ -1,0 +1,64 @@
+{
+  "document_id": "doc_043",
+  "synthetic": true,
+  "set": "trap",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "Scenario 43 includes a documented synthetic diagnosis.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Continue apixaban according to the written medication list.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "medication",
+      "text_en": "Stop apixaban according to the written medication list.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "appointment",
+      "text_en": "Please attend a follow-up visit in 3 days.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "restriction",
+      "text_en": "Keep the support wrap in place until the scheduled review.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "warning_sign",
+      "text_en": "Contact the care team if a new concern described in the paperwork occurs.",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "id": "F7",
+      "kind": "pending_test",
+      "text_en": "The final imaging report is pending.",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "trap_type": "stop_continue_conflict"
+}

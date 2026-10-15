@@ -1,0 +1,4 @@
+Fictional software trap scenario 58 includes two different medication durations.
+Medication instructions:
+The fictional medication list says to take apixaban 5 mg twice daily for 5 days.
+A second fictional instruction says to take apixaban 5 mg twice daily for 10 days.

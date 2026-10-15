@@ -1,0 +1,57 @@
+{
+  "document_id": "doc_055",
+  "synthetic": true,
+  "set": "clean",
+  "narrative_style": true,
+  "authoring": "curated synthetic facts",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "diagnosis",
+      "text_en": "A synthetic condition was documented for fictional scenario 55.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Amlodipine is named in the fictional medication record; use the instructions printed with that list.",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "appointment",
+      "text_en": "A follow-up appointment is scheduled in 7 days.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "restriction",
+      "text_en": "Do not lift any object heavier than 5 kg before the follow-up.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "warning_sign",
+      "text_en": "Seek urgent assistance for difficulty breathing.",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "pending_test",
+      "text_en": "The final laboratory result has not yet returned.",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ]
+}

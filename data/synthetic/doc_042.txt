@@ -1,0 +1,13 @@
+Diagnosis:
+The discharge team recorded a synthetic condition for scenario 42.
+Medications:
+Keep taking insulin as directed in the discharge paperwork.
+Discontinue insulin as directed in the discharge paperwork.
+Follow-up:
+A follow-up appointment is scheduled for 21 days from discharge.
+Restrictions:
+Use the mobility aid as described in the discharge paperwork.
+Warning signs:
+Use the contact instructions in the discharge paperwork if symptoms worsen.
+Pending tests:
+A culture result is pending review.

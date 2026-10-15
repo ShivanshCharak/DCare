@@ -1,0 +1,12 @@
+Diagnosis:
+Scenario 23 includes a documented synthetic diagnosis.
+Medications:
+Use the discharge paperwork for the instructions on cephalexin.
+Follow-up:
+Please attend a follow-up visit in 5 days.
+Restrictions:
+Keep the support wrap in place until the scheduled review.
+Warning signs:
+Contact the care team if a new concern described in the paperwork occurs.
+Pending tests:
+The final imaging report is pending.

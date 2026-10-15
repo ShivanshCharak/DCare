@@ -1,0 +1,26 @@
+{
+  "document_id": "doc_058",
+  "synthetic": true,
+  "set": "trap",
+  "trap_type": "duration_conflict",
+  "narrative_style": true,
+  "authoring": "curated synthetic facts",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "medication",
+      "text_en": "The fictional medication list says to take apixaban 5 mg twice daily for 5 days.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "A second fictional instruction says to take apixaban 5 mg twice daily for 10 days.",
+      "source_ids": [
+        "S3"
+      ]
+    }
+  ]
+}

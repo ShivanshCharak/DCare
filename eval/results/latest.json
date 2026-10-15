@@ -1,0 +1,705 @@
+{
+  "run_at_utc": "2026-10-14T11:51:34.638423+00:00",
+  "synthetic_data_only": true,
+  "scope_note": "Starter corpus: 59 synthetic documents and controlled heuristic cases. Results are stratified by template versus curated narrative style. These measurements do not establish clinical performance.",
+  "extraction": {
+    "document_count": 59,
+    "document_set_counts": {
+      "clean": 45,
+      "trap": 14
+    },
+    "style_metrics": {
+      "template": {
+        "documents": 50,
+        "gold_facts": 302,
+        "predicted_facts": 302,
+        "exact_matches": 302,
+        "exact_precision": 1.0,
+        "exact_recall": 1.0,
+        "exact_f1": 1.0
+      },
+      "curated_narrative": {
+        "documents": 9,
+        "gold_facts": 38,
+        "predicted_facts": 38,
+        "exact_matches": 38,
+        "exact_precision": 1.0,
+        "exact_recall": 1.0,
+        "exact_f1": 1.0
+      }
+    },
+    "dataset_sha256": "825bf5eb85c6250d5e2a1dee8fab68e2aff2189a058141a75e1b4da204aadb7b",
+    "gold_fact_count": 340,
+    "predicted_fact_count": 340,
+    "true_positives": 340,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "source_link_match_count": 340,
+    "source_link_count": 340,
+    "source_link_accuracy": 1.0,
+    "per_document": [
+      {
+        "document_id": "doc_001",
+        "gold_fact_count": 4,
+        "predicted_fact_count": 4,
+        "exact_fact_matches": 4,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_002",
+        "gold_fact_count": 4,
+        "predicted_fact_count": 4,
+        "exact_fact_matches": 4,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_003",
+        "gold_fact_count": 4,
+        "predicted_fact_count": 4,
+        "exact_fact_matches": 4,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_004",
+        "gold_fact_count": 5,
+        "predicted_fact_count": 5,
+        "exact_fact_matches": 5,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_005",
+        "gold_fact_count": 5,
+        "predicted_fact_count": 5,
+        "exact_fact_matches": 5,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_006",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_007",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_008",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_009",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_010",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_011",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_012",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_013",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_014",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_015",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_016",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_017",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_018",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_019",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_020",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_021",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_022",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_023",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_024",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_025",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_026",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_027",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_028",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_029",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_030",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_031",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_032",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_033",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_034",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_035",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_036",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_037",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_038",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_039",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_040",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_041",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_042",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_043",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_044",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_045",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_046",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_047",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_048",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_049",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_050",
+        "gold_fact_count": 7,
+        "predicted_fact_count": 7,
+        "exact_fact_matches": 7,
+        "style": "template"
+      },
+      {
+        "document_id": "doc_051",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "curated_narrative"
+      },
+      {
+        "document_id": "doc_052",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "curated_narrative"
+      },
+      {
+        "document_id": "doc_053",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "curated_narrative"
+      },
+      {
+        "document_id": "doc_054",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "curated_narrative"
+      },
+      {
+        "document_id": "doc_055",
+        "gold_fact_count": 6,
+        "predicted_fact_count": 6,
+        "exact_fact_matches": 6,
+        "style": "curated_narrative"
+      },
+      {
+        "document_id": "doc_056",
+        "gold_fact_count": 2,
+        "predicted_fact_count": 2,
+        "exact_fact_matches": 2,
+        "style": "curated_narrative"
+      },
+      {
+        "document_id": "doc_057",
+        "gold_fact_count": 2,
+        "predicted_fact_count": 2,
+        "exact_fact_matches": 2,
+        "style": "curated_narrative"
+      },
+      {
+        "document_id": "doc_058",
+        "gold_fact_count": 2,
+        "predicted_fact_count": 2,
+        "exact_fact_matches": 2,
+        "style": "curated_narrative"
+      },
+      {
+        "document_id": "doc_059",
+        "gold_fact_count": 2,
+        "predicted_fact_count": 2,
+        "exact_fact_matches": 2,
+        "style": "curated_narrative"
+      }
+    ]
+  },
+  "trap_documents": {
+    "trap_document_count": 14,
+    "trap_detected_count": 14,
+    "trap_detection_rate": 1.0,
+    "trap_detection_by_type": {
+      "stop_continue_conflict": {
+        "count": 10,
+        "detected": 10,
+        "detection_rate": 1.0
+      },
+      "dose_conflict": {
+        "count": 2,
+        "detected": 2,
+        "detection_rate": 1.0
+      },
+      "frequency_conflict": {
+        "count": 1,
+        "detected": 1,
+        "detection_rate": 1.0
+      },
+      "duration_conflict": {
+        "count": 1,
+        "detected": 1,
+        "detection_rate": 1.0
+      }
+    },
+    "clean_document_count": 45,
+    "clean_conflict_false_flag_count": 0,
+    "clean_conflict_false_flag_rate": 0.0
+  },
+  "corruption_checks": {
+    "corrupted_case_count": 12,
+    "expected_reason_detected_count": 12,
+    "expected_reason_detection_rate": 1.0,
+    "clean_claim_count": 11,
+    "clean_claim_flagged_count": 0,
+    "clean_claim_false_flag_rate": 0.0,
+    "clean_claim_routing_counts": {
+      "needs_clinician": 11
+    },
+    "corrupted_claim_routing_counts": {
+      "needs_clinician": 12
+    },
+    "heuristic_routing_score": {
+      "clean_claims": {
+        "count": 11,
+        "mean": 0.7,
+        "below_threshold_count": 11,
+        "threshold": 0.85
+      },
+      "corrupted_claims": {
+        "count": 12,
+        "mean": 0.4583,
+        "below_threshold_count": 12,
+        "threshold": 0.85
+      },
+      "scope_note": "These scores are deterministic routing heuristics, not calibrated probabilities or model-quality metrics."
+    },
+    "cases": [
+      {
+        "id": "dose_changed",
+        "expected_reason": "medication_dose_mismatch",
+        "actual_reasons": [
+          "medication_dose_mismatch",
+          "unsupported_details_check_incomplete",
+          "unsupported_numeric_detail",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.3,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "frequency_changed",
+        "expected_reason": "medication_frequency_mismatch",
+        "actual_reasons": [
+          "medication_frequency_mismatch",
+          "unsupported_details_check_incomplete",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "unsupported_known_medication_name",
+        "expected_reason": "unsupported_medication_name",
+        "actual_reasons": [
+          "unsupported_medication_name",
+          "unsupported_details_check_incomplete",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "follow_up_timeframe_changed",
+        "expected_reason": "unsupported_numeric_detail",
+        "actual_reasons": [
+          "unsupported_details_check_incomplete",
+          "unsupported_numeric_detail",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "date_changed",
+        "expected_reason": "unsupported_numeric_detail",
+        "actual_reasons": [
+          "unsupported_details_check_incomplete",
+          "unsupported_numeric_detail",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "negation_dropped",
+        "expected_reason": "instruction_polarity_mismatch",
+        "actual_reasons": [
+          "medication_attribute_unrecognized",
+          "ambiguous_medication_details",
+          "unsupported_details_check_incomplete",
+          "instruction_polarity_mismatch",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "unsupported_clinician_attribution",
+        "expected_reason": "unsupported_attribution",
+        "actual_reasons": [
+          "unsupported_attribution",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "high_alert_stop_continue_conflict",
+        "expected_reason": "contradictory_medication_instructions",
+        "actual_reasons": [
+          "medication_attribute_unrecognized",
+          "ambiguous_medication_details",
+          "high_alert_medication_review",
+          "unsupported_details_check_incomplete",
+          "contradictory_medication_instructions",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": null,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": null
+      },
+      {
+        "id": "medication_duration_changed",
+        "expected_reason": "medication_duration_mismatch",
+        "actual_reasons": [
+          "medication_duration_mismatch",
+          "unsupported_details_check_incomplete",
+          "unsupported_numeric_detail",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.3,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "as_needed_instruction_dropped",
+        "expected_reason": "medication_frequency_mismatch",
+        "actual_reasons": [
+          "medication_frequency_mismatch",
+          "high_alert_medication_review",
+          "unsupported_details_check_incomplete",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "continue_instruction_dropped",
+        "expected_reason": "instruction_polarity_mismatch",
+        "actual_reasons": [
+          "unsupported_details_check_incomplete",
+          "instruction_polarity_mismatch",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": 0.7
+      },
+      {
+        "id": "restriction_threshold_changed",
+        "expected_reason": "unsupported_numeric_detail",
+        "actual_reasons": [
+          "unsupported_details_check_incomplete",
+          "unsupported_numeric_detail",
+          "confidence_below_threshold",
+          "verification_layers_not_fully_configured"
+        ],
+        "expected_reason_detected": true,
+        "clean_claim_flagged": false,
+        "corrupted_state": "needs_clinician",
+        "corrupted_routing_score": 0.49,
+        "clean_routing_score": 0.7
+      }
+    ]
+  }
+}

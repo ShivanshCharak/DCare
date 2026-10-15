@@ -1,0 +1,12 @@
+Diagnosis:
+A diagnosis was entered for synthetic scenario 24 before discharge.
+Medications:
+The medication plan for doxycycline is listed in the discharge paperwork.
+Follow-up:
+Your follow-up appointment should take place in 7 days.
+Restrictions:
+Avoid the activity listed in the discharge instructions until review.
+Warning signs:
+Follow the written urgent-contact instructions if the listed warning signs occur.
+Pending tests:
+A follow-up test result is pending.

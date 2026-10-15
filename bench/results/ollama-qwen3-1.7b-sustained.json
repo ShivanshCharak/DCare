@@ -1,0 +1,55 @@
+{
+  "run_at_utc": "2026-10-13T13:42:01.598298+00:00",
+  "synthetic_prompts_only": true,
+  "endpoint_host": "localhost",
+  "model_id": "qwen3:1.7b",
+  "host_metadata": {
+    "architecture": "x86_64",
+    "logical_cpu_count": 12,
+    "ollama_version": "ollama version is 0.23.2"
+  },
+  "model_processor": "100% GPU (from ollama ps immediately after the run)",
+  "gpu_name": null,
+  "requests_per_concurrency_level": 25,
+  "results": [
+    {
+      "concurrency": 1,
+      "request_count": 25,
+      "elapsed_seconds": 8.0374613150002,
+      "ttft_p50_seconds": 0.18704611500015744,
+      "ttft_p95_seconds": 0.214486959000169,
+      "latency_p50_seconds": 0.32495490000019345,
+      "latency_p95_seconds": 0.35346589200025846,
+      "completion_tokens_reported": 300,
+      "completion_tokens_available_for_requests": 25,
+      "aggregate_tokens_per_second": 37.32521852890467,
+      "documents_per_minute": 186.62609264452337
+    },
+    {
+      "concurrency": 2,
+      "request_count": 25,
+      "elapsed_seconds": 4.309555059000104,
+      "ttft_p50_seconds": 0.1912429119997796,
+      "ttft_p95_seconds": 0.1981139589997838,
+      "latency_p50_seconds": 0.331552166000165,
+      "latency_p95_seconds": 0.3398418669999046,
+      "completion_tokens_reported": 300,
+      "completion_tokens_available_for_requests": 25,
+      "aggregate_tokens_per_second": 69.61275488834467,
+      "documents_per_minute": 348.06377444172335
+    },
+    {
+      "concurrency": 4,
+      "request_count": 25,
+      "elapsed_seconds": 4.339494375999948,
+      "ttft_p50_seconds": 0.5267632620002587,
+      "ttft_p95_seconds": 0.5336848980000468,
+      "latency_p50_seconds": 0.6683288139997785,
+      "latency_p95_seconds": 0.6730296810001164,
+      "completion_tokens_reported": 300,
+      "completion_tokens_available_for_requests": 25,
+      "aggregate_tokens_per_second": 69.13247811984343,
+      "documents_per_minute": 345.66239059921713
+    }
+  ]
+}

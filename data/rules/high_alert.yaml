@@ -1,0 +1,102 @@
+# Partial generic-name subset based on the ISMP List of High-Alert
+# Medications in Acute Care Settings, published January 2024:
+# https://www.ismp.org/system/files/resources/2024-01/ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+#
+# This is not the complete ISMP list or a clinical reference. The checker
+# currently ignores route/formulation qualifiers, so matching an entry in
+# this file always adds a human-review reason, even when the source describes
+# a route/formulation outside the ISMP category.
+source: "ISMP List of High-Alert Medications in Acute Care Settings (January 2024)"
+source_url: "https://www.ismp.org/system/files/resources/2024-01/ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf"
+scope: "Partial generic-name subset; route and formulation qualifiers are not enforced"
+medications:
+  - generic: warfarin
+    aliases: [warfarin]
+    class: anticoagulant
+  - generic: heparin
+    aliases: [heparin, unfractionated heparin]
+    class: anticoagulant
+  - generic: low molecular weight heparin
+    aliases: [enoxaparin, dalteparin, tinzaparin]
+    class: anticoagulant
+  - generic: apixaban
+    aliases: [apixaban]
+    class: direct oral anticoagulant
+  - generic: rivaroxaban
+    aliases: [rivaroxaban]
+    class: direct oral anticoagulant
+  - generic: fondaparinux
+    aliases: [fondaparinux]
+    class: antithrombotic
+  - generic: dabigatran
+    aliases: [dabigatran]
+    class: direct thrombin inhibitor
+  - generic: argatroban
+    aliases: [argatroban]
+    class: direct thrombin inhibitor
+  - generic: bivalirudin
+    aliases: [bivalirudin]
+    class: direct thrombin inhibitor
+  - generic: eptifibatide
+    aliases: [eptifibatide]
+    class: glycoprotein IIb/IIIa inhibitor
+  - generic: alteplase
+    aliases: [alteplase]
+    class: thrombolytic
+  - generic: reteplase
+    aliases: [reteplase]
+    class: thrombolytic
+  - generic: tenecteplase
+    aliases: [tenecteplase]
+    class: thrombolytic
+  - generic: insulin
+    aliases: [insulin]
+    class: glucose-lowering medication
+  - generic: methotrexate
+    aliases: [methotrexate]
+    class: chemotherapy; oral nononcologic use is also listed by ISMP
+  - generic: opioid
+    aliases: [morphine, oxycodone, hydrocodone, hydromorphone, fentanyl, methadone, codeine]
+    class: opioid; ISMP list covers all routes
+  - generic: glimepiride
+    aliases: [glimepiride]
+    class: sulfonylurea
+  - generic: glipizide
+    aliases: [glipizide]
+    class: sulfonylurea
+  - generic: glyburide
+    aliases: [glyburide]
+    class: sulfonylurea
+  - generic: tolbutamide
+    aliases: [tolbutamide]
+    class: sulfonylurea
+  - generic: magnesium sulfate
+    aliases: [magnesium sulfate]
+    class: specific high-alert medication; injection
+  - generic: potassium chloride
+    aliases: [potassium chloride]
+    class: specific high-alert medication; injection concentrate
+  - generic: potassium phosphates
+    aliases: [potassium phosphates, potassium phosphate]
+    class: specific high-alert medication; injection
+  - generic: promethazine
+    aliases: [promethazine]
+    class: specific high-alert medication; injection
+  - generic: epinephrine
+    aliases: [epinephrine, adrenaline]
+    class: specific high-alert medication; route-specific entries
+  - generic: oxytocin
+    aliases: [oxytocin]
+    class: specific high-alert medication; intravenous
+  - generic: tranexamic acid
+    aliases: [tranexamic acid]
+    class: specific high-alert medication; injection
+  - generic: vasopressin
+    aliases: [vasopressin]
+    class: specific high-alert medication; intravenous and intraosseous
+  - generic: epoprostenol
+    aliases: [epoprostenol]
+    class: specific high-alert medication; intravenous
+  - generic: nitroprusside sodium
+    aliases: [nitroprusside sodium, sodium nitroprusside]
+    class: specific high-alert medication; injection

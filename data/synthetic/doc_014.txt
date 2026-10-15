@@ -1,0 +1,12 @@
+Diagnosis:
+A diagnosis was entered for synthetic scenario 14 before discharge.
+Medications:
+The medication plan for metformin is listed in the discharge paperwork.
+Follow-up:
+Your follow-up appointment should take place in 21 days.
+Restrictions:
+Avoid the activity listed in the discharge instructions until review.
+Warning signs:
+Use the contact instructions in the discharge paperwork if symptoms worsen.
+Pending tests:
+A culture result is pending review.

@@ -1,0 +1,4 @@
+Fictional software trap scenario 59 has inconsistent directions for one listed medicine.
+Medication instructions:
+One fictional instruction says to take methotrexate 2.5 mg once weekly.
+A second fictional instruction says to take methotrexate 5 mg once weekly.

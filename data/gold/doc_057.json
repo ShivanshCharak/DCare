@@ -1,0 +1,26 @@
+{
+  "document_id": "doc_057",
+  "synthetic": true,
+  "set": "trap",
+  "trap_type": "frequency_conflict",
+  "narrative_style": true,
+  "authoring": "curated synthetic facts",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "medication",
+      "text_en": "The fictional medication instructions say to take insulin once daily.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "medication",
+      "text_en": "Another line in the fictional instructions says to take insulin twice daily.",
+      "source_ids": [
+        "S3"
+      ]
+    }
+  ]
+}

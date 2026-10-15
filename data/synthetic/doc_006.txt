@@ -1,0 +1,12 @@
+Diagnosis:
+A synthetic condition from scenario 06 was documented during this hospital stay.
+Medications:
+Follow the discharge medication instructions for amlodipine.
+Follow-up:
+Attend the follow-up appointment in 14 days.
+Restrictions:
+Follow the written activity restrictions in the discharge paperwork.
+Warning signs:
+Use the contact instructions in the discharge paperwork if symptoms worsen.
+Pending tests:
+A culture result is pending review.
