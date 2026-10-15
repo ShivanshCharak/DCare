@@ -1,5 +1,5 @@
 {
-  "run_at_utc": "2026-10-14T11:51:34.638423+00:00",
+  "run_at_utc": "2026-10-15T07:53:23.843514+00:00",
   "synthetic_data_only": true,
   "scope_note": "Starter corpus: 59 synthetic documents and controlled heuristic cases. Results are stratified by template versus curated narrative style. These measurements do not establish clinical performance.",
   "extraction": {
@@ -488,29 +488,30 @@
     "corrupted_case_count": 12,
     "expected_reason_detected_count": 12,
     "expected_reason_detection_rate": 1.0,
+    "false_negative_count": 0,
+    "false_negative_case_ids": [],
     "clean_claim_count": 11,
     "clean_claim_flagged_count": 0,
+    "false_alarm_count": 0,
+    "false_alarm_case_ids": [],
     "clean_claim_false_flag_rate": 0.0,
     "clean_claim_routing_counts": {
-      "needs_clinician": 11
+      "source_supported": 9,
+      "review_suggested": 2
     },
     "corrupted_claim_routing_counts": {
       "needs_clinician": 12
     },
-    "heuristic_routing_score": {
+    "review_priority_score": {
       "clean_claims": {
         "count": 11,
-        "mean": 0.7,
-        "below_threshold_count": 11,
-        "threshold": 0.85
+        "mean": 0.06
       },
       "corrupted_claims": {
         "count": 12,
-        "mean": 0.4583,
-        "below_threshold_count": 12,
-        "threshold": 0.85
+        "mean": 0.9125
       },
-      "scope_note": "These scores are deterministic routing heuristics, not calibrated probabilities or model-quality metrics."
+      "scope_note": "This score only orders the human review queue; it is not a probability or model-quality metric."
     },
     "cases": [
       {
@@ -518,141 +519,136 @@
         "expected_reason": "medication_dose_mismatch",
         "actual_reasons": [
           "medication_dose_mismatch",
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
           "unsupported_numeric_detail",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.3,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.96,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "frequency_changed",
         "expected_reason": "medication_frequency_mismatch",
         "actual_reasons": [
           "medication_frequency_mismatch",
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.9,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "unsupported_known_medication_name",
         "expected_reason": "unsupported_medication_name",
         "actual_reasons": [
           "unsupported_medication_name",
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.9,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "follow_up_timeframe_changed",
         "expected_reason": "unsupported_numeric_detail",
         "actual_reasons": [
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
           "unsupported_numeric_detail",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.9,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "date_changed",
         "expected_reason": "unsupported_numeric_detail",
         "actual_reasons": [
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
           "unsupported_numeric_detail",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.9,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "negation_dropped",
         "expected_reason": "instruction_polarity_mismatch",
         "actual_reasons": [
-          "medication_attribute_unrecognized",
           "ambiguous_medication_details",
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
           "instruction_polarity_mismatch",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.91,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "unsupported_clinician_attribution",
         "expected_reason": "unsupported_attribution",
         "actual_reasons": [
+          "entailment_judge_failed",
           "unsupported_attribution",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.9,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "high_alert_stop_continue_conflict",
         "expected_reason": "contradictory_medication_instructions",
         "actual_reasons": [
-          "medication_attribute_unrecognized",
           "ambiguous_medication_details",
           "high_alert_medication_review",
-          "unsupported_details_check_incomplete",
-          "contradictory_medication_instructions",
-          "confidence_below_threshold",
-          "verification_layers_not_fully_configured"
+          "contradictory_medication_instructions"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": null,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": null
+        "corrupted_review_priority_score": 0.91,
+        "clean_review_priority_score": null
       },
       {
         "id": "medication_duration_changed",
         "expected_reason": "medication_duration_mismatch",
         "actual_reasons": [
           "medication_duration_mismatch",
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
           "unsupported_numeric_detail",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.3,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.96,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "as_needed_instruction_dropped",
@@ -660,45 +656,45 @@
         "actual_reasons": [
           "medication_frequency_mismatch",
           "high_alert_medication_review",
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.9,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "continue_instruction_dropped",
         "expected_reason": "instruction_polarity_mismatch",
         "actual_reasons": [
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
           "instruction_polarity_mismatch",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.91,
+        "clean_review_priority_score": 0.06
       },
       {
         "id": "restriction_threshold_changed",
         "expected_reason": "unsupported_numeric_detail",
         "actual_reasons": [
+          "entailment_judge_failed",
           "unsupported_details_check_incomplete",
           "unsupported_numeric_detail",
-          "confidence_below_threshold",
           "verification_layers_not_fully_configured"
         ],
         "expected_reason_detected": true,
         "clean_claim_flagged": false,
         "corrupted_state": "needs_clinician",
-        "corrupted_routing_score": 0.49,
-        "clean_routing_score": 0.7
+        "corrupted_review_priority_score": 0.9,
+        "clean_review_priority_score": 0.06
       }
     ]
   }
