@@ -34,8 +34,6 @@ def _validated_base_url() -> str:
             "Model endpoint must resolve to a local or private-network host when using local Ollama. "
             "Set ALLOW_REMOTE_LLM=true or LLM_PROVIDER=openai_compatible to allow remote endpoints."
         )
-    if base_url.endswith("/v1"):
-        base_url = base_url[:-3]
     return base_url
 
 
@@ -57,13 +55,21 @@ def chat_completion(
         if settings.llm_api_key:
             headers["Authorization"] = f"Bearer {settings.llm_api_key}"
 
+        messages_to_send = [dict(m) for m in messages]
         payload: dict[str, Any] = {
             "model": model,
-            "messages": messages,
+            "messages": messages_to_send,
             "temperature": temperature,
         }
         if response_format:
             payload["response_format"] = {"type": "json_object"}
+            has_json_word = any("json" in m.get("content", "").lower() for m in messages_to_send)
+            if not has_json_word and messages_to_send:
+                messages_to_send[0] = {
+                    **messages_to_send[0],
+                    "content": messages_to_send[0]["content"] + "\nReturn the response in valid JSON format.",
+                }
+                payload["messages"] = messages_to_send
 
         response = httpx.post(endpoint, headers=headers, json=payload, timeout=timeout)
         response.raise_for_status()
@@ -73,6 +79,7 @@ def chat_completion(
         )
 
     # Provider: Ollama (default local)
+    ollama_base = base_url[:-3] if base_url.endswith("/v1") else base_url
     payload: dict[str, Any] = {
         "model": model,
         "messages": messages,
@@ -87,7 +94,7 @@ def chat_completion(
         payload["format"] = schema
 
     response = httpx.post(
-        f"{base_url}/api/chat",
+        f"{ollama_base}/api/chat",
         json=payload,
         timeout=timeout,
     )
@@ -106,9 +113,7 @@ def text_completion(
     timeout: float = 60.0,
 ) -> str | None:
     """Call raw completion or chat fallback for completion models."""
-    base_url = _validated_base_url()
-
-    if settings.llm_provider == "openai_compatible":
+    if settings.llm_provider == "openai_compatible" and model != "mashriram/sarvam-1":
         # Forward prompt to chat endpoint as a single prompt
         res = chat_completion(
             model=model,
@@ -118,8 +123,10 @@ def text_completion(
         )
         return res.choices[0].message.content
 
+    base_url = _validated_base_url()
+    ollama_base = base_url[:-3] if base_url.endswith("/v1") else base_url
     response = httpx.post(
-        f"{base_url}/api/generate",
+        f"{ollama_base}/api/generate",
         json={
             "model": model,
             "prompt": prompt,

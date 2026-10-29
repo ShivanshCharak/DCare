@@ -25,6 +25,23 @@ class Settings(BaseSettings):
 
     cors_origins: str = "http://localhost:3000"
 
+    def model_post_init(self, __context) -> None:
+        if self.llm_api_key and self.llm_api_key.startswith("gsk_"):
+            if self.llm_provider == "ollama":
+                self.llm_provider = "openai_compatible"
+            if self.llm_base_url == "http://localhost:11434/v1":
+                self.llm_base_url = "https://api.groq.com/openai/v1"
+            if self.model_id == "qwen3:1.7b":
+                self.model_id = "llama-3.1-8b-instant"
+            if self.translation_judge_model_id == "qwen3:1.7b":
+                self.translation_judge_model_id = "llama-3.1-8b-instant"
+            if self.translation_model_id == "mashriram/sarvam-1":
+                self.translation_model_id = "llama-3.1-8b-instant"
+            self.allow_remote_llm = True
+        elif self.llm_api_key and self.llm_provider == "ollama":
+            self.llm_provider = "openai_compatible"
+            self.allow_remote_llm = True
+
     model_config = SettingsConfigDict(
         env_file=Path(__file__).resolve().parents[2] / ".env",
         extra="ignore",

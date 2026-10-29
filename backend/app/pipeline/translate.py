@@ -11,7 +11,7 @@ from ..llm_client import chat_completion, text_completion
 from ..models import Claim, Fact, State
 from .entailment import check_claim_entailment
 
-SARVAM_TRANSLATION_MODEL = settings.translation_model_id or "mashriram/sarvam-1"
+SARVAM_TRANSLATION_MODEL = "mashriram/sarvam-1"
 LANGUAGES = {
     "en": "English",
     "hi": "Hindi",
