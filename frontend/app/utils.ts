@@ -59,8 +59,9 @@ export function claimOverviewCounts(claims: Array<{ state: string }>) {
   }, { needsClinician: 0, reviewSuggested: 0, sourceSupported: 0, verified: 0 });
 }
 
-export const API =
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+export const API = (
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000"
+).replace(/\/+$/, ""); // strip any trailing slashes
 
 const API_TOKEN_KEY = "discharge-explainer-api-access-token";
 
@@ -69,10 +70,14 @@ export async function apiFetch(
   init: RequestInit = {},
 ): Promise<Response> {
   const headers = new Headers(init.headers);
-  if (typeof window !== "undefined") {
-    const token = window.sessionStorage.getItem(API_TOKEN_KEY);
-    if (token) headers.set("Authorization", `Bearer ${token}`);
-  }
+  const sessionToken =
+    typeof window !== "undefined"
+      ? window.sessionStorage.getItem(API_TOKEN_KEY)
+      : null;
+  // Session storage takes priority; fall back to the build-time env var
+  // (NEXT_PUBLIC_API_ACCESS_TOKEN set in Vercel / your hosting dashboard).
+  const token = sessionToken ?? process.env.NEXT_PUBLIC_API_ACCESS_TOKEN ?? "";
+  if (token) headers.set("Authorization", `Bearer ${token}`);
   return fetch(input, { ...init, headers });
 }
 
