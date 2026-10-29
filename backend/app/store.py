@@ -123,7 +123,7 @@ class PostgresDocumentMapping(MutableMapping[str, DocumentRecord]):
                 "Please install psycopg2-binary with: pip install psycopg2-binary"
             )
 
-        self.database_url = database_url
+        self.database_url = database_url.strip()
         self._lock = threading.RLock()
         self._connection = psycopg2.connect(self.database_url)
         self._connection.autocommit = True
@@ -209,6 +209,7 @@ class PostgresDocumentMapping(MutableMapping[str, DocumentRecord]):
 
 class DocumentStore:
     def __init__(self, database_url: str):
+        database_url = database_url.strip()
         if database_url.startswith(("postgresql://", "postgres://")):
             self.documents = PostgresDocumentMapping(database_url)
         elif database_url.startswith("sqlite:///"):

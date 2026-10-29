@@ -26,6 +26,9 @@ class Settings(BaseSettings):
     cors_origins: str = "http://localhost:3000"
 
     def model_post_init(self, __context) -> None:
+        if self.database_url:
+            self.database_url = self.database_url.strip()
+
         if self.llm_api_key and self.llm_api_key.startswith("gsk_"):
             if self.llm_provider == "ollama":
                 self.llm_provider = "openai_compatible"
