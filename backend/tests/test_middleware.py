@@ -1,7 +1,7 @@
 import asyncio
 import json
 
-from app.middleware import BearerTokenAuth, MaxRequestBodySize
+from app.middleware import MaxRequestBodySize
 
 
 def run_middleware(scope, incoming_messages, max_bytes=5):
@@ -54,45 +54,3 @@ def test_allows_body_within_limit():
     assert sent[0]["status"] == 200
     assert sent[1]["body"] == b"ok"
 
-
-def run_auth(headers=None, *, token="", app_env="development", path="/review-queue"):
-    sent = []
-
-    async def app(scope, receive, send):
-        await send({"type": "http.response.start", "status": 204, "headers": []})
-        await send({"type": "http.response.body", "body": b""})
-
-    async def receive():
-        return {"type": "http.request", "body": b"", "more_body": False}
-
-    async def send(message):
-        sent.append(message)
-
-    scope = {"type": "http", "path": path, "headers": headers or []}
-    asyncio.run(BearerTokenAuth(app, token, app_env)(scope, receive, send))
-    return sent
-
-
-def test_bearer_auth_rejects_missing_or_invalid_tokens():
-    for headers in ([], [(b"authorization", b"Bearer wrong-token")]):
-        sent = run_auth(headers, token="expected-token")
-        assert sent[0]["status"] == 401
-        assert (b"www-authenticate", b"Bearer") in sent[0]["headers"]
-
-
-def test_bearer_auth_accepts_configured_token():
-    sent = run_auth(
-        [(b"authorization", b"Bearer expected-token")],
-        token="expected-token",
-    )
-    assert sent[0]["status"] == 204
-
-
-def test_bearer_auth_is_optional_in_development_and_health_is_public():
-    assert run_auth()[0]["status"] == 204
-    assert run_auth(token="expected-token", path="/health")[0]["status"] == 204
-
-
-def test_production_requires_configured_token():
-    sent = run_auth(app_env="production")
-    assert sent[0]["status"] == 503

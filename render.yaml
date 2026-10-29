@@ -10,8 +10,6 @@ services:
     envVars:
       - key: APP_ENV
         value: Production
-      - key: API_ACCESS_TOKEN
-        sync: false # Set this to a strong random secret in the Render dashboard (e.g. openssl rand -hex 32)
       - key: DATABASE_URL
         sync: false # Paste your Supabase PostgreSQL connection string
       - key: LLM_PROVIDER

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ApiAccessToken } from "./components/ApiAccessToken";
 
 export const metadata: Metadata = {
   title: "Discharge Explainer",
@@ -10,10 +9,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>
-        <ApiAccessToken />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

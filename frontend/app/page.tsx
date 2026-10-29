@@ -245,7 +245,6 @@ const [reviewError, setReviewError] = useState("");
           <h1>Understand what happens next.</h1>
           <p className="hero-description">Turn discharge notes into clear explanations linked to the original instructions.</p>
         </div>
-        <div className="demo-notice" role="note"><span aria-hidden="true">ⓘ</span><p><strong>Demo with synthetic data only.</strong> Don’t upload real patient information. Documents are processed by the configured local model and stored locally for up to 7 days. You can delete a document sooner.</p></div>
       </header>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-7">
@@ -301,10 +300,6 @@ const [reviewError, setReviewError] = useState("");
           </span>
           <span className="upload-formats">PDF or TXT · up to 5 MB</span>
         </div>
-
-        <p className="mt-3 text-xs leading-5 text-slate-500">
-          Scanned PDF pages use local OCR when Tesseract is installed. Use synthetic demonstration data only.
-        </p>
 
         <details open className="sample-panel mt-6 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
           <summary className="cursor-pointer text-sm font-semibold text-slate-700">

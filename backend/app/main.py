@@ -24,7 +24,7 @@ from .models import (
     Sentence,
     ReviewAction,
 )
-from .middleware import BearerTokenAuth, MaxRequestBodySize
+from .middleware import MaxRequestBodySize
 from app.models import State
 from .store import store
 from .pipeline.parse import parse_and_split
@@ -38,11 +38,6 @@ from .pipeline.translate import LANGUAGES, translate_claims
 app = FastAPI(title="Discharge Explainer API", version="0.1.0")
 logger = logging.getLogger(__name__)
 app.add_middleware(MaxRequestBodySize, max_bytes=settings.max_request_bytes)
-app.add_middleware(
-    BearerTokenAuth,
-    api_access_token=settings.api_access_token,
-    app_env=settings.app_env,
-)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
