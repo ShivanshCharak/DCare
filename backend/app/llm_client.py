@@ -113,10 +113,11 @@ def text_completion(
     timeout: float = 60.0,
 ) -> str | None:
     """Call raw completion or chat fallback for completion models."""
-    if settings.llm_provider == "openai_compatible" and model != "mashriram/sarvam-1":
-        # Forward prompt to chat endpoint as a single prompt
+    if settings.llm_provider == "openai_compatible" and "localhost:11434" not in settings.llm_base_url:
+        target_model = settings.translation_model_id if settings.translation_model_id != "mashriram/sarvam-1" else settings.model_id
+        actual_model = target_model if model == "mashriram/sarvam-1" else model
         res = chat_completion(
-            model=model,
+            model=actual_model,
             messages=[{"role": "user", "content": prompt}],
             temperature=temperature,
             timeout=timeout,
