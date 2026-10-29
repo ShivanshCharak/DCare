@@ -18,8 +18,10 @@ class Settings(BaseSettings):
     llm_base_url: str = "http://localhost:11434/v1"
     model_id: str = "qwen3:1.7b"
     translation_judge_model_id: str = "qwen3:1.7b"
+    translation_model_id: str = "mashriram/sarvam-1"
     llm_provider: Literal["ollama", "openai_compatible"] = "ollama"
     llm_api_key: str = ""
+    allow_remote_llm: bool = False
 
     cors_origins: str = "http://localhost:3000"
 

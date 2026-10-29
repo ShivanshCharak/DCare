@@ -1,4 +1,4 @@
-"""Small synchronous Ollama chat client for the local model integration."""
+"""Ollama and OpenAI-compatible client supporting local and free hosted inference."""
 
 from __future__ import annotations
 
@@ -12,8 +12,13 @@ import httpx
 from .config import settings
 
 
-def _validated_ollama_base_url() -> str:
+def _validated_base_url() -> str:
     base_url = settings.llm_base_url.rstrip("/")
+
+    # If using OpenAI-compatible or remote LLM is explicitly allowed, allow remote endpoints
+    if settings.llm_provider == "openai_compatible" or settings.allow_remote_llm:
+        return base_url
+
     hostname = urlparse(base_url).hostname
     local_aliases = {"localhost", "host.docker.internal", "host.containers.internal"}
     try:
@@ -25,7 +30,10 @@ def _validated_ollama_base_url() -> str:
     except ValueError:
         local_address = hostname in local_aliases
     if not local_address:
-        raise ValueError("Model endpoint must resolve to a local or private-network host; external endpoints are blocked to protect source text.")
+        raise ValueError(
+            "Model endpoint must resolve to a local or private-network host when using local Ollama. "
+            "Set ALLOW_REMOTE_LLM=true or LLM_PROVIDER=openai_compatible to allow remote endpoints."
+        )
     if base_url.endswith("/v1"):
         base_url = base_url[:-3]
     return base_url
@@ -39,9 +47,32 @@ def chat_completion(
     response_format: dict[str, Any] | None = None,
     timeout: float = 60.0,
 ) -> SimpleNamespace:
-    """Call Ollama's native API so thinking models can use ``think: false``."""
-    base_url = _validated_ollama_base_url()
+    """Call either OpenAI-compatible hosted API or native Ollama API."""
+    base_url = _validated_base_url()
 
+    # Provider: OpenAI-compatible (Groq, Together, Hugging Face, OpenRouter, etc.)
+    if settings.llm_provider == "openai_compatible":
+        endpoint = base_url if base_url.endswith("/chat/completions") else f"{base_url}/chat/completions"
+        headers: dict[str, str] = {"Content-Type": "application/json"}
+        if settings.llm_api_key:
+            headers["Authorization"] = f"Bearer {settings.llm_api_key}"
+
+        payload: dict[str, Any] = {
+            "model": model,
+            "messages": messages,
+            "temperature": temperature,
+        }
+        if response_format:
+            payload["response_format"] = {"type": "json_object"}
+
+        response = httpx.post(endpoint, headers=headers, json=payload, timeout=timeout)
+        response.raise_for_status()
+        content = response.json()["choices"][0]["message"]["content"]
+        return SimpleNamespace(
+            choices=[SimpleNamespace(message=SimpleNamespace(content=content))]
+        )
+
+    # Provider: Ollama (default local)
     payload: dict[str, Any] = {
         "model": model,
         "messages": messages,
@@ -74,9 +105,21 @@ def text_completion(
     temperature: float = 0,
     timeout: float = 60.0,
 ) -> str | None:
-    """Call Ollama's raw completion endpoint for base text-completion models."""
+    """Call raw completion or chat fallback for completion models."""
+    base_url = _validated_base_url()
+
+    if settings.llm_provider == "openai_compatible":
+        # Forward prompt to chat endpoint as a single prompt
+        res = chat_completion(
+            model=model,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=temperature,
+            timeout=timeout,
+        )
+        return res.choices[0].message.content
+
     response = httpx.post(
-        f"{_validated_ollama_base_url()}/api/generate",
+        f"{base_url}/api/generate",
         json={
             "model": model,
             "prompt": prompt,
@@ -85,7 +128,7 @@ def text_completion(
             "options": {
                 "temperature": temperature,
                 "num_predict": 512,
-            "stop": ["\nEnglish:", "\n English:", "\n\n English:"],
+                "stop": ["\nEnglish:", "\n English:", "\n\n English:"],
             },
         },
         timeout=timeout,
