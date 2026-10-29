@@ -19,11 +19,11 @@ services:
       - key: LLM_BASE_URL
         value: https://api.groq.com/openai/v1
       - key: MODEL_ID
-        value: llama-3.1-8b-instant
+        value: llama-3.3-70b-versatile
       - key: TRANSLATION_JUDGE_MODEL_ID
-        value: llama-3.1-8b-instant
+        value: llama-3.3-70b-versatile
       - key: TRANSLATION_MODEL_ID
-        value: llama-3.1-8b-instant
+        value: llama-3.3-70b-versatile
       - key: LLM_API_KEY
         sync: false # Paste your free Groq API key (gsk_...) or OpenRouter key
       - key: ALLOW_REMOTE_LLM
