@@ -9,7 +9,7 @@ services:
     autoDeploy: true
     envVars:
       - key: APP_ENV
-        value: production
+        value: development
       - key: DATABASE_URL
         sync: false # Paste your Supabase PostgreSQL connection string
       - key: LLM_PROVIDER
