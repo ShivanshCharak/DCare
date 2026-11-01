@@ -8,6 +8,7 @@ services:
     environment:
       DATABASE_URL: sqlite:////app/data/discharge_explainer.db
       LLM_BASE_URL: http://host.docker.internal:11434/v1
+      LANGFUSE_HOST: http://langfuse-server:3000
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
@@ -27,5 +28,40 @@ services:
     depends_on:
       - backend
 
+  # ------------------------------------------------------------
+  # Tracing & Observability: Langfuse (Local Docker Deployment)
+  # ------------------------------------------------------------
+  langfuse-server:
+    image: langfuse/langfuse:2
+    depends_on:
+      langfuse-db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:3001:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://postgres:postgres@langfuse-db:5432/langfuse
+      - NEXTAUTH_URL=http://localhost:3001
+      - NEXTAUTH_SECRET=discharge_explainer_langfuse_secret_32_chars_min
+      - SALT=discharge_explainer_salt_32_chars_minimum
+      - TELEMETRY_ENABLED=false
+    restart: unless-stopped
+
+  langfuse-db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=langfuse
+    volumes:
+      - langfuse_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
 volumes:
   backend_data:
+  langfuse_postgres_data:

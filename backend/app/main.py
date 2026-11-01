@@ -34,6 +34,7 @@ from .pipeline.explain import explain_facts
 from .pipeline.verify import verify_claims
 from .pipeline.route import build_doctor_questions, combine_states
 from .pipeline.translate import LANGUAGES, translate_claims
+from .tracing import flush_traces, pipeline_trace
 
 app = FastAPI(title="Discharge Explainer API", version="0.1.0")
 logger = logging.getLogger(__name__)
@@ -194,6 +195,8 @@ async def create_document(
             detail="Use application/json or multipart/form-data.",
         )
 
+    doc_id = str(uuid.uuid4())
+
     sentences = parse_and_split(text)
 
     if not sentences:
@@ -202,32 +205,41 @@ async def create_document(
             detail="No sentences could be extracted.",
         )
 
-    try:
-        logger.info(
-            "Document sentence splitting completed source=%s sentences=%d",
-            source_name, len(sentences),
-        )
-        facts = extract_facts(
-            sentences,
-            mode=settings.fact_extraction_mode,
-        )
-        validate_fact_sources(facts, sentences)
-        logger.info(
-            "Document fact extraction completed source=%s mode=%s facts=%d sentences=%d",
-            source_name, settings.fact_extraction_mode, len(facts), len(sentences),
-        )
-    except Exception as exc:
-        logger.exception("Fact extraction failed mode=%s", settings.fact_extraction_mode)
-        raise HTTPException(
-            status_code=502 if settings.fact_extraction_mode == "structured_llm" else 422,
-            detail={
-                "code": "fact_extraction_failed",
-                "message": str(exc) or "Fact extraction did not complete validation.",
-                "mode": settings.fact_extraction_mode,
-            },
-        ) from exc
-
-    doc_id = str(uuid.uuid4())
+    with pipeline_trace(doc_id, source_name, feature="document-ingest") as root_span:
+        try:
+            logger.info(
+                "Document sentence splitting completed source=%s sentences=%d",
+                source_name, len(sentences),
+            )
+            facts = extract_facts(
+                sentences,
+                mode=settings.fact_extraction_mode,
+            )
+            validate_fact_sources(facts, sentences)
+            logger.info(
+                "Document fact extraction completed source=%s mode=%s facts=%d sentences=%d",
+                source_name, settings.fact_extraction_mode, len(facts), len(sentences),
+            )
+            if root_span is not None:
+                root_span.update(
+                    metadata={
+                        "feature": "document-ingest",
+                        "fact_extraction_mode": settings.fact_extraction_mode,
+                        "sentence_count": len(sentences),
+                        "fact_count": len(facts),
+                        "ocr_used": ocr_used,
+                    }
+                )
+        except Exception as exc:
+            logger.exception("Fact extraction failed mode=%s", settings.fact_extraction_mode)
+            raise HTTPException(
+                status_code=502 if settings.fact_extraction_mode == "structured_llm" else 422,
+                detail={
+                    "code": "fact_extraction_failed",
+                    "message": str(exc) or "Fact extraction did not complete validation.",
+                    "mode": settings.fact_extraction_mode,
+                },
+            ) from exc
 
     record = DocumentRecord(
         id=doc_id,
@@ -282,55 +294,66 @@ def explain_document(
         ) from exc
 
     logger.info("Claim generation started doc_id=%s facts=%d", doc_id, len(facts))
-    try:
-        claims = explain_facts(facts)
-    except Exception as exc:
-        logger.exception("Claim generation failed doc_id=%s facts=%d", doc_id, len(facts))
-        raise HTTPException(
-            status_code=502,
-            detail={"code": "claim_generation_failed", "message": str(exc)},
-        ) from exc
-    if not claims:
-        logger.error("Claim generation returned no claims doc_id=%s facts=%d", doc_id, len(facts))
-        raise HTTPException(
-            status_code=502,
-            detail={
-                "code": "claim_generation_empty",
-                "message": "Claim generation returned no claims for a document with extracted facts.",
-            },
-        )
-    if len(claims) != len(facts):
-        logger.error(
-            "Claim generation count mismatch doc_id=%s facts=%d claims=%d",
-            doc_id, len(facts), len(claims),
-        )
-        raise HTTPException(
-            status_code=502,
-            detail={"code": "claim_generation_incomplete", "message": "Claim generation did not return one claim per extracted fact."},
-        )
-    # Fact/claim counters restart per document; qualify claim IDs so review
-    # requests cannot accidentally update a same-numbered claim in another doc.
-    for claim in claims:
-        claim.id = f"{doc_id}-{claim.id}"
-        if record.input_warnings:
-            claim.reason_codes.append("ocr_source_requires_review")
-
-    try:
-        claims = verify_claims(claims, record.sentences, facts)
-    except Exception as exc:
-        logger.exception("Claim verification failed doc_id=%s claims=%d", doc_id, len(claims))
-        raise HTTPException(
-            status_code=502,
-            detail={"code": "claim_verification_failed", "message": str(exc)},
-        ) from exc
-    logger.info("Claim verification completed doc_id=%s claims=%d", doc_id, len(claims))
-
-    if lang != "en":
+    with pipeline_trace(doc_id, record.source_name, feature="explain-pipeline") as root_span:
         try:
-            claims = translate_claims(claims, facts, lang)
+            claims = explain_facts(facts)
         except Exception as exc:
-            logger.exception("Local translation failed doc_id=%s language=%s", doc_id, lang)
-            raise HTTPException(status_code=502, detail={"code": "translation_failed", "message": "Local translation did not complete; the English claims remain available for review."}) from exc
+            logger.exception("Claim generation failed doc_id=%s facts=%d", doc_id, len(facts))
+            raise HTTPException(
+                status_code=502,
+                detail={"code": "claim_generation_failed", "message": str(exc)},
+            ) from exc
+        if not claims:
+            logger.error("Claim generation returned no claims doc_id=%s facts=%d", doc_id, len(facts))
+            raise HTTPException(
+                status_code=502,
+                detail={
+                    "code": "claim_generation_empty",
+                    "message": "Claim generation returned no claims for a document with extracted facts.",
+                },
+            )
+        if len(claims) != len(facts):
+            logger.error(
+                "Claim generation count mismatch doc_id=%s facts=%d claims=%d",
+                doc_id, len(facts), len(claims),
+            )
+            raise HTTPException(
+                status_code=502,
+                detail={"code": "claim_generation_incomplete", "message": "Claim generation did not return one claim per extracted fact."},
+            )
+        # Fact/claim counters restart per document; qualify claim IDs so review
+        # requests cannot accidentally update a same-numbered claim in another doc.
+        for claim in claims:
+            claim.id = f"{doc_id}-{claim.id}"
+            if record.input_warnings:
+                claim.reason_codes.append("ocr_source_requires_review")
+
+        try:
+            claims = verify_claims(claims, record.sentences, facts)
+        except Exception as exc:
+            logger.exception("Claim verification failed doc_id=%s claims=%d", doc_id, len(claims))
+            raise HTTPException(
+                status_code=502,
+                detail={"code": "claim_verification_failed", "message": str(exc)},
+            ) from exc
+        logger.info("Claim verification completed doc_id=%s claims=%d", doc_id, len(claims))
+
+        if lang != "en":
+            try:
+                claims = translate_claims(claims, facts, lang)
+            except Exception as exc:
+                logger.exception("Local translation failed doc_id=%s language=%s", doc_id, lang)
+                raise HTTPException(status_code=502, detail={"code": "translation_failed", "message": "Local translation did not complete; the English claims remain available for review."}) from exc
+
+        if root_span is not None:
+            root_span.update(
+                metadata={
+                    "feature": "explain-pipeline",
+                    "fact_count": len(facts),
+                    "claim_count": len(claims),
+                    "language": lang,
+                }
+            )
 
     record.claims = claims
     record.status = "explained"
@@ -497,3 +520,9 @@ def doctor_questions(doc_id: str):
     if record is None:
         raise HTTPException(status_code=404, detail="Document not found.")
     return build_doctor_questions(record.facts, record.claims)
+
+
+@app.on_event("shutdown")
+def on_shutdown():
+    flush_traces()
+

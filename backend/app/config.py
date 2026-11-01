@@ -23,6 +23,18 @@ class Settings(BaseSettings):
     llm_api_key: str = ""
     allow_remote_llm: bool = False
 
+    # Observability & Tracing (Langfuse v5)
+    # LANGFUSE_ENABLED=true activates tracing.
+    # Set credentials via LANGFUSE_PUBLIC_KEY / LANGFUSE_SECRET_KEY /
+    # LANGFUSE_BASE_URL (standard Langfuse v5 env vars) — the fields below are
+    # read by tracing.py which forwards them to the SDK before first use.
+    langfuse_enabled: bool = False
+    langfuse_public_key: str = ""
+    langfuse_secret_key: str = ""
+    # LANGFUSE_BASE_URL takes precedence; langfuse_host kept for legacy compat.
+    langfuse_base_url: str = ""
+    langfuse_host: str = "http://localhost:3001"
+
     cors_origins: str = "http://localhost:3000"
 
     def model_post_init(self, __context) -> None:

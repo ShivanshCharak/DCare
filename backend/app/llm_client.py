@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 import httpx
 
 from .config import settings
+from .tracing import trace_generation
 
 
 def _validated_base_url() -> str:
@@ -73,7 +74,17 @@ def chat_completion(
 
         response = httpx.post(endpoint, headers=headers, json=payload, timeout=timeout)
         response.raise_for_status()
-        content = response.json()["choices"][0]["message"]["content"]
+        resp_json = response.json()
+        content = resp_json["choices"][0]["message"]["content"]
+        usage = resp_json.get("usage")
+        trace_generation(
+            "chat_completion",
+            model=model,
+            input_data=messages_to_send,
+            output_data=content,
+            usage=usage,
+            metadata={"provider": "openai_compatible", "temperature": temperature},
+        )
         return SimpleNamespace(
             choices=[SimpleNamespace(message=SimpleNamespace(content=content))]
         )
@@ -99,7 +110,20 @@ def chat_completion(
         timeout=timeout,
     )
     response.raise_for_status()
-    content = response.json().get("message", {}).get("content")
+    resp_json = response.json()
+    content = resp_json.get("message", {}).get("content")
+    trace_generation(
+        "chat_completion",
+        model=model,
+        input_data=messages,
+        output_data=content,
+        usage={
+            "prompt_tokens": resp_json.get("prompt_eval_count", 0),
+            "completion_tokens": resp_json.get("eval_count", 0),
+            "total_tokens": resp_json.get("prompt_eval_count", 0) + resp_json.get("eval_count", 0),
+        } if "eval_count" in resp_json else None,
+        metadata={"provider": "ollama", "temperature": temperature},
+    )
     return SimpleNamespace(
         choices=[SimpleNamespace(message=SimpleNamespace(content=content))]
     )
@@ -142,4 +166,12 @@ def text_completion(
         timeout=timeout,
     )
     response.raise_for_status()
-    return response.json().get("response")
+    gen_content = response.json().get("response")
+    trace_generation(
+        "text_completion",
+        model=model,
+        input_data=prompt,
+        output_data=gen_content,
+        metadata={"provider": "ollama_generate", "temperature": temperature},
+    )
+    return gen_content
